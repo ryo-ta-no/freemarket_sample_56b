@@ -38,17 +38,13 @@ Things you may want to cover:
 |year-day|integer|null false|　日
 |call-number|string|null false, unique: true|　電話番号
 |authenticaition-number|string|null false, unique: true| 認証番号
-|post|string|null false|   郵便番号
-|pretectures|string|null false|   都道府県
-|city|string|null false|　市区町村
-|address|string|null false| 番地
-|bilding|string|| 建物名
-|phone|integer|| 電話
 
 ### Association
 - has_many :items
 - has_one :card
 - has_one :profile
+- has_one :street
+
 
 ## cardsテーブル
 |Column|Type|Options|
@@ -154,5 +150,16 @@ Things you may want to cover:
 - belongs_to :categories
 - belongs_to :size
 
+## Streetsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|post|string|null false|   郵便番号
+|pretectures|string|null false|   都道府県
+|city|string|null false|　市区町村
+|address|string|null false| 番地
+|bilding|string|| 建物名
+|phone|integer|| 電話
 
+### Association
+- belongs_to :user
 
