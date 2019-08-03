@@ -111,6 +111,7 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |category-name|string|null false|　カテゴリー名前
+|ancestry|string|null false| アンセストリー
 
 ### Association
 - has_many :items
