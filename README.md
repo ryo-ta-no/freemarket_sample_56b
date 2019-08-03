@@ -47,8 +47,8 @@ Things you may want to cover:
 
 ### Association
 - has_many :items
-- belongs_to :card
-- belongs_to :profile
+- has_one :card
+- has_one :profile
 
 ## cardsテーブル
 |Column|Type|Options|
