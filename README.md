@@ -96,6 +96,7 @@ Things you may want to cover:
 - belongs_to :category
 - belongs_to :brand
 
+
 ## sizesテーブル
 |Column|Type|Options|
 |------|----|-------|
@@ -103,6 +104,8 @@ Things you may want to cover:
 
 ### Association
 - has_many :items
+- has_many :categories through:size_categories
+
 
 ## categoriesテーブル
 |Column|Type|Options|
@@ -111,6 +114,8 @@ Things you may want to cover:
 
 ### Association
 - has_many :items
+- has_many :categories through:size_categories
+
 
 ## Brandsテーブル
 |Column|Type|Options|
@@ -136,5 +141,17 @@ Things you may want to cover:
 |img|string|null false|　画像
 
 ### Association
-- belong_to :item
+- belongs_to :item
+
+###　size_categoriesテーブル　(中間テーブル)
+|Column|Type|Options|
+|------|----|-------|
+|size_id|integer|foreign_key: true, null false|
+|category_id|integer|foreign_key: true, null false|
+
+### Association
+- belongs_to :categories
+- belongs_to :size
+
+
 
