@@ -85,6 +85,8 @@ Things you may want to cover:
 |prefecture_id|integer|foreign_key: true, null false|
 |shipping_date|integer|foreign_key: true, null false|
 |size_id|string|foreign_key: true, null false|
+|brand_id|integer|foreign_key: true, null false|
+|user_id|integer|foreign_key: true, null false|
 
 ### Association
 - has_many :photo
@@ -113,7 +115,6 @@ Things you may want to cover:
 ## Brandsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|items_id|integer|foreign_key: true, null false|
 |bland|string|null false, index|　ブランド名
 
 ### Association
