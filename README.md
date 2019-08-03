@@ -56,6 +56,7 @@ Things you may want to cover:
 |card-number|integer|null false|　カード番号
 |expirationdate-year|integer|null false|　カード年
 |expirationdate-mouth|integer|null false|　カード月
+|card-name|string|null false| カード名前
 |security-cord|integer|null false|　セキュリティーコード
 
 ### Association
@@ -75,7 +76,7 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null false, index|　商品名
-|explain|string|null false|　商品説明
+|explain|text|null false|　商品説明
 |state|string|null false|　商品状態
 |price|integer|null false|　商品価格
 |buyer_id|integer|foreign_key: true, null false|
