@@ -6,13 +6,12 @@ body{
 }
 .header{
   width:auto;
-  height:100px;
   position: relative;
   z-index: 1001;
   padding: 0 200px;
   margin: 0 auto;
   display:block;
-  
+
   .inner{
     min-width: 700px;
     padding: 0;
@@ -21,14 +20,14 @@ body{
     font-size: 14px;
     line-height: 1;
     margin:0;
-  
+
     .top{
       height:50%;
       display: -webkit-box;
       -webkit-box-align: center;
       margin: 0px;
-      padding: 0px; 
-    
+      padding: 0px;
+
       .title{
         display: flex;
         align-items: center;
@@ -37,12 +36,12 @@ body{
           margin-inline-start: 0px;
           margin-inline-end: 0px;
           font-weight: bold;
-                   
+
         .img{
           vertical-align: middle;
-         }
+        }
       }
-    
+
       .form{
         position: relative;
         margin-left: 45px;
@@ -51,7 +50,7 @@ body{
         -webkit-box-flex: 1;
         display: block;
         font-size: 14px;
-        
+
         .icon-search{
         position: absolute;
         top: 0;
@@ -72,10 +71,10 @@ body{
           line-height: 1.5;
           font-size: 16px;
           background: #f5f5f5;
-        } 
+        }
       }
     }
-  
+
     .under{
       height:50px;
       padding: 0;
@@ -88,7 +87,7 @@ body{
         float:left;
         height:50px;
         text-align: center;
-      
+
         .header-navi{
         display:flex;
         }
@@ -105,7 +104,7 @@ body{
             line-height: 32px;
             text-decoration: none;
             font-size: 14px;
-         
+
               .category-icon{
               font-weight: 400;
               line-height: 1;
@@ -116,7 +115,7 @@ body{
             }
           }
         }
-           
+
           .header-l-right{
           position: relative;
           display: inline-block;
@@ -127,7 +126,7 @@ body{
           height: 44px;
           line-height: 32px;
           font-size: 14px;
-            .brand-icon{      
+            .brand-icon{
               display: inline-block;
               font-style: normal;
               font-weight: 400;
@@ -146,7 +145,7 @@ body{
         padding:0;
         display:flex;
         line-height: 32px;
-        
+
           .new-create-user{
           font-size:13px;
           padding: 0 10px;
@@ -174,13 +173,13 @@ body{
           border-radius: 4px;
           text-align: center;
           font-size:13px;
-          
+
           &:hover{
             color: #fff;
             border: 1px solid #0099e8;
             background-color: #0099e8;
             cursor:pointer;
-          } 
+          }
         }
       }
     }
