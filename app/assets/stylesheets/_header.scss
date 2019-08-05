@@ -1,0 +1,187 @@
+body{
+  font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+}
+*{
+  list-style:none;
+}
+.header{
+  width:auto;
+  height:100px;
+  position: relative;
+  z-index: 1001;
+  padding: 0 200px;
+  margin: 0 auto;
+  display:block;
+  
+  .inner{
+    min-width: 700px;
+    padding: 0;
+    position: relative;
+    min-height: 100%;
+    font-size: 14px;
+    line-height: 1;
+    margin:0;
+  
+    .top{
+      height:50%;
+      display: -webkit-box;
+      -webkit-box-align: center;
+      margin: 0px;
+      padding: 0px; 
+    
+      .title{
+        display: flex;
+        align-items: center;
+          margin-block-start: 0.67em;
+          margin-block-end: 0.67em;
+          margin-inline-start: 0px;
+          margin-inline-end: 0px;
+          font-weight: bold;
+                   
+        .img{
+          vertical-align: middle;
+         }
+      }
+    
+      .form{
+        position: relative;
+        margin-left: 45px;
+        width: 100%;
+        display:flex;
+        -webkit-box-flex: 1;
+        display: block;
+        font-size: 14px;
+        
+        .icon-search{
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+          }
+        .form__search{
+          border-radius: 4px;
+          padding: 0 42px 0 10px;
+          width: 100%;
+          height: 40px;
+          border: 1px solid #ccc;
+          line-height: 1.5;
+          font-size: 16px;
+          background: #f5f5f5;
+        } 
+      }
+    }
+  
+    .under{
+      height:50px;
+      padding: 0;
+      display: block;
+      font: 66.66667% sans-serif;
+      clear: both;
+      .left{
+        margin-top:0;
+        padding: 0;
+        float:left;
+        height:50px;
+        text-align: center;
+      
+        .header-navi{
+        display:flex;
+        }
+          .header-l-left{
+            position: relative;
+            display: inline-block;
+            padding: 0 11px;
+            padding-left:0;
+            margin:0;
+            color:#333;
+            font-weight: bold;
+            display: block;
+            height: 44px;
+            line-height: 32px;
+            text-decoration: none;
+            font-size: 14px;
+         
+              .category-icon{
+              font-weight: 400;
+              line-height: 1;
+              color: #ea352d;
+              font-size: 15px;
+              margin-right: 4px;
+              }
+            }
+          }
+        }
+           
+          .header-l-right{
+          position: relative;
+          display: inline-block;
+          padding-left:12px;
+          color:#333;
+          font-weight: bold;
+          display: block;
+          height: 44px;
+          line-height: 32px;
+          font-size: 14px;
+            .brand-icon{      
+              display: inline-block;
+              font-style: normal;
+              font-weight: 400;
+              font-variant: normal;
+              line-height: 1;
+              -webkit-font-smoothing: antialiased;
+              color: #ea352d;
+              font-size: 15px;
+              margin-right: 4px;
+            }
+          }
+      .right{
+        float: right;
+      }
+        .login-navi{
+        padding:0;
+        display:flex;
+        line-height: 32px;
+        
+          .new-create-user{
+          font-size:13px;
+          padding: 0 10px;
+          line-height: 30px;
+          margin:0;
+          border-radius: 4px;
+          text-align: center;
+          background: #ea352d;
+          border: 1px solid #ea352d;
+          color: #fff;
+          text-decoration: none;
+          &:hover{
+            cursor:pointer;
+          }
+        }
+          .login{
+          display: inline-block;
+          margin: 0 0 0 10px ;
+          display: block;
+          border: 1px solid #0099e8;
+          background: #fff;
+          color: #0099e8;
+          padding: 0 10px;
+          line-height: 30px;
+          border-radius: 4px;
+          text-align: center;
+          font-size:13px;
+          
+          &:hover{
+            color: #fff;
+            border: 1px solid #0099e8;
+            background-color: #0099e8;
+            cursor:pointer;
+          } 
+        }
+      }
+    }
+  }
