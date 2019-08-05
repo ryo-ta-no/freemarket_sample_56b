@@ -62,7 +62,7 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |text|text||　プロフィール紹介文
-|user_id|integer|foreign_key: true, null false|
+|user_id|integer|foreign_key: true, null false|
 
 ### Association
 - belongs_to :user
@@ -75,14 +75,14 @@ Things you may want to cover:
 |explain|text|null false|　商品説明
 |state|string|null false|　商品状態
 |price|integer|null false|　商品価格
-|buyer_id|integer|foreign_key: true, null false|
-|seller_id|integer|foreign_key: true, null false|
+|buyer_id|integer|foreign_key: true, null false|
+|seller_id|integer|foreign_key: true, null false|
 |postage|integer|null false|　送料負担者
-|prefecture_id|integer|foreign_key: true, null false|
-|shipping_date|integer|foreign_key: true, null false|
-|size_id|string|foreign_key: true, null false|
-|brand_id|integer|foreign_key: true, null false|
-|user_id|integer|foreign_key: true, null false|
+|prefecture_id|integer|foreign_key: true, null false|
+|shipping_date|integer|foreign_key: true, null false|
+|size_id|string|foreign_key: true, null false|
+|brand_id|integer|foreign_key: true, null false|
+|user_id|integer|foreign_key: true, null false|
 
 ### Association
 - has_many :photo
@@ -134,7 +134,7 @@ Things you may want to cover:
 ## Photosテーブル
 |Column|Type|Options|
 |------|----|-------|
-|item_id|integer|foreign_key: true, null false|
+|item_id|integer|foreign_key: true, null false|
 |img|string|null false|　画像
 
 ### Association
@@ -143,8 +143,8 @@ Things you may want to cover:
 ###　size_categoriesテーブル　(中間テーブル)
 |Column|Type|Options|
 |------|----|-------|
-|size_id|integer|foreign_key: true, null false|
-|category_id|integer|foreign_key: true, null false|
+|size_id|integer|foreign_key: true, null false|
+|category_id|integer|foreign_key: true, null false|
 
 ### Association
 - belongs_to :categories
@@ -159,7 +159,7 @@ Things you may want to cover:
 |address|string|null false| 番地
 |bilding|string|| 建物名
 |phone|integer|| 電話
+|user_id|integer|foreign_key: true, null false|
 
 ### Association
 - belongs_to :user
-
