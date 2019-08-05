@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
-  root to: "items#index"
+  root to: "current_user#index"
   resources :items
 end
