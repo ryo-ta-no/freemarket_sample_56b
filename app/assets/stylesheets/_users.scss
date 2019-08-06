@@ -3,38 +3,42 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .mypage-main {
+  display: flex;
+  height: 100%;
   border-width: 0px;
-  margin: 0, auto;
+  margin: 40px 200px 0;
   padding: 0, 0, 40px;
 
-  .left-container {
-    position: relative;
-    padding: 20px;
-    width: 700px;
+  .right-container {
+    height: 1200px;
+    width: 400px;
+    background-color: chartreuse;
+    margin-right: 40px;
 
+  }
+
+  .left-container {
+    width: 100%;
 
     .user-top {
       height: 200px;
       text-align: center;
       background-color: aqua;
-      display: flex;
-      justify-content: center;
-      align-items: center;
 
 
-      a {
+
+      .top-box {
         text-decoration: none;
+        position: relative;
+        top: 50px;
 
         .user-img {
-          display: block;
-          margin-block-start: 1em;
-          margin-block-end: 1em;
-          margin-inline-start: 40px;
-          margin-inline-end: 40px;
 
           #rad {
             border-radius: 50%;
+
           }
+
         }
 
         .user-nick {
@@ -46,23 +50,135 @@
           font-size: 15px;
           line-height: 1.4;
         }
+
       }
+
     }
 
     .user-notice {
-      position: relative;
-      padding: 20px;
       background-color: khaki;
       min-height: 300px;
 
       .user-tab {
         display: flex;
+        width: 100%;
+        line-height: 72px;
+        font-size: 16px;
 
-        .active1 {
-          
+        .active-1 {
+          background-color: aliceblue;
+          text-align: center;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+
+          .one {
+            font-weight: 600;
+          }
+
+        }
+
+        .active-2 {
+          background-color: gainsboro;
+          text-align: center;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+
+          .one {
+            font-weight: 600;
+          }
+
+        }
+
+      }
+
+      .user-box {
+        width: 100%;
+        background: url(https://www.mercari.com/jp/assets/img/common/common/logo-gray-icon.svg?2094209);
+        background-repeat:no-repeat;
+        background-position: center 40px;
+        background-size: 78px 85px;
+        text-align: center;
+        font-size: 16px;
+        color: #ccc;
+
+        .list-box {
+          padding-top: 160px;
+          padding-bottom: 60px;
+
+          .not-find-box-1 {
+            font-weight: 600;
+          }
+
         }
       }
     }
 
+    .user-history {
+      width: 100%;
+      background-color: beige;
+      margin-top: 40px;
+
+      .history-head {
+        height: 72px;
+        font-size: 16px;
+        font-weight: 600;
+        padding-right: 16px;
+        padding-left: 16px;
+        display: flex;
+        align-items: center;
+
+      }
+
+      .history-tab {
+        display: flex;
+        background-color: greenyellow;
+        line-height: 72px;
+
+          .active-3 {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+          }
+
+          .active-4 {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+          }
+
+      }
+
+      .history-box {
+        width: 100%;
+        background: url(https://www.mercari.com/jp/assets/img/common/common/logo-gray-icon.svg?2094209);
+        background-repeat:no-repeat;
+        background-position: center 40px;
+        background-size: 78px 85px;
+        text-align: center;
+        font-size: 16px;
+        color: #ccc;
+
+        .history-list {
+          padding-top: 160px;
+          padding-bottom: 60px;
+
+          .not-find-history-1 {
+            font-weight: 600;
+          }
+
+        }
+      }
+
+    }
+
   }
+
 }
