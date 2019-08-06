@@ -8,9 +8,9 @@
           = f.text_field :content, class: 'form__search', placeholder: '何をお探しで？',name: 'keyword',type:'search' ,value:''
           = link_to " " do
             = fa_icon 'search', class: 'icon-search' 
-          
+
     .under
-      %nav.left 
+      %nav.left
         %ul.header-navi
           %li.header-l-left
             = fa_icon 'list-ul', class: 'category-icon' 
@@ -22,5 +22,5 @@
         %ul.login-navi
           %li.new-create-user
             = link_to "新規会員登録", new_user_registration_path, class: 'new-ragistration-text'
-          %li.login 
+          %li.login
             ログイン
