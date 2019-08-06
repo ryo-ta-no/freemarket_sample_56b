@@ -5,6 +5,8 @@
 #
 #   movies = Movie.create([{ category_name: 'Star Wars' }, { category_name: 'Lord of the Rings' }])
 #   Character.create(category_name: 'Luke', movie: movies.first)
+
+#categoriesテーブル
 lady = Category.create(:category_name=>"レディース")
 man = Category.create(:category_name=>"メンズ")
 baby = Category.create(:category_name=>"ベビー・キッズ")
@@ -137,3 +139,6 @@ handmade_accessory = handmade.children.create(:category_name=>"アクセサリ�
 handmade_interior = handmade.children.create(:category_name=>"日用品/インテリア")
 
 
+
+#photosテーブル
+Photos.create([{img: ""}]
