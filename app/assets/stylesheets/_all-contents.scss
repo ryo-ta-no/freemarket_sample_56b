@@ -1,0 +1,72 @@
+// ピックアップカテゴリー、新着アイテムなど真ん中のメインコンテンツ
+.all-contents {
+  height: 4000px;
+  width: 100%;
+
+  &__contents {
+    background-color: purple;
+    height: 4000px;
+    width: 80%;
+    margin: auto;
+
+    .picup-category {
+      color: #333;
+      font-size: 28px;
+      text-align: center;
+      margin: 26px;
+    }
+
+    .ladies {
+      max-width: 100%;
+
+      &__caption{
+        color: #0099e8;
+        font-size: 22px;
+        text-align: center;
+        margin-bottom: 26px;
+      }
+
+      &__products {
+        height: 330px;
+        width: 852px;
+        display: flex;
+        margin: 0 auto;
+
+        .products-1 {
+          background-color: red;
+          height: 330px;
+          width: 213px;
+          margin: 0 20px;
+        }
+
+        .products-2 {
+          background-color: blue;
+          height: 330px;
+          width: 213px;
+          margin-right: 20px;
+        }
+
+        .products-3 {
+          background-color: green;
+          height: 330px;
+          width: 213px;
+          margin-right: 20px;
+        }
+
+        .products-4 {
+          background-color:yellow;
+          height: 330px;
+          width: 213px;
+        }
+      }
+    }
+
+    .show-all {
+      color: #0099e8;
+      width: 852px;
+      font-size: 14px;
+      text-align: right;
+      padding: 20px 0;
+    }
+  }
+}
