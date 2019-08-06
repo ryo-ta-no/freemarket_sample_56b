@@ -138,7 +138,3 @@ handmade_item = handmade.children.create(:category_name=>"ファッション/小
 handmade_accessory = handmade.children.create(:category_name=>"アクセサリー/時計")
 handmade_interior = handmade.children.create(:category_name=>"日用品/インテリア")
 
-
-
-#photosテーブル
-Photos.create([{img: ""}]
