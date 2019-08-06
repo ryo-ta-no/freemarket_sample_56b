@@ -1,0 +1,34 @@
+.wrapper
+  = render 'shared/header'
+  .mypage-main
+    .right-container
+    .left-container
+      .user-top
+        %a
+          .user-img
+            = image_tag 'https://cdn.pixabay.com/photo/2018/12/25/11/10/deer-3894103_1280.png', alt: '', height: '60', width: '60', id: 'rad'
+          .user-nick
+            りょう
+          .user-val
+            評価
+            %span.bold 0
+            出品数
+            %span.bold 0
+      .user-notice
+        %ul.user-tab
+          %li.active1
+            %h3
+              %a
+                お知らせ
+          %li.active2
+            %h3
+              %a
+                やることリスト
+        .tab-box
+          %ul
+            %li.not-find-box1
+              現在、お知らせはありません
+          -# %ul
+          -#   %li.not-find-box2
+      .user-history
+  = render 'shared/footer'

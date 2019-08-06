@@ -1,0 +1,68 @@
+// Place all the styles related to the Users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.mypage-main {
+  border-width: 0px;
+  margin: 0, auto;
+  padding: 0, 0, 40px;
+
+  .left-container {
+    position: relative;
+    padding: 20px;
+    width: 700px;
+
+
+    .user-top {
+      height: 200px;
+      text-align: center;
+      background-color: aqua;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+
+      a {
+        text-decoration: none;
+
+        .user-img {
+          display: block;
+          margin-block-start: 1em;
+          margin-block-end: 1em;
+          margin-inline-start: 40px;
+          margin-inline-end: 40px;
+
+          #rad {
+            border-radius: 50%;
+          }
+        }
+
+        .user-nick {
+          font-size: 15px;
+          line-height: 1.4;
+        }
+
+        .user-val {
+          font-size: 15px;
+          line-height: 1.4;
+        }
+      }
+    }
+
+    .user-notice {
+      position: relative;
+      padding: 20px;
+      background-color: khaki;
+      min-height: 300px;
+
+      .user-tab {
+        display: flex;
+
+        .active1 {
+          
+        }
+      }
+    }
+
+  }
+}
