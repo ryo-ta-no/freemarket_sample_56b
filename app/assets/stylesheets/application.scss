@@ -1,14 +1,14 @@
 @import "reset";
 @import "header";
 @import "footer-mixin";
-@import "footer";
 
 
+@import "user-right";
 @import "font-awesome";
 @import "user-right";
 @import "side-bar";
-@import "current_user";
-
+// @import "current_user";
+@import "footer";
 @import "ragistration/center-main";
 @import "ragistration/header-main";
 @import "ragistration/fotter-main";

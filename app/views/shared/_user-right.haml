@@ -1,0 +1,73 @@
+.container
+
+  
+  .main-container
+    
+    = render 'shared/side-bar'
+
+    .right-container
+
+      .section
+        .h2
+          本人情報の登録
+      
+        .form
+          .text
+            お客さまの本人情報をご登録ください。
+            登録されたお名前・生年月日を変更する場合、本人確認書類の提出が必要になります。
+                
+            = link_to "",class: "p" do
+              = fa_icon 'chevron-right', class: 'icon-arrow-right' 
+              %p 本人確認書類のアップロードについて
+           
+          .name
+            %label 
+              お名前
+
+          .kana
+            %label
+              カタカナ
+          .birth
+            %label
+              生年月日
+          .postnam
+            %label
+              郵便番号
+              %span 
+                任意
+              = form_with  method: :get, local: true  do |f| 
+                = f.text_field :content, class: 'form__input', placeholder: '例） 1234567',name: 'zip-code',type:'text' ,value:''
+          .prefecture
+            %label
+              都道府県
+              %span 
+                任意
+                -# = form_with model: :prefecture, local: true do |f| 
+                  -# = f.select :prefecture.all,
+                  
+          .city
+            %label
+              市区町村
+              %span 
+                任意
+              = form_with  method: :get, local: true  do |f| 
+                = f.text_field :content, class: 'form__input', placeholder: '例) 愛知県名古屋市',name: 'zip-code',type:'text' ,value:''
+          .banti
+            %label
+              番地
+              %span 
+                任意
+              = form_with  method: :get, local: true  do |f| 
+                = f.text_field :content, class: 'form__input', placeholder: '例）栄５０番地-1',name: 'zip-code',type:'text' ,value:''
+          .bild
+            %label
+              建物名
+              %span 
+                任意
+              = form_with  method: :get, local: true  do |f| 
+                = f.text_field :content, class: 'form__input', placeholder: '例）栄センタービル3階',name: 'zip-code',type:'text' ,value:''
+          .regist
+            %label
+            
+          .form-text
+            %p 本人の登録情報について
