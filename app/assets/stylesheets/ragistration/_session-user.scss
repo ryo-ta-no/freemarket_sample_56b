@@ -89,22 +89,35 @@ body{
       width: 250px;
       .__checker-mini-box{
         height: 70px;
-        width: 206px;
-        background-color: #ea352d;
+        width: 250px;
         position: relative;
         .__square-small-checker{
           display: flex;
-          transform:		scale(2);
+          transform:		scale(1.4);
           position: absolute;
-          margin-top: 12%;
+          margin-top: 10%;
           margin-left: 13px;
         }
-        .__suqure-text{
-          font-size: 14px;
+        .__suquare-text{
+          font-size: 13px;
           margin-left: 8px;
           position: absolute;
           margin-left: 40px;
-          margin-top: 10px;
+          margin-top: 15px;
+        }
+        .__suquare-icon{
+          position: absolute;
+          right: 25px;
+          top: 5px;
+          .suquare-icon{
+            font-size: 40px;
+          }
+        }
+        .__under-text{
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          font-size: 3px;
         }
       }
     }
@@ -118,6 +131,11 @@ body{
       width: 100%;
       text-align: center;
       cursor: pointer;
+    }
+    .forgot-box{
+      margin: 40px 0 0;
+      font-size: 14px;
+      color: #0099e8;
     }
   }
 }

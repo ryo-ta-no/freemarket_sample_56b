@@ -18,18 +18,24 @@
   .login-form-session
     = form_with do |form|
       .session-email-form
-        = form.email_field :email, class: 'email-form'
+        = form.email_field :email,placeholder: 'メールアドレス', class: 'email-form'
       .session-password-form
-        = form.password_field :password, class: 'password-form'
+        = form.password_field :password, placeholder: 'パスワード',class: 'password-form'
       .session-form-checker
         .__checker-mini-box
           .__square-small-checker
             = form.check_box :check_box, class: 'small-check'
-          .__suqure-text
+          .__suquare-text
             私はロボットではあり
             %br
             ません
+          .__suquare-icon
+            = fa_icon 'internet-explorer', class: 'suquare-icon'
+          .__under-text
+            プライバシー・利用規約
       .log-in-box
         .text-box-log
           ログイン
+      .forgot-box
+        パスワードをお忘れの方
 
