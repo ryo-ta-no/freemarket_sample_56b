@@ -1,0 +1,29 @@
+body{
+  background-color: #f5f5f5;
+}
+.session-box{
+  width: 456px;
+  margin: auto;
+  .login-session{
+    padding: 40px 64px;
+    background-color: white;
+    text-align: center;
+    .login-new-user{
+    }
+    .login-new-form{
+      margin: 8px 0 0;
+      border: solid 1px #0099e8;
+      background-color: #0099e8;
+      color: white;
+      line-height: 40px;
+    }
+  }
+  .login-box-session{
+    padding: 40px 64px;
+    background-color: red;
+  }
+  .login-form-session{
+    background-color: blue;
+    padding: 24px 64px 32px;
+  }
+}
