@@ -34,7 +34,7 @@
 
         .user-img {
 
-          #rad {
+          #img-top {
             border-radius: 50%;
 
           }
@@ -97,13 +97,15 @@
 
       .user-box {
         width: 100%;
-        background: url(メルカリアイコンスクショ.png);
-        background-repeat:no-repeat;
-        background-position: center 40px;
-        background-size: 78px 85px;
         text-align: center;
         font-size: 16px;
         color: #ccc;
+
+        #box-img {
+          position: relative;
+          top: 50px;
+
+        }
 
         .list-box {
           padding-top: 160px;
@@ -170,13 +172,15 @@
 
       .history-box {
         width: 100%;
-        background: url(メルカリアイコンスクショ.png);
-        background-repeat:no-repeat;
-        background-position: center 40px;
-        background-size: 78px 85px;
         text-align: center;
         font-size: 16px;
         color: #ccc;
+
+        #box-img {
+          position: relative;
+          top: 50px;
+
+        }
 
         .history-list {
           padding-top: 160px;
@@ -184,6 +188,7 @@
 
           .not-find-history-1 {
             font-weight: 600;
+
           }
 
         }
