@@ -14,6 +14,7 @@ body{
       background-color: #0099e8;
       color: white;
       line-height: 40px;
+      cursor: pointer;
     }
   }
   .login-box-session{
@@ -24,6 +25,7 @@ body{
       line-height: 48px;
       text-align: center;
       display: flex;
+      cursor: pointer;
       .__session-facebook-icon{
         margin-left: 7%;
         .icon-session-facebook{
@@ -42,6 +44,7 @@ body{
       line-height: 48px;
       text-align: center;
       display: flex;
+      cursor: pointer;
       .__session-google-icon{
         margin-left: 7%;
         .icon-session-google{
@@ -80,8 +83,32 @@ body{
     .session-form-checker{
       margin: 24px 0 0;
       border: 1px solid #ccc;
-      .__checker-text{
+      background: #f9f9f9;
+      color: #000;
+      height: 60px;
+      width: 250px;
+      .__checker-mini-box{
+        height: 74px;
+        width: 206px;
+        .__square-box{
+          height: 100%;
+          .small-check{
+          }
+        }
+        .__square-text{
+        }
       }
+    }
+    .log-in-box{
+      background: #ea352d;
+      border: 1px solid #ea352d;
+      color: #fff;
+      margin: 24px 0 0;
+      line-height: 48px;
+      font-size: 14px;
+      width: 100%;
+      text-align: center;
+      cursor: pointer;
     }
   }
 }

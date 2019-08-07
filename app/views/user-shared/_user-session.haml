@@ -22,8 +22,12 @@
       .session-password-form
         = form.password_field :password, class: 'password-form'
       .session-form-checker
-        .__checker-text
-          私はロボットではあり
-          %br
-          ません
+        .__checker-mini-box
+          .__square-text
+            zzzz
+          .__square-box
+            = form.check_box :check_box, class: 'small-check'
+      .log-in-box
+        .text-box-log
+          ログイン
 
