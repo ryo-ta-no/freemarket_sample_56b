@@ -18,5 +18,5 @@ class Prefecture < ActiveHash::Base
                 {id: 46, prefecture: '鹿児島県'}, {id: 47, prefecture: '沖縄県'}, {id:48, prefecture: '未定'}
 
   ]
-  belongs_to :item
+
 end
