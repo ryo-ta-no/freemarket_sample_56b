@@ -117,7 +117,7 @@ Things you may want to cover:
 ## Brandsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|bland|string|null false, index|　ブランド名
+|brand|string|null false, index|　ブランド名
 
 ### Association
 - has_many :items
