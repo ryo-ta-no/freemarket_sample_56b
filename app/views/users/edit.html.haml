@@ -1,0 +1,16 @@
+.wrapper
+  = render 'shared/header'
+  .mypage-main
+    .right-container
+
+    .left-container
+      .projects
+        %h2.topic
+          プロフィール
+        = form_with url: users_path, class: "editarea" do |f|
+          .nickname-edit
+            = f.text_field :name, id: "nickname"
+            = f.text_area :content, id: "p-about"
+            = f.submit :変更, id: "p-edit"
+
+  = render 'shared/footer'
