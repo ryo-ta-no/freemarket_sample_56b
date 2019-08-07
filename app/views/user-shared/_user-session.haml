@@ -1,0 +1,41 @@
+.session-box
+  .login-session
+    .__login-new-user
+      アカウントをお持ちでない方はこちら
+    .__login-new-form
+      新規会員登録
+  .login-box-session
+    .session-facebook-box
+      .__session-facebook-icon
+        = fa_icon 'facebook-f', class: 'icon-session-facebook'
+      .__session-facebook-text
+        Facebookでログイン
+    .session-google-box
+      .__session-google-icon
+        = fa_icon 'google', class: 'icon-session-google'
+      .__session-google-text
+        Googleでログイン
+  .login-form-session
+    = form_with do |form|
+      .session-email-form
+        = form.email_field :email,placeholder: 'メールアドレス', class: 'email-form'
+      .session-password-form
+        = form.password_field :password, placeholder: 'パスワード',class: 'password-form'
+      .session-form-checker
+        .__checker-mini-box
+          .__square-small-checker
+            = form.check_box :check_box, class: 'small-check'
+          .__suquare-text
+            私はロボットではあり
+            %br
+            ません
+          .__suquare-icon
+            = fa_icon 'internet-explorer', class: 'suquare-icon'
+          .__under-text
+            プライバシー・利用規約
+      .log-in-box
+        .text-box-log
+          ログイン
+      .forgot-box
+        パスワードをお忘れの方
+

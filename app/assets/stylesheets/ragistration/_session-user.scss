@@ -1,0 +1,141 @@
+body{
+  background-color: #f5f5f5;
+}
+.session-box{
+  width: 456px;
+  margin: auto;
+  .login-session{
+    padding: 40px 64px;
+    background-color: white;
+    text-align: center;
+    .__login-new-form{
+      margin: 8px 0 0;
+      border: solid 1px #0099e8;
+      background-color: #0099e8;
+      color: white;
+      line-height: 40px;
+      cursor: pointer;
+    }
+  }
+  .login-box-session{
+    padding: 40px 64px;
+    background-color: white;
+    .session-facebook-box{
+      background-color: #385185;
+      line-height: 48px;
+      text-align: center;
+      display: flex;
+      cursor: pointer;
+      .__session-facebook-icon{
+        margin-left: 7%;
+        .icon-session-facebook{
+          color: white;
+          font-size: 23px;
+        }
+      }
+      .__session-facebook-text{
+        color: white;
+        margin-left: 23%;
+      }
+    }
+    .session-google-box{
+      margin: 16px 0 0;
+      border: #979797 solid 1px;
+      line-height: 48px;
+      text-align: center;
+      display: flex;
+      cursor: pointer;
+      .__session-google-icon{
+        margin-left: 7%;
+        .icon-session-google{
+          font-size: 23px;
+        }
+      }
+      .__session-google-text{
+        margin-left: 23%;
+      }
+    }
+
+  }
+  .login-form-session{
+    background-color: white;
+    padding: 24px 64px 32px;
+    .session-email-form{
+      .email-form{
+        width: 90%;
+        // height: 48px;
+        padding: 10px 16px 8px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        font-size: 16px;
+      }
+    }
+    .session-password-form{
+      margin: 24px 0 0;
+      .password-form{
+        padding: 10px 16px 8px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        font-size: 16px;
+        width: 90%;
+      }
+    }
+    .session-form-checker{
+      margin: 24px 0 0;
+      border: 1px solid #ccc;
+      background: #f9f9f9;
+      color: #000;
+      height: 70px;
+      width: 250px;
+      .__checker-mini-box{
+        height: 70px;
+        width: 250px;
+        position: relative;
+        .__square-small-checker{
+          display: flex;
+          transform:		scale(1.4);
+          position: absolute;
+          margin-top: 10%;
+          margin-left: 13px;
+        }
+        .__suquare-text{
+          font-size: 13px;
+          margin-left: 8px;
+          position: absolute;
+          margin-left: 40px;
+          margin-top: 15px;
+        }
+        .__suquare-icon{
+          position: absolute;
+          right: 25px;
+          top: 5px;
+          .suquare-icon{
+            font-size: 40px;
+          }
+        }
+        .__under-text{
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          font-size: 3px;
+        }
+      }
+    }
+    .log-in-box{
+      background: #ea352d;
+      border: 1px solid #ea352d;
+      color: #fff;
+      margin: 24px 0 0;
+      line-height: 48px;
+      font-size: 14px;
+      width: 100%;
+      text-align: center;
+      cursor: pointer;
+    }
+    .forgot-box{
+      margin: 40px 0 0;
+      font-size: 14px;
+      color: #0099e8;
+    }
+  }
+}
