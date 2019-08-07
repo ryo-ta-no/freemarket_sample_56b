@@ -1,5 +1,6 @@
 .projects {
   width: auto;
+  background-color: khaki;
 
   .topic {
     text-align: center;
@@ -11,22 +12,40 @@
   }
 
   .nickname-edit {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    background-color: blue;
 
-    .nickname {
+    #img-top {
+      border-radius: 50%;
 
     }
+    .nickname {
+      margin-left: 15px;
+      height: 48px;
+      width: 220px;
+
+    }
+
+  }
+
+  .about-edit {
+    background-color: antiquewhite;
+    width: 600px;
+    height: 200px;
+    text-align: center;
+    margin: 0 auto;
 
     .p-about {
       width: auto;
 
     }
-
     .p-edit {
-      width: auto;
 
     }
-  }
 
+  }
 
 }

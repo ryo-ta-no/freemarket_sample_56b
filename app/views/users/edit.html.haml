@@ -7,11 +7,11 @@
       .projects
         %h2.topic
           プロフィール
-        = image_tag 'https://cdn.pixabay.com/photo/2018/12/25/11/10/deer-3894103_1280.png', alt: '', height: '60', width: '60', id: 'img-top'
-        .nickname-edit
-          = form_with url: users_path do |f|
+        = form_with url: users_path do |f|
+          .nickname-edit
+            = image_tag 'https://cdn.pixabay.com/photo/2018/12/25/11/10/deer-3894103_1280.png', alt: '', height: '60', width: '60', id: 'img-top'
             = f.text_field :name, class: "nickname"
-            .about-edit
+          .about-edit
             = f.text_area :content, class: "p-about"
             = f.submit :変更, class: "p-edit"
 
