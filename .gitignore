@@ -25,5 +25,9 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+
 vendor/*
+.DS_Store
+
+vendor/bundle/*
 .DS_Store
