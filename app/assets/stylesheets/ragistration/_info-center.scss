@@ -1,0 +1,32 @@
+.info-center-box{
+  .center-info-main{
+    background-color: white;
+    margin: auto;
+    width: 700px;
+    .__info-small-text{
+      font-size: 22px;
+      padding: 32px;
+      text-align: center;
+    }
+    .__info-center-small{
+      padding: 40px  40px 64px;
+      .__info-list{
+        max-width: 343px;
+
+      }
+    }
+  }
+}
+.__list-from{
+  display: flex;
+}
+
+.__list-required{
+  margin: 0 0 0 8px;
+  padding: 2px 4px;
+  background: #ea352d;
+  color: #fff;
+  border-radius: 2px;
+  font-size: 12px;
+  vertical-align: top;
+}

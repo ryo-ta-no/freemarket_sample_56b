@@ -1,0 +1,40 @@
+.info-center-box
+  .center-info-main
+    .__info-small-text
+      会員情報登録
+    .__info-center-small
+      .__info-list
+        = form_with do |f|
+          .__list-from
+            .__info-nickname
+              = f.label :"ニックネーム"
+            .__list-required
+              必須
+          = f.text_field :nickname, placeholder: "例)メルカリ太郎", class: "text-info"
+          .__list-from
+            .__info-email
+              = f.label :"メールアドレス"
+            .__list-required
+              必須
+          = f.email_field :email, placeholder: "メールアドレス", class: "text-info"
+          .__list-from
+            .__info-password
+              = f.label :"パスワード"
+            .__list-required
+              必須
+          = f.password_field :password, placeholder: "パスワード", class: "text-info"
+          .__list-from
+            .__info-confirm
+              = f.label :"7文字以上"
+            .__list-required
+              必須
+          .__list-from
+            .__list-required
+              必須
+          .__list-from
+            .__list-required
+              必須
+          .__list-from
+            .__list-required
+              必須
+
