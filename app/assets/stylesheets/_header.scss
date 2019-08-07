@@ -156,10 +156,12 @@ body{
           text-align: center;
           background: #ea352d;
           border: 1px solid #ea352d;
-          color: #fff;
-          text-decoration: none;
           &:hover{
             cursor:pointer;
+          }
+          a {
+            color: #fff;
+            text-decoration: none;
           }
         }
           .login{
