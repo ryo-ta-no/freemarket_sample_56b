@@ -1,7 +1,17 @@
 @import "reset";
 @import "header";
-@import "footer-mixin";
+@import "slick-banner";
+@import "all-contents";
+@import "under-banner";
 @import "footer";
+
+@import "exhibition-btn";
+@import "font-awesome";
+
+
+@import "font-awesome";
+@import "side-bar";
+
 @import "ragistration/center-main";
 @import "ragistration/header-main";
 @import "ragistration/fotter-main";
