@@ -7,12 +7,12 @@
       .projects
         %h2.topic
           プロフィール
-        = form_with url: users_path do |f|
+        = form_with url: users_path, id: "topic-form" do |f|
           .nickname-edit
-            = image_tag 'https://cdn.pixabay.com/photo/2018/12/25/11/10/deer-3894103_1280.png', alt: '', height: '60', width: '60', id: 'img-top'
-            = f.text_field :name, class: "nickname"
+            = image_tag 'mer.png', alt: '', height: '60', width: '60', id: 'img-top'
+            = f.text_field :name, class: "nickname", value: "りょう"
           .about-edit
-            = f.text_area :content, class: "p-about"
-            = f.submit :変更, class: "p-edit"
+            = f.text_area :content, class: "p-about", placeholder: "こんにちは、メルカリです。あなたは誰ですか？"
+            = f.submit "変更", class: "p-edit"
 
   = render 'shared/footer'

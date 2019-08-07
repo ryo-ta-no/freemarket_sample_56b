@@ -3,6 +3,8 @@
   background-color: khaki;
 
   .topic {
+    font-weight: 600;
+    font-size: 25px;
     text-align: center;
     height: 50px;
     display: flex;
@@ -11,38 +13,51 @@
 
   }
 
-  .nickname-edit {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: auto;
-    background-color: blue;
+  #topic-form {
+    overflow:hidden;
 
-    #img-top {
-      border-radius: 50%;
-
-    }
-    .nickname {
-      margin-left: 15px;
-      height: 48px;
-      width: 220px;
-
-    }
-
-  }
-
-  .about-edit {
-    background-color: antiquewhite;
-    width: 600px;
-    height: 200px;
-    text-align: center;
-    margin: 0 auto;
-
-    .p-about {
+    .nickname-edit {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       width: auto;
+      background-color: aquamarine;
+      padding: 72px 16px 24px;
+
+      #img-top {
+        border-radius: 50%;
+
+      }
+      .nickname {
+        margin-left: 15px;
+        height: 48px;
+        width: 220px;
+
+      }
 
     }
-    .p-edit {
+
+    .about-edit {
+      background-color: antiquewhite;
+      text-align: center;
+      width: auto;
+      margin: 40px 16px;
+
+      .p-about {
+        width: 700px;
+        height: 200px;
+
+      }
+      .p-edit {
+        color: white;
+        background-color: red;
+        margin-top: 16px;
+        // margin-bottom: 40px;
+        width: 700px;
+        padding: 10px;
+        border-style: none;
+
+      }
 
     }
 
