@@ -1,8 +1,29 @@
 .session-box
   .login-session
-    .login-new-user
+    .__login-new-user
       アカウントをお持ちでない方はこちら
-    .login-new-form
+    .__login-new-form
       新規会員登録
   .login-box-session
+    .session-facebook-box
+      .__session-facebook-icon
+        = fa_icon 'facebook-f', class: 'icon-session-facebook'
+      .__session-facebook-text
+        Facebookでログイン
+    .session-google-box
+      .__session-google-icon
+        = fa_icon 'google', class: 'icon-session-google'
+      .__session-google-text
+        Googleでログイン
   .login-form-session
+    = form_with do |form|
+      .session-email-form
+        = form.email_field :email, class: 'email-form'
+      .session-password-form
+        = form.password_field :password, class: 'password-form'
+      .session-form-checker
+        .__checker-text
+          私はロボットではあり
+          %br
+          ません
+

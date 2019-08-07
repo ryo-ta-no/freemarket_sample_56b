@@ -8,9 +8,7 @@ body{
     padding: 40px 64px;
     background-color: white;
     text-align: center;
-    .login-new-user{
-    }
-    .login-new-form{
+    .__login-new-form{
       margin: 8px 0 0;
       border: solid 1px #0099e8;
       background-color: #0099e8;
@@ -20,10 +18,70 @@ body{
   }
   .login-box-session{
     padding: 40px 64px;
-    background-color: red;
+    background-color: white;
+    .session-facebook-box{
+      background-color: #385185;
+      line-height: 48px;
+      text-align: center;
+      display: flex;
+      .__session-facebook-icon{
+        margin-left: 7%;
+        .icon-session-facebook{
+          color: white;
+          font-size: 23px;
+        }
+      }
+      .__session-facebook-text{
+        color: white;
+        margin-left: 23%;
+      }
+    }
+    .session-google-box{
+      margin: 16px 0 0;
+      border: #979797 solid 1px;
+      line-height: 48px;
+      text-align: center;
+      display: flex;
+      .__session-google-icon{
+        margin-left: 7%;
+        .icon-session-google{
+          font-size: 23px;
+        }
+      }
+      .__session-google-text{
+        margin-left: 23%;
+      }
+    }
+
   }
   .login-form-session{
-    background-color: blue;
+    background-color: white;
     padding: 24px 64px 32px;
+    .session-email-form{
+      .email-form{
+        width: 90%;
+        // height: 48px;
+        padding: 10px 16px 8px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        font-size: 16px;
+      }
+    }
+    .session-password-form{
+      margin: 24px 0 0;
+      .password-form{
+        padding: 10px 16px 8px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        font-size: 16px;
+        width: 90%;
+      }
+    }
+    .session-form-checker{
+      margin: 24px 0 0;
+      border: 1px solid #ccc;
+      .__checker-text{
+      }
+    }
   }
 }
