@@ -7,10 +7,12 @@
       .projects
         %h2.topic
           プロフィール
-        = form_with url: users_path, class: "editarea" do |f|
-          .nickname-edit
-            = f.text_field :name, id: "nickname"
-            = f.text_area :content, id: "p-about"
-            = f.submit :変更, id: "p-edit"
+        = image_tag 'https://cdn.pixabay.com/photo/2018/12/25/11/10/deer-3894103_1280.png', alt: '', height: '60', width: '60', id: 'img-top'
+        .nickname-edit
+          = form_with url: users_path do |f|
+            = f.text_field :name, class: "nickname"
+            .about-edit
+            = f.text_area :content, class: "p-about"
+            = f.submit :変更, class: "p-edit"
 
   = render 'shared/footer'

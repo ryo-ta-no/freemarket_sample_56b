@@ -3,7 +3,30 @@
 
   .topic {
     text-align: center;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
   }
-  
+
+  .nickname-edit {
+    display: block;
+
+    .nickname {
+
+    }
+
+    .p-about {
+      width: auto;
+
+    }
+
+    .p-edit {
+      width: auto;
+
+    }
+  }
+
 
 }
