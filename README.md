@@ -100,7 +100,7 @@ Things you may want to cover:
 
 ### Association
 - has_many :items
-- has_many :categories through:size_categories
+- has_many :categories through: :size_categories
 
 
 ## categoriesテーブル
@@ -111,7 +111,7 @@ Things you may want to cover:
 
 ### Association
 - has_many :items
-- has_many :categories through:size_categories
+- has_many :sizes through: :size_categories
 
 
 ## Brandsテーブル

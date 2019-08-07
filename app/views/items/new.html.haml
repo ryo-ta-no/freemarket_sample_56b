@@ -1,0 +1,23 @@
+.product_listing_content
+  = render "user-shared/user-header" 
+  .product_listing_box
+    .product_listing_title
+      商品の情報を入力
+    = form_with(model: @item) do |f|
+      .upload_box
+        .upload_text
+          .upload_header 
+            出品画像
+          .upload_require 
+            必須
+        %p
+          最大10枚までアップロードできます
+        = f.label :img, class: "image_label" do
+          .upload_image
+          =f.file_field :img, class: "file_field" 
+          %pre.image_text
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ドラッグアンドドロップ　
+            またはクリックしてファイルをアップロード
+            
+
+  = render "user-shared/user-fotter" 
