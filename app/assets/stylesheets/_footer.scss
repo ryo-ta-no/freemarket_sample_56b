@@ -16,7 +16,7 @@
 .footer {
   background-color: #212121;
   height: 391px;
-  width: 100%;
+  width: 100vw;
   font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
 
   &__footer1 {
@@ -81,6 +81,11 @@
       }
       .footer-mercari-logo {
         margin-top: 70px;
+
+        .mercari-logo-img {
+          max-height: 36px;
+          max-width: 130px;
+        }
       }
     }
     .footer-box-2 {
