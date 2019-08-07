@@ -20,6 +20,7 @@
       
       .upload_box{
         padding: 40px;
+        border-bottom: solid 1px #f5f5f5;
         
 
         .upload_text {
@@ -71,11 +72,16 @@
           font-size: 14px;
           font-weight: bolder;
           line-height: 20px;
-          color: rgba(0, 0, 0, 0.733);
+          color: rgba(0, 0, 0, 0.685);
+
          
 
           }
         }
+      }
+
+      .product_box {
+
       }
     }
   }
