@@ -2,29 +2,22 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-* {
-  box-sizing: border-box;
-}
-
 .main-box {
   background-color: #F5F5F5;
+  width: 100%;
+
 
   .mypage-main {
     display: flex;
-    border-width: 0px;
     margin: 40px 200px 0;
     padding: 40px;
 
+
+
     .right-container {
-      height: 1200px;
-      width: 250px;
-      background-color: chartreuse;
-      margin-right: 40px;
-
-    }
-
-    .left-container {
       width: 100%;
+      max-width: 700px;
+
 
       .user-top {
         height: 200px;
@@ -39,7 +32,9 @@
           position: relative;
           top: 50px;
 
+
           .user-img {
+
 
             #img-top {
               border-radius: 50%;
@@ -51,6 +46,7 @@
           .user-nick {
             @include font-size-1;
             @include line-height;
+            @include font-weight;
           }
 
           .user-val {
@@ -73,7 +69,6 @@
           @include font-size-2;
 
           .active-1 {
-            background-color: aliceblue;
             text-align: center;
             @include tab-center;
             width: 100%;
@@ -149,7 +144,7 @@
             .active-3 {
               width: 100%;
               @include tab-center;
-              background-color: greenyellow;
+              
 
               .do-3 {
                 @include font-weight;
@@ -160,7 +155,7 @@
             .active-4 {
               width: 100%;
               @include tab-center;
-              background-color: green;
+              background-color:gainsboro;
 
               .do-4 {
                 @include font-weight;
