@@ -1,0 +1,21 @@
+.user-center-box
+  .crenter-box
+    .__user-text
+      新規会員登録
+    .user-touroku-box
+      .touroku-box
+        .email-box
+          .__email-icon
+            = fa_icon 'envelope', class: 'icon-email'
+          .__email-text
+            = link_to "メールアドレスで登録する", ragistrations_path, class:'sign-up-member'
+        .facebook-box
+          .__facebook-icon
+            = fa_icon 'facebook-f', class: 'icon-facebook'
+          .__facebook-text
+            Facebookで登録する
+        .google-box
+          .__google-icon
+            = fa_icon 'google', class: 'icon-google'
+          .__google-text
+            Googleで登録する
