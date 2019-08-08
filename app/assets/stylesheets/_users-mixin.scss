@@ -1,3 +1,31 @@
-@mixin font{
+@mixin back-img {
+  background-image : url(mer-back.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
+@mixin font-size-1 {
+  font-size: 15px;
+}
+
+@mixin font-size-2 {
+  font-size: 16px;
+}
+
+@mixin font-weight {
+  font-weight: 600;
+}
+
+@mixin line-height {
+  line-height: 2;
+}
+
+@mixin background-white {
+  background-color: white;
+}
+
+@mixin tab-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

@@ -1,18 +1,18 @@
 .wrapper
   = render 'shared/header'
-  .mypage-main
-    .right-container
-
-    .left-container
-      .projects
-        %h2.topic
-          プロフィール
-        = form_with url: users_path, id: "topic-form" do |f|
-          .nickname-edit
-            = image_tag 'mer.png', alt: '', height: '60', width: '60', id: 'img-top'
-            = f.text_field :name, class: "nickname", value: "りょう"
-          .about-edit
-            = f.text_area :content, class: "p-about", placeholder: "こんにちは、メルカリです。あなたは誰ですか？"
-            = f.submit "変更", class: "p-edit"
+  .main-box
+    .mypage-main
+      .right-container
+      .left-container
+        .projects
+          %h2.topic
+            プロフィール
+          = form_with url: users_path, id: "topic-form" do |f|
+            .nickname-edit
+              = image_tag 'mer.png', alt: '', height: '60', width: '60', id: 'img-top'
+              = f.text_field :name, class: "nickname", value: "りょう"
+            .about-edit
+              = f.text_area :content, class: "p-about", placeholder: "こんにちは、メルカリです。あなたは誰ですか？"
+              = f.submit "変更", class: "p-edit"
 
   = render 'shared/footer'

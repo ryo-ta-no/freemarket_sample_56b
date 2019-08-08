@@ -1,53 +1,54 @@
 .wrapper
   = render 'shared/header'
-  .mypage-main
-    .right-container
-    .left-container
-      .user-top
-        %a.top-box
-          .user-img
-            = image_tag 'mer.png', alt: '', height: '60', width: '60', id: 'img-top'
-          .user-nick
-            りょう
-          .user-val
-            評価
-            %span.bold 0
-            出品数
-            %span.bold 0
-      .user-notice
-        %ul.user-tab
-          %li.active-1
-            %h3
-              %a.one
-                お知らせ
-          %li.active-2
-            %h3
-              %a.one
-                やることリスト
-        .user-box
-          = image_tag 'mer-i', alt: '', height: '100', width: '120', id: 'box-img'
-          %ul.list-box
-            %li.not-find-box-1
-              現在、お知らせはありません
-          -# %ul
-          -#   %li.not-find-box-2
-          -#     現在、やることリストはありません
-      .user-history
-        %h2.history-head
-          購入した商品
-        %ul.history-tab
-          %li.active-3
-            %a.two
-              取引中
-          %li.active-4
-            %a.two
-              過去の取引
-        .history-box
-          = image_tag 'mer-i.png', alt: '', height: '100', width: '120', id: 'box-img'
-          %ul.history-list
-            %li.not-find-history-1
-              取引中の商品がありません
-            -# %li.not-find-history-2
-            -#   過去に取引した商品がありません
+  .main-box
+    .mypage-main
+      .right-container
+      .left-container
+        .user-top
+          %a.top-box
+            .user-img
+              = image_tag 'mer.png', alt: '', height: '60', width: '60', id: 'img-top'
+            .user-nick
+              りょう
+            .user-val
+              評価
+              %span.bold 0
+              出品数
+              %span.bold 0
+        .user-notice
+          %ul.user-tab
+            %li.active-1
+              %h3
+                %a.do-1
+                  お知らせ
+            %li.active-2
+              %h3
+                %a.do-2
+                  やることリスト
+          .user-box
+            = image_tag 'mer-i', alt: '', height: '100', width: '120', id: 'box-img'
+            %ul.list-box
+              %li.not-find-box-1
+                現在、お知らせはありません
+            -# %ul
+            -#   %li.not-find-box-2
+            -#     現在、やることリストはありません
+        .user-history
+          %h2.history-head
+            購入した商品
+          %ul.history-tab
+            %li.active-3
+              %a.two
+                取引中
+            %li.active-4
+              %a.two
+                過去の取引
+          .history-box
+            = image_tag 'mer-i.png', alt: '', height: '100', width: '120', id: 'box-img'
+            %ul.history-list
+              %li.not-find-history-1
+                取引中の商品がありません
+              -# %li.not-find-history-2
+              -#   過去に取引した商品がありません
 
   = render 'shared/footer'
