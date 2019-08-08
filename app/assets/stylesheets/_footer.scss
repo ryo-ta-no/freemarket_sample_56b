@@ -1,7 +1,22 @@
+@mixin footer-caption {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 100;
+  margin-top: 14px;
+}
+
+@mixin footer-menu {
+  color: #fff;
+  font-size: 12px;
+  opacity: .7;
+  margin-top: 14px;
+}
+
+// フッター
 .footer {
   background-color: #212121;
   height: 391px;
-  width: 100%;
+  width: 100vw;
   font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
 
   &__footer1 {
@@ -9,42 +24,38 @@
     width: 1020px;
     margin: auto;
     display: flex;
+
     .footer-box-1 {
       width: 204px;
-      .footer-caption-1 {
+
+      .footer-caption {
         @include footer-caption;
-        .footer-menu-1-1 {
-          @include footer-menu;
-        }
-        .footer-menu-1-2 {
-          @include footer-menu;
-        }
-        .footer-menu-1-3 {
-          @include footer-menu;
-        }
-        .footer-menu-1-4 {
-          @include footer-menu;
-        }
-        .footer-menu-1-5 {
+
+        &__menu {
           @include footer-menu;
         }
       }
+
       .footer-links {
         height: 43px;
         display: flex;
         margin-top: 14px;
+
         .twitter-link {
           width: 47.53px;
           margin-top: 14px;
+
           .twitter-icon {
             color: #fff;
-            font-size: 32px;
+            font-size: 33px;
           }
         }
+
         .facebook-link {
           width: 44px;
           margin-top: 14px;
           padding-bottom: 60px;
+
           .facebook-icon {
             color: #fff;
             font-size: 32px;
@@ -53,41 +64,29 @@
       }
       .footer-mercari-logo {
         margin-top: 70px;
+
+        .mercari-logo-img {
+          max-height: 36px;
+          max-width: 130px;
+        }
       }
     }
     .footer-box-2 {
       width: 234.59px;
-      .footer-caption-2 {
+
+      .footer-caption {
         @include footer-caption;
-        .footer-menu-2-1 {
-          @include footer-menu;
-        }
-        .footer-menu-2-2 {
-          @include footer-menu;
-        }
-        .footer-menu-2-3 {
-          @include footer-menu;
-        }
-        .footer-menu-2-4 {
-          @include footer-menu;
-        }
-        .footer-menu-2-5 {
-          @include footer-menu;
-        }
-        .footer-menu-2-6 {
-          @include footer-menu;
-        }
-        .footer-menu-2-7 {
-          @include footer-menu;
-        }
-        .footer-menu-2-8 {
+
+        &__menu {
           @include footer-menu;
         }
       }
     }
+
     .footer-box-3 {
       height: 391px;
       width: 428.39px;
+
       .footer-caption-3 {
         color: #fff;
         font-size: 16px;
@@ -95,23 +94,17 @@
         height: 22px;
         margin-top: 18px;
       }
+
       .menu-enclosure-1 {
         height: 148px;
         width: 184.19px;
         float: left;
         padding-right: 20px;
-        .footer-menu-3a-1 {
+
+        &__menu {
           @include footer-menu;
         }
-        .footer-menu-3a-2 {
-          @include footer-menu;
-        }
-        .footer-menu-3a-3 {
-          @include footer-menu;
-        }
-        .footer-menu-3a-4 {
-          @include footer-menu;
-        }
+
         .footer-mercari-copyright {
           color: #fff;
           font-size: 12px;
@@ -119,34 +112,27 @@
           margin-left: 35px;
         }
       }
+
       .menu-enclosure-2 {
         height: 148px;
         width: 184.19px;
         float: left;
-        .footer-menu-3b-1 {
-          @include footer-menu;
-        }
-        .footer-menu-3b-2 {
-          @include footer-menu;
-        }
-        .footer-menu-3b-3 {
-          @include footer-menu;
-        }
-        .footer-menu-3b-4 {
+
+        &__menu {
           @include footer-menu;
         }
       }
     }
+
     .footer-box-4 {
       height: 96.83px;
       width: 88px;
-      .footer-caption-4 {
+
+      .footer-caption {
         @include footer-caption;
       }
-      .footer-menu-4-1 {
-        @include footer-menu;
-      }
-      .footer-menu-4-2 {
+
+      .footer-country {
         @include footer-menu;
       }
     }
