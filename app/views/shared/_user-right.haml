@@ -1,67 +1,59 @@
 .container
-
-  
   .main-container
-    
     = render 'shared/side-bar'
-
     .right-container
-
       .section
         .h2
           本人情報の登録
-      
         .form
           .text
-            
             お客さまの本人情報をご登録ください。
             登録されたお名前・生年月日を変更する場合、本人確認書類の提出が必要になります。
             %li.li
               = link_to "",class: "p" do
                 %p 本人確認書類のアップロードについて
               = fa_icon 'chevron-right', class: 'icon-arrow-right' 
-              
-           
           .name
             %label 
               お名前
-
           .kana
             %label
               カタカナ
           .birth
             %label
               生年月日
-          .postnam
+          .form-group
             %label.label
               郵便番号
             %span.span
               任意
             = form_with  method: :get, local: true, class:'form-type'  do |f| 
               = f.text_field :content, class: 'form__input', placeholder: '例） 1234567',name: 'zip-code',type:'text' ,value:''
-          .prefecture
+          .form-group
             %label.label
               都道府県
-              %span 
-                任意
-                -# = form_with model: :prefecture, local: true do |f| 
-                  -# = f.select :prefecture.all,
+            %span.span
+              任意
+            .form-select
+              = form_with model:@prefecture, local: true ,class:'form-type' do |f|
+                = f.collection_select(:prefecture_id, Prefecture.all, :id, :prefecture, selected: @search_params[:prefecture_id], include_blank: '--',) 
+                = fa_icon 'chevron-down', class: 'icon-arrow-right'
                   
-          .city
+          .form-group
             %label.label 
               市区町村
             %span.span
               任意
             = form_with  method: :get, local: true  do |f| 
               = f.text_field :content, class: 'form__input', placeholder: '例) 愛知県名古屋市',name: 'zip-code',type:'text' ,value:''
-          .banti
+          .form-group
             %label.label
               番地
             %span.span
               任意
             = form_with  method: :get, local: true  do |f| 
               = f.text_field :content, class: 'form__input', placeholder: '例）栄５０番地-1',name: 'zip-code',type:'text' ,value:''
-          .bild
+          .form-group
             %label.label
               建物名
             %span.span
@@ -69,14 +61,12 @@
             = form_with  method: :get, local: true  do |f| 
               = f.text_field :content, class: 'form__input', placeholder: '例）栄センタービル3階',name: 'zip-code',type:'text' ,value:''
           .regist
-            登録する
-             
-             
-            
+            = link_to "",class: "p" do
+              登録する
           .form-text
             %li.li
               = link_to "",class: "p" do
                 %p 本人の登録情報について
               = fa_icon 'chevron-right', class: 'icon-arrow-right' 
                
-                
+             
