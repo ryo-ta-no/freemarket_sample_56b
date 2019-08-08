@@ -1,0 +1,24 @@
+.authentication-box
+  .authentication-small-box
+    .__call-number-text
+      電話番号認証
+    .call-center
+      = form_with do |f|
+        .__list-call-form
+          .__list-call-number-text
+            = f.label :"携帯電話の番号"
+          .__list-call-field
+            = f.telephone_field :telephone, placeholder: "携帯電話の番号を入力", class: "text-call"
+          .__list-short-text
+            本人確認のため、携帯電話のSMS(ショートメッセージ
+            %br/
+            サービス)を利用して認証します。
+          .__l-call-text
+            SMSを送信する
+          .list-call-under-text
+            ※電話番号は本人確認や不正利用帽子のために利用し
+            %br/
+            ます。他のユーザーに公開されることはありません。
+          .list-call-authen
+            電話番号の確認が必要な理由>
+
