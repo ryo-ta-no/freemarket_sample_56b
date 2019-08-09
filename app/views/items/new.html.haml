@@ -37,13 +37,12 @@
         .product_box-details
           商品の詳細
         .product_select-details
-          .product_header
-            カテゴリー
-          .product_require
-            必須
+          .product_select-group
+            .product_header
+              カテゴリー
+            .product_require
+              必須
           .product_select
-            .product_select-box
-                
-
-
+            = f.collection_select :category, @category, :id, :category_name, { prompt: "---" }, { class: "select-box", id: "category_select" }
+            = 
   = render "user-shared/user-fotter" 
