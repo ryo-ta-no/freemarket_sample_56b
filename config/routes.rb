@@ -9,6 +9,7 @@ Rails.application.routes.draw do
       get 'authentication'
       get 'address'
       get 'payment'
+      get 'complete'
     end
   end
 end
