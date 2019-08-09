@@ -315,25 +315,33 @@
         .product-details-23 {
           background-color: blue;
           height: 40px;
-          display: flex;
 
           .product-details-24 {
-            background-color: red;
-            width: 126px;
-            border-radius: 40px;
+              display: flex;
+              float: left;
+
+            .product-details-25 {
+              background-color: rgb(245, 245, 245);
+              width: 126px;
+              border-radius: 40px;
+            }
+
+            .product-details-26 {
+              background-color: rgb(245, 245, 245);
+              width: 180px;
+              border-radius: 40px;
+            }
           }
 
-          .product-details-25 {
-            background-color: yellow;
-            width: 180px;
-            border-radius: 40px;
-          }
-
-          .product-details-26 {
-            background-color: green;
+          .product-details-27 {
+            background-color: rgb(245, 245, 245);
             width: 230px;
+            float: right;
 
-            
+            .product-details-28 {
+              color: #0099e8;
+              font-size: 14px;
+            }
           }
         }
       }
