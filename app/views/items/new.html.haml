@@ -18,12 +18,32 @@
           %pre.image_text
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ドラッグアンドドロップ　
             またはクリックしてファイルをアップロード
-        
-      .product_box 
-        .product_text
+
+      .product_content
+        .product_box-description
           .product_header
             商品名
           .product_require
+            必須  
+        = f.text_field :name, placeholder: "商品名（必須 40文字まで)", class: "product_description"
+        .product_box-explain
+          .product_header
+            商品の説明
+          .product_require
             必須
+        = f.text_area :explain, placeholder: "商品の説明 (必須 1000文字以内) (色、素材、重さ、定価、注意点など) 例) 2010年頃に1万円で購入したジャケットです。ライトグレーではありません。あわせやすいのでおすすめです。", class: "product_explain"
+
+      .product_content2
+        .product_box-details
+          商品の詳細
+        .product_select-details
+          .product_header
+            カテゴリー
+          .product_require
+            必須
+          .product_select
+            .product_select-box
+                
+
 
   = render "user-shared/user-fotter" 
