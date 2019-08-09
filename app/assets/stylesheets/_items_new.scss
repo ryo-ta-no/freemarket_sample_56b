@@ -12,6 +12,23 @@
   font-weight: bolder;
   font-size: 14px;
 }
+@mixin select {
+  margin: 8px 0 0;
+  width: 400px;
+  height: 50px;
+  padding: 10px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+@mixin fa-chevron-down {
+  color: #888;
+  position: absolute;
+  right: 20px;
+  bottom: 17px;
+}
 select {
   -webkit-appearance: none;
   
@@ -175,21 +192,10 @@ select {
           position: relative;
           
           .category_select-box {
-            margin: 8px 0 0;
-            width: 400px;
-            height: 50px;
-            padding: 10px 16px 8px;
-            border-radius: 4px;
-            border: 1px solid #ccc;
-            background: #fff;
-            font-size: 16px;
-            box-sizing: border-box;
+            @include select
           }
           .fa-chevron-down {
-            color: #888;
-            position: absolute;
-            right: 20px;
-            bottom: 17px;
+            @include fa-chevron-down;
           }
         }
 
@@ -205,9 +211,13 @@ select {
             }
         }
         .product_state-select {
+          position: relative;
           
           .state_select-box {
-            
+            @include select;
+          }
+          .fa-chevron-down {
+            @include fa-chevron-down;
           }
         }
       }
