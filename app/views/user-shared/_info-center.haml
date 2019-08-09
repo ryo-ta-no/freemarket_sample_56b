@@ -76,7 +76,16 @@
               必須
 
           -# 生年月日
-          = render "user-shared/birthday"
+          .__info-pull-box
+            .__info-pull-mouth
+            = render "user-shared/pull-down-birthday/pull-mouth"
+            .__info-pull-text
+              月
+            .__info-pull-day
+            = render "user-shared/pull-down-birthday/pull-day"
+            .__info-pull-text
+              日
+
 
           -# 本人情報テキスト
           .__list-render-text

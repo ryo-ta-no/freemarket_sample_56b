@@ -7,4 +7,7 @@ class RagistrationsController < ApplicationController
 
   def address
   end
+
+  def payment
+  end
 end

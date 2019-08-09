@@ -12,6 +12,39 @@
   vertical-align: top;
 }
 
+.text-info{
+  width: 100%;
+  margin: 8px 0 0;
+  height: 30px;
+  padding: 10px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+  line-height: 15px;
+  font-size: 16px;
+}
+
+.__info-form-text{
+  margin: 6px 0 3px 8px;
+}
+
+.sms-text-box{
+  color: #fff;
+  text-decoration: none;
+}
+
+.pull-box-info{
+  width: 100%;
+  margin: 8px 0 0;
+  height: 50px;
+  padding: 10px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+  line-height: 15px;
+  font-size: 16px;
+}
+
 .info-center-box{
   margin: auto;
   .center-info-main{
@@ -52,6 +85,19 @@
         display: flex;
         .__katakana-name-2{
           margin-left: 10px;
+        }
+      }
+      .__info-pull-box{
+        display: flex;
+        .__info-pull-mouth{
+          margin-right: 3px;
+        }
+        .__info-pull-day{
+          margin-left: 5px;
+        }
+        .__info-pull-text{
+          margin-top: 23px;
+          margin-left: 5px;
         }
       }
 
@@ -131,23 +177,3 @@
   }
 }
 
-.text-info{
-  width: 100%;
-  margin: 8px 0 0;
-  height: 30px;
-  padding: 10px 16px 8px;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-  background: #fff;
-  line-height: 15px;
-  font-size: 16px;
-}
-
-.__info-form-text{
-  margin: 6px 0 3px 8px;
-}
-
-.sms-text-box{
-  color: #fff;
-  text-decoration: none;
-}
