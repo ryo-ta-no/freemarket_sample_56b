@@ -1,3 +1,4 @@
+@import "users-mixin";
 @import "reset";
 @import "header";
 @import "slick-banner";
@@ -21,3 +22,6 @@
 @import "ragistration/_session-user";
 @import "ragistration/info-header";
 @import "font-awesome";
+
+@import "users-show";
+@import "users-edit";
