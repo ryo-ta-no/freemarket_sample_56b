@@ -3,12 +3,12 @@ crumb :root do
 end
 
 crumb :show_user do
-  link "マイページ", users_path
+  link "マイページ", user_path
   parent :root
 end
 
 crumb :edit_user do |user|
-  link "プロフィール"
+  link "プロフィール", edit_user_path
   parent :show_user
 end
 
