@@ -42,7 +42,16 @@
               カテゴリー
             .product_require
               必須
-          .product_select
-            = f.collection_select :category, @category, :id, :category_name, { prompt: "---" }, { class: "select-box", id: "category_select" }
-            = 
+          .product_category-select
+            = f.collection_select :category, @category, :id, :category_name, { prompt: "---" }, { class: "category_select-box", id: "category_select" }
+            %i.fa.fa-chevron-down
+
+          .product_select-group2
+            .product_header
+              商品の状態
+            .product_require
+              必須
+          .product_state-select
+            = f.select :state, Item.states.keys, {}, { class: "state_select-box" }
+            %i.fa.fa-chevron-down
   = render "user-shared/user-fotter" 
