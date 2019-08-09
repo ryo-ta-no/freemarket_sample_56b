@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-
   devise_for :users
   root to: "items#index"
   resources :items
@@ -12,4 +11,7 @@ Rails.application.routes.draw do
       get 'complete'
     end
   end
+  resources :users
+
+  resources :ragistrations
 end
