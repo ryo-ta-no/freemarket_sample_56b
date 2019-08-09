@@ -2,6 +2,9 @@ class RagistrationsController < ApplicationController
   def index
   end
 
-  def new
+  def authentication
+  end
+
+  def address
   end
 end
