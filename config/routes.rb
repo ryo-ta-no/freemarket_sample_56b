@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     collection do
       get 'authentication'
       get 'address'
+      get 'payment'
     end
   end
 end
