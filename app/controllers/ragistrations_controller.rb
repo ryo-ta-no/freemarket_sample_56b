@@ -10,4 +10,7 @@ class RagistrationsController < ApplicationController
 
   def payment
   end
+
+  def complete
+  end
 end
