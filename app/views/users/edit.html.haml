@@ -1,0 +1,20 @@
+= render 'shared/exhibition-btn'
+.wrapper
+  -# = render 'shared/header'
+  - breadcrumb :edit_user
+  .main-box
+    .mypage-main
+      = render 'shared/side-bar'
+      .right-container
+        .projects
+          %h2.topic
+            プロフィール
+          = form_with url: users_path, id: "topic-form" do |f|
+            .nickname-edit
+              = image_tag 'mer.png', alt: '', height: '60', width: '60', id: 'img-top'
+              = f.text_field :name, class: "nickname", value: "りょう"
+            .about-edit
+              = f.text_area :content, class: "p-about", placeholder: "例）こんにちは☆ご覧いただきありがとうございます！かわいいものやきれいめオフィスカジュアル中心に出品しています。服のサイズは主に９号です。気持ちよく取引できるようできるよう心がけていますので、商品や発送方法などなどご質問がありましたらお気軽にどうぞ♪"
+              = f.submit "変更", class: "p-edit"
+
+  = render 'shared/footer'
