@@ -78,14 +78,7 @@
           -# 生年月日
           .__info-pull-box
             .__info-pull-mouth
-            = render "user-shared/pull-down-birthday/pull-mouth"
-            .__info-pull-text
-              月
-            .__info-pull-day
-            = render "user-shared/pull-down-birthday/pull-day"
-            .__info-pull-text
-              日
-
+            = raw sprintf( f.date_select( :birth_date , use_month_numbers: true , start_year: 1930 , end_year: (Time.now.year - 18) , default: Date.new(1989, 1, 1),date_separator: '%s'),'年 ', '月 ') + '日'
 
           -# 本人情報テキスト
           .__list-render-text
