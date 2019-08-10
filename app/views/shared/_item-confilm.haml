@@ -1,0 +1,74 @@
+.item-confilm-conteiner 
+  .item-confilm-header
+    %h1.h1
+      %img{src: "//www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?917505326",width:'185px',height: '49px'}
+  .item-confilm-main
+    %section.buy-content
+      %h2.main-head
+        購入内容の確認
+      .main-center
+        .main-inner
+          %h3.inner-lazyloaded
+          %img{src:"https://static.mercdn.net/thumb/photos/m38251906148_1.jpg?1565241696",  alt:"",width: '64px',}
+            %p.item-name 
+              新品  革  アフリカ大陸キーホルダー
+          = form_with method: :post, class: 'buys-form' do |f|
+            %p.item-price
+              ¥ 1,000 
+              %span.item-fee
+                送料込み
+            %ul.point-boxs
+              %li.point-box
+                .point-text
+                  ポイントはありません
+            %ul.total-buy-price
+              %li.price-box
+                .price-text
+                  支払い金額
+                .price-num
+                  %span
+                    ¥1,000
+            %p.error-text
+              配送先と支払い方法の入力を完了してください。
+            %button{type: 'submit', class: 'purchase-btn'} 購入する
+
+    %section.shipping-address-box
+      .main-inner
+        %h3
+          配送先
+        %address.shipping-info
+          〒
+          %br
+          %p.shipping-info
+            
+          =link_to "",class:"shipping-p" do
+            %span 変更する
+            = fa_icon "arrow-right",class:"shipping-p"
+
+    %section.shipping-method-box
+      .main-inner
+        %h3 
+          支払方法
+          %p.shipping-info
+        %br
+          =link_to "",class:"shipping-p" do
+            %span 変更する
+            = fa_icon "arrow-right",class:"shipping-p"
+
+  .item-confilm-footer
+    %nav
+      %ul.footer-text
+        %li.li
+          = link_to "https://www.mercari.com/jp/privacy/",class:"li" do
+            プライバシーポリシー 
+        %li.li
+          = link_to "https://www.mercari.com/jp/tos/" ,class:"li" do
+            メルカリ利用規約 
+        %li.li
+          = link_to "https://www.mercari.com/jp/tokutei/",class:"li" do
+            特定商取引に関する表記           
+      = link_to "https://www-mercari-jp.akamaized.net/assets/img/common/common/logo-gray.svg?2508029365",class:"footer-logo" do
+        %img{src: "//www-mercari-jp.akamaized.net/assets/img/common/common/logo-gray.svg?2508029365", alt:"mercari", width:'80', height:'65'}
+      %p 
+        %small
+          Mercari @2019 
