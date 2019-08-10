@@ -1,6 +1,7 @@
-= render 'shared/exhibition-btn'
 .wrapper
   = render 'shared/header'
+  - breadcrumb :edit_user
+  = render 'shared/breadcrumbs'
   .main-box
     .mypage-main
       = render 'shared/side-bar'
@@ -17,3 +18,4 @@
               = f.submit "変更", class: "p-edit"
 
   = render 'shared/footer'
+  = render 'shared/exhibition-btn'
