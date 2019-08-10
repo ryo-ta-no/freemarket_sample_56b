@@ -1,8 +1,7 @@
 .wrapper
   = render 'shared/header'
   - breadcrumb :edit_user
-  .bread
-    = breadcrumbs separator: " &rsaquo; "
+  = render 'shared/breadcrumbs'
   .main-box
     .mypage-main
       = render 'shared/side-bar'
