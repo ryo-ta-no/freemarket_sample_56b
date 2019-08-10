@@ -3,15 +3,8 @@ Rails.application.routes.draw do
   root to: "items#index"
   resources :items
 
-  resources :ragistrations do
-    collection do
-      get 'authentication'
-      get 'address'
-      get 'payment'
-      get 'complete'
-    end
-  end
   resources :users
 
   resources :ragistrations
+
 end
