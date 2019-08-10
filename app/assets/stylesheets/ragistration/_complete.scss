@@ -1,0 +1,41 @@
+.complete-text-move{
+  color: #fff;
+  text-decoration: none;
+}
+
+.complete-box{
+  .complete-center-box{
+    background-color: #fff;
+    margin: auto;
+    width: 700px;
+    .__complete-small-text{
+      font-size: 22px;
+      padding: 62px;
+      text-align: center;
+    }
+    .__complete-small-box{
+      padding: 40px 40px 20px;
+      .__complete-list-box{
+        max-width: 343px;
+        margin: auto;
+        .__complete-big-textbox{
+          text-align: center;
+          font-size: 20px;
+        }
+      }
+      .__complete-red-move{
+        margin: 24px 0 0 ;
+        background: #ea352d;
+        border: 1px solid #ea352d;
+        color: #fff;
+        height: 38px;
+        width: 72%;
+        border-radius: 2px;
+        text-align: center;
+        padding-top: 10px;
+        margin-left: 12%;
+        }
+
+    }
+  }
+}
