@@ -4,4 +4,16 @@ Rails.application.routes.draw do
   resources :items
 
 
+  resources :ragistrations do
+    collection do
+      get 'authentication'
+      get 'address'
+      get 'payment'
+      get 'complete'
+    end
+  end
+  resources :users
+
+  resources :ragistrations
+
 end
