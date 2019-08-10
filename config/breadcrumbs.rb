@@ -7,10 +7,35 @@ crumb :show_user do
   parent :root
 end
 
-crumb :edit_user do |user|
+crumb :edit_user do
   link "プロフィール", edit_user_path
   parent :show_user
 end
+
+# crumbs :user_payment
+#   link "支払い方法",
+#   parent :show_user
+# end
+
+# crumb :
+#   link "本人情報の登録",
+#   parent :show_user
+# end
+
+
+
+# crumb :
+#   link "カテゴリー一覧",
+#   parent :root
+# end
+
+
+
+
+
+
+
+
 
 
 # crumb :projects do
