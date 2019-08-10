@@ -1,7 +1,7 @@
 .item-confilm-conteiner 
   .item-confilm-header
     %h1.h1
-      %img{src: "//www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?917505326",width:'185px',height: '49px'}
+    = image_tag src: "//www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?917505326",width:'185px',height: '49px'
   .item-confilm-main
     %section.buy-content
       %h2.main-head
@@ -9,7 +9,7 @@
       .main-center
         .main-inner
           %h3.inner-lazyloaded
-          %img{src:"https://static.mercdn.net/thumb/photos/m38251906148_1.jpg?1565241696",  alt:"",width: '64px',}
+          = image_tag src:"https://static.mercdn.net/thumb/photos/m38251906148_1.jpg?1565241696",alt:"",width: '64px'
             %p.item-name 
               新品  革  アフリカ大陸キーホルダー
           = form_with method: :post, class: 'buys-form' do |f|
@@ -30,7 +30,7 @@
                     ¥1,000
             %p.error-text
               配送先と支払い方法の入力を完了してください。
-            %button{type: 'submit', class: 'purchase-btn'} 購入する
+            = button type: 'submit', class: 'purchase-btn' 購入する
 
     %section.shipping-address-box
       .main-inner
@@ -68,7 +68,7 @@
           = link_to "https://www.mercari.com/jp/tokutei/",class:"li" do
             特定商取引に関する表記           
       = link_to "https://www-mercari-jp.akamaized.net/assets/img/common/common/logo-gray.svg?2508029365",class:"footer-logo" do
-        %img{src: "//www-mercari-jp.akamaized.net/assets/img/common/common/logo-gray.svg?2508029365", alt:"mercari", width:'80', height:'65'}
+        = image_tag src: "//www-mercari-jp.akamaized.net/assets/img/common/common/logo-gray.svg?2508029365", alt:"mercari", width:'80', height:'65'
       %p 
         %small
           Mercari @2019 
