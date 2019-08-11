@@ -83,6 +83,7 @@ Things you may want to cover:
 |size_id|string|foreign_key: true, null false|
 |brand_id|integer|foreign_key: true, null false|
 |user_id|integer|foreign_key: true, null false|
+|category_id|integer|foreign_key: true, null false|
 
 ### Association
 - has_many :photo
