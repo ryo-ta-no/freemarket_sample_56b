@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: "items#index"
+  root to: "items#show"
   resources :items
+
 
   resources :ragistrations do
     collection do
@@ -14,4 +15,5 @@ Rails.application.routes.draw do
   resources :users
 
   resources :ragistrations
+
 end

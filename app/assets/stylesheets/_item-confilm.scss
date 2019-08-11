@@ -1,0 +1,207 @@
+@mixin buy-content{
+  margin: 40px 0 0;
+    padding: 24px 12.5% 0;
+    border-top: 1px solid #f5f5f5;
+}
+
+.item-confilm-conteiner {
+  padding: 0 0 250px;
+  position: relative;
+  min-height: 100%;
+  background: #f5f5f5;
+  font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+  font-size: 14px;
+  color: #333;
+  line-height: 1;
+    
+  .item-confilm-header{
+    height: 128px;
+    text-align: center;
+     .h1{
+      margin: 40px 0 0;
+      display:inline-block;
+     }
+   }
+  .item-confilm-main{
+    display: block;
+    margin: 0 auto;
+    width: 700px;
+    background:#fff;
+    
+      .main-head{
+        font-weight: bold;
+        padding: 16px;
+        font-size:22px;
+        line-height: 1.5;
+        text-align: center;
+       }  
+      .main-center{
+        @include buy-content;
+        margin: 0;
+        
+        .main-inner{
+          display: flex;
+          flex-wrap: wrap;
+          text-align: center;
+          margin: 0 auto;
+          max-width: 320px;
+
+          .inner-lazyloaded{
+          font-size:22px;
+         }
+
+            .item-name{
+              width: calc(100% - 80px);
+              margin: 0 0 0 16px;
+              text-align: left;
+              font-size: 16px;
+              line-height: 1.5;
+              font-weight: 600;
+             } 
+          .buys-form{
+            width: 100%;
+          
+            .item-price{
+            margin: 8px 0 0;
+            line-height: 1.5;
+            font-size: 22px;
+            font-weight: 600;
+           }
+              .item-fee{
+                margin: 0 0 0 8px;
+                font-size: 14px;
+                font-weight: 400;
+                display: inline-block;
+              }
+
+            .point-boxs{
+              background: #ccc;
+              margin: 16px 0 0;
+              list-style: none;
+            }
+                .point-text{
+                  padding:16px;
+                  border: 1px solid #ccc;
+                  position: relative;
+                }
+            .total-buy-price{
+              display: table;
+              border-collapse: collapse;
+              width: 100%;
+              .price-box{
+                font-size: 18px;
+                font-weight:600;
+                display: table-row;
+                .price-text{
+                  text-align: left;
+                  display: table-cell;
+                  padding: 16px 0;
+                }
+                .price-num{
+                  text-align: right;
+                  display: table-cell;
+                  padding: 16px 0;
+                  font-size: 28px;
+                }
+              }
+            }
+
+            .error-text{
+              margin: 8px 0 0;
+              line-height: 1.5;
+              color: #ea352d;
+              line-height: 1.5;
+              font-size: 14px;
+              }
+
+            .purchase-btn{
+              margin: 8px 0 0;
+              border: 1px solid #888;
+              background: #888;
+              color: #fff;
+              display: block;
+              width: 100%;
+              line-height: 48px;
+              font-size: 14px;
+              cursor: pointer;
+              text-align: center;
+              font-weight:600;
+             }
+            }
+           }
+          }
+      
+      .shipping-address-box{
+        @include buy-content;
+     
+        .main-inner{
+          max-width: 320px;
+          margin: 0 auto;
+          font-size:14px;
+        }
+          .shipping-info{
+            margin: 8px 0 0;
+            font-size: 14px;
+            line-height: 1.4;
+          }
+          .shipping-p{
+            display: inline-block;
+            float:right;
+            color: #0099e8;
+            text-decoration: none;
+          }
+        }
+      .shipping-method-box{
+        @include buy-content;
+        padding-bottom:40px;
+
+        .main-inner{
+          max-width: 320px;
+          margin: 0 auto;
+          font-size:14px;
+        }
+          .shipping-info{
+            margin: 8px 0 0;
+            font-size: 14px;
+            line-height: 1.4;
+          }
+          .shipping-p{
+            display: inline-block;
+            float:right;
+            color: #0099e8;
+            text-decoration: none;
+          }   
+         }
+        }
+
+  .item-confilm-footer{
+    display:inline-block;
+    width: 100%;
+    height: 190px;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    padding: 40px 0;
+    text-align: center;
+    color:#333;
+     
+        .li{
+          color: #333;
+          display:inline-block;
+          margin: 0 0 0 16px;
+          font-size: 12px;
+          text-decoration:none;
+        }}
+      .footer-logo{
+        display: block;
+        color: #333;
+        width: 80px;
+        height: 65px;
+        margin: 40px auto 0;
+        font-size:12px;
+        text-decoration: none;
+      }
+    }
