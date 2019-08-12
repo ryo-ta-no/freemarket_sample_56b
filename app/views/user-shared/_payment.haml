@@ -4,7 +4,7 @@
       支払い方法
     .__payment-small-box
       .__payment-list-box
-        = form_with do |pay|
+        = form_with model: @user , url: complete_ragistrations_path, method: :get, local: true do |pay|
           .__l-payment-form
             .__l-p-text
               = pay.label :"カード番号"
@@ -48,5 +48,5 @@
             カード裏面の番号とは？
 
           .__payment-move-on-btn
-            = link_to "次へ進む" , complete_ragistrations_path , class: "payment-move-text"
+            = pay.submit "次へ進む", class: "payment-move-text"
 
