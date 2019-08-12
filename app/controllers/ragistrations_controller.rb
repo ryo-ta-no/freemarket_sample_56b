@@ -28,10 +28,11 @@ class RagistrationsController < ApplicationController
     session[:first_kana] = user_params[:first_kana]
     session[:last_kana] = user_params[:last_kana]
     session[:post] = user_params[:post]
-    session[:pretectures] = user_params[:pretectures]
+    session[:pretecture_id] = user_params[:pretecture_id]
     session[:city] = user_params[:city]
     session[:bilding] = user_params[:bilding]
     session[:phone] = user_params[:phone]
+    binding.pry
     @user = User.new
   end
 
@@ -58,7 +59,7 @@ class RagistrationsController < ApplicationController
       call_number: session[:call_number],
       birth_day: session[:birth_day],
       post: session[:post],
-      pretectures: session[:pretectures],
+      pretecture_id: session[:pretecture_id],
       city: session[:city],
       address: session[:address],
       bilding: session[:bilding],
@@ -93,7 +94,7 @@ class RagistrationsController < ApplicationController
       :birth_day,
       :authentication_number,
       :post,
-      :pretectures,
+      :pretecture_id,
       :city,
       :address,
       :bilding,
