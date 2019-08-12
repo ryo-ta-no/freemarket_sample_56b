@@ -30,7 +30,7 @@ class ItemsController < ApplicationController
 
 
 
-end
+
 
   def show
     @search_params = user_search_params
