@@ -12,20 +12,22 @@ Rails.application.routes.draw do
 
   root to: "items#show"
   resources :items
+  resources :users
 
 
   resources :ragistrations do
+  resources :ragistrations , only: [:create] do
     collection do
+      get 'member'
       get 'authentication'
       get 'address'
       get 'payment'
       get 'complete'
+      post "/" => "items#index"
     end
   end
-  resources :users
+
 
   resources :ragistrations
-
-
 end
 

@@ -31,7 +31,7 @@ Things you may want to cover:
 |email|string|null false, unique: true|　メールアドレス
 |first-name|string|null false|　全角苗字
 |last-name|string|null false|　全角名前
-|first-kana|string|null false|　苗字カタカナ
+|first-kana|string|null false| 苗字カタカナ
 |last-kana|string|null false|　名前カタカナ
 |year|integer|null false|　年
 |year-mouth|integer|null false|　月
