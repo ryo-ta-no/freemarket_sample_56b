@@ -69,12 +69,12 @@ class RagistrationsController < ApplicationController
       card_name: session[:card_name],
       security_card: session[:security_card]
     )
-    # if @user.save
-    #   session[:id] = @user.id
-    #   redirect_to complete_root_path
-    # else
-    #   render '/signup/registration'
-    # end
+    if @user.save
+      session[:id] = @user.id
+      redirect_to complete_root_path
+    else
+      render '/signup/registration'
+    end
   end
 
   private
