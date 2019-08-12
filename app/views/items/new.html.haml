@@ -84,7 +84,7 @@
             .product_require
               必須
           .product_days-select
-            = f.collection_select :prefecture, @prefecture, :id, :prefecture, {prompt: "---"}, {class: "days_select-box", id: "region_select"}
+            = f.collection_select :postage_day, @postage_day, :id, :postage_day, {prompt: "---"}, {class: "days_select-box", id: "days_select"}
             %i.fa.fa-chevron-down
 
   = render "user-shared/user-fotter" 

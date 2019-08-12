@@ -52,7 +52,7 @@ ActiveRecord::Schema.define(version: 2019_08_12_074408) do
     t.datetime "updated_at", null: false
     t.integer "category_id"
     t.integer "postage_id", null: false
-    t.integer "postage_days_id", null: false
+    t.integer "postage_day_id", null: false
     t.index ["name"], name: "index_items_on_name"
   end
 

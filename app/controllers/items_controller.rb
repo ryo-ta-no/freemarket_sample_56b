@@ -7,6 +7,7 @@ class ItemsController < ApplicationController
     @category = Category.all.order("id ASC").limit(13)
     @postage = Postage.all.order("id ASC").limit(2)
     @prefecture = Prefecture.all
+    @postage_day = PostageDay.all
   end
 
   def category_children  
