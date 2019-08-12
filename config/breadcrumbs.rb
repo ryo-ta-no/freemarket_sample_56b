@@ -2,14 +2,14 @@ crumb :root do
   link "メルカリ", root_path
 end
 
-crumb :show_user do
-  link "マイページ", user_path
+crumb :index_user do
+  link "マイページ", users_path
   parent :root
 end
 
 crumb :edit_user do
-  link "プロフィール", edit_user_path
-  parent :show_user
+  link "プロフィール", user_path
+  parent :index_user
 end
 
 # crumbs :user_payment
@@ -17,12 +17,10 @@ end
 #   parent :show_user
 # end
 
-# crumb :
-#   link "本人情報の登録",
-#   parent :show_user
-# end
-
-
+crumb :update_user do
+  link "本人情報の登録",items_path
+  parent :index_user
+end
 
 # crumb :
 #   link "カテゴリー一覧",
