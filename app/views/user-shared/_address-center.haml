@@ -39,8 +39,7 @@
               = ad.label :"都道府県"
             .__l-a-required
               必須
-          = ad.collection_select :prefecture_id, Prefecture.all ,:id, prompt: "--",class: "text-address"
-          = fa_icon "chevron-down"
+          = ad.collection_select(:prefecture_id, Prefecture.all ,:id, :prefecture, prompt: "--" )
           .__l-address-form
             .__l-a-text
               = ad.label :"市区町村"
