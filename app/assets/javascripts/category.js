@@ -37,7 +37,7 @@ $(function(){
 
 
 
-  $('#category_select').on('change', function(){ 
+  $(document).on('change', '#category_select', function(){ 
     var productcategory = document.getElementById('category_select').value; 
     if (productcategory != ''){
       $.ajax({

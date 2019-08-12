@@ -28,7 +28,7 @@ function appendChildrenBox(insertHTML){
 }
 
 
-  $('#postage_select').on('change', function(){
+  $(document).on('change', '#postage_select', function(){
     console.log(1)
     var postageitem = document.getElementById('postage_select').value; 
     console.log(postageitem)
@@ -46,7 +46,7 @@ function appendChildrenBox(insertHTML){
           insertHTML += appendOption(child);
         });
         appendChildrenBox(insertHTML);
-        $('#postage_select').on('change', function(){
+        $(document).on('change', '#postage_select', function(){
           $('#children_wrapper').remove();
         })
       })
