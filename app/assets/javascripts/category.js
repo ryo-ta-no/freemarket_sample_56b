@@ -35,10 +35,11 @@ $(function(){
     $('.product_select-grandchildren').append(grandchildrenSelectHtml);
   }
 
-  $('#category_select').on('change', function(){
-    console.log(0)
+
+
+  $('#category_select').on('change', function(){ 
     var productcategory = document.getElementById('category_select').value; 
-    console.log(1)
+    if (productcategory != ''){
       $.ajax({
         url: 'category_children',
         type: 'GET',
@@ -51,17 +52,23 @@ $(function(){
           insertHTML += appendOption(child);
         });
         appendChidrenBox(insertHTML);
+        $(document).on('change', '#category_select', function(){
+          $('#children_wrapper').remove();
+          $('#ggrandchildren_wrapper').remove();
+        })
       })
       .fail(function(){
         alert('カテゴリー取得に失敗しました');
+        
       })
-
+    }
   });
+  
+
 
   $(document).on('change', '#child_category', function(){
-    console.log(2)
     var productcategory = document.getElementById('child_category').value;
-    console.log(3)
+    if (productcategory != ''){
     $.ajax ({
       url: 'category_grandchildren',
       type: 'GET',
@@ -69,16 +76,18 @@ $(function(){
       dataType: 'json'
     })
     .done(function(grandchildren){
-      console.log(4)
       var insertHTML = '';
       grandchildren.forEach(function(grandchild){
-        console.log(5)
         insertHTML += appendOption(grandchild);
         });
         appendgrandChidrenBox(insertHTML);  
+        $(document).on('change', '#child_category',function(){
+          $('#grandchildren_wrapper').remove();
+          })
         })  
         .fail(function(){
           alert('カテゴリー取得に失敗しました');
         })
+    }
   });
 });

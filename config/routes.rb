@@ -3,8 +3,8 @@ Rails.application.routes.draw do
   root to: "items#index"
   resources :items do
     collection do
-      get 'category_children', defaults: { format: 'json' }
-      get 'category_grandchildren', defaults: { format: 'json' }
+      get 'category_children'
+      get 'category_grandchildren'
     end
   end
 end
