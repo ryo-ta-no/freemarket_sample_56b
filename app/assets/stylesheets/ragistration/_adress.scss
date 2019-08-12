@@ -80,17 +80,19 @@
           }
         }
         .__address-red-move{
-          margin: 24px 0 0 ;
-          background: #ea352d;
-          border: 1px solid #ea352d;
-          color: #fff;
-          height: 38px;
-          width: 72%;
-          border-radius: 2px;
-          text-align: center;
-          padding-top: 10px;
-          margin-left: 15%;
+          .address-payment{
+            margin: 24px 0 0 ;
+            background: #ea352d;
+            border: 1px solid #ea352d;
+            color: #fff;
+            height: 38px;
+            width: 72%;
+            border-radius: 2px;
+            text-align: center;
+            padding-top: 3px;
+            margin-left: 10%;
           }
+        }
       }
     }
   }
