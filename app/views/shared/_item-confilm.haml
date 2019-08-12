@@ -1,7 +1,7 @@
 .item-confilm-conteiner 
   .item-confilm-header
     %h1.h1
-      = image_tag 'logo.svg',width:'185px',height: '49px'
+    = image_tag 'logo.svg',width:'185px',height: '49px'
   .item-confilm-main
     %section.buy-content
       %h2.main-head
@@ -30,6 +30,9 @@
                     ¥1,000
             %p.error-text
               配送先と支払い方法の入力を完了してください。
+              = form_with url: 'purchase_item_path' do
+                :plain
+                  <script type="text/javascript" src="https://checkout.pay.jp" class="payjp-button" data-key="公開鍵"></script>
             %button{type: 'submit', class: 'purchase-btn'} 購入する
 
     %section.shipping-address-box

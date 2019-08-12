@@ -11,6 +11,8 @@
 // about supported directives.
 //
 //= require rails-ujs
+//= require payjp
+//= Payjp.api_key =pk_test_57f5b7abfc1b1cbd41160d6a
 //= require activestorage
 //= require turbolinks
 //= require_tree .
