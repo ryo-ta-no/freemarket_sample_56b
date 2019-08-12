@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_07_054736) do
+ActiveRecord::Schema.define(version: 2019_08_12_074408) do
 
   create_table "brands", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "brand", null: false
@@ -39,11 +39,10 @@ ActiveRecord::Schema.define(version: 2019_08_07_054736) do
   create_table "items", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
     t.text "explain", null: false
-    t.string "state", null: false
+    t.integer "state", null: false
     t.integer "price", null: false
     t.integer "buyer_id", null: false
     t.integer "seller_id", null: false
-    t.integer "postage", null: false
     t.integer "prefecture_id", null: false
     t.integer "shipping_date", null: false
     t.string "size_id", null: false
@@ -51,12 +50,27 @@ ActiveRecord::Schema.define(version: 2019_08_07_054736) do
     t.integer "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "category_id"
+    t.integer "postage_id", null: false
+    t.integer "postage_day_id", null: false
     t.index ["name"], name: "index_items_on_name"
   end
 
   create_table "photos", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "img", null: false
     t.integer "item_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "postage_days", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "postages", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "postage", null: false
+    t.string "ancestry"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

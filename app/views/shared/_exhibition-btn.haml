@@ -1,6 +1,23 @@
--# 出品ボタン
-.exhibition-btn
-  .exhibition-btn__text
-    出品
-  .exhibition-btn__icon
-    =fa_icon 'camera', class: "camera-icon"
+-# -# 出品ボタン
+-# - if user_signed_in?
+-#   = link_to "/items/new" do
+-#     .exhibition-btn
+-#       .exhibition-btn__text
+-#         出品
+-#       .exhibition-btn__icon
+-#         =fa_icon 'camera', class: "camera-icon"
+-# - else
+-#   = link_to "/users/sign_in" do
+-#     .exhibition-btn
+-#       .exhibition-btn__text
+-#         出品
+-#       .exhibition-btn__icon
+-#         =fa_icon 'camera', class: "camera-icon"
+
+
+= link_to "/items/new" do
+  .exhibition-btn
+    .exhibition-btn__text
+      出品
+    .exhibition-btn__icon
+      =fa_icon 'camera', class: "camera-icon"

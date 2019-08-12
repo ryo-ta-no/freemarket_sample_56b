@@ -1,0 +1,333 @@
+@mixin require {
+  padding: 2px 4px;
+  color: #fff;
+  font-size: 12px;
+  background-color: #ea352d;
+  font-weight: bolder;
+  border-radius: 2px;
+  margin: 0 0 0 8px;
+  text-align: center;
+}
+@mixin header {
+  font-weight: bolder;
+  font-size: 14px;
+}
+@mixin select {
+  margin: 8px 0 0;
+  width: 400px;
+  height: 50px;
+  padding: 10px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+@mixin fa-chevron-down {
+  color: #888;
+  position: absolute;
+  right: 20px;
+  bottom: 17px;
+}
+select {
+  -webkit-appearance: none;
+  
+}
+
+.postage-select-wrapper {
+
+  .product_postage-group {
+    display: flex;
+    margin: 40px 0 0;
+
+    .product_header {
+      @include header;
+    }
+    .product_require {
+      @include require;
+    }
+  }
+}
+
+.product_listing_content {
+  width: 100%;
+  height: 100%;
+  background-color: #f5f5f5;
+  
+  .product_listing_box {
+    margin: 0 auto;
+    width: 700px;
+    background-color: #fff;
+    
+    .product_listing_title {
+      
+      font-weight: bolder;
+      padding: 32px 16px;
+      text-align: center;
+      border-bottom: solid 1px #f5f5f5;
+      font-size: 22px;
+    }
+      
+      .upload_box{
+        padding: 40px;
+        border-bottom: solid 1px #f5f5f5;
+
+
+        .upload_text {
+          display: flex;
+          font-size: 16px;
+          
+          
+          
+          .upload_header {
+            font-weight: bolder;
+            
+          }
+
+          .upload_require {
+            @include require;
+            
+          }
+        }
+        p {
+          font-size: 14px;
+          margin-top: 8px;
+          margin-bottom: 20px;
+        }
+      .image_label {
+        position: relative;
+        cursor: pointer;
+
+        .upload_image {
+          min-height: 162px;
+          background: #f5f5f5;
+          border: 1px dashed #ccc;
+          font-size: 0;
+          text-align: center;
+          position: relative;
+      
+          
+        }
+        .file_field {
+          display: none;
+          
+        }
+
+        .image_text {
+          position: absolute;
+          bottom: 60px;
+          left: 160px;
+          font-size: 14px;
+          font-weight: bolder;
+          line-height: 20px;
+          color: rgba(0, 0, 0, 0.685);
+          }
+        }
+      }
+      .product_content {
+        padding: 40px;
+        border-bottom: solid 1px #f5f5f5;
+
+        .product_box-description {
+          display: flex;
+
+          .product_header {
+            @include header;
+          }
+          .product_require {
+            @include require;
+          }
+        }
+        
+        .product_description {
+          width: 100%;
+          margin: 8px 0 0;
+          height: 50px;
+          padding: 10px 16px 8px;
+          border-radius: 4px;
+          border: 1px solid #ccc;
+          background: #fff;
+          font-size: 16px;
+          box-sizing: border-box;
+        }
+        .product_box-explain {
+          margin: 40px 0 0;
+          display: flex;
+
+          .product_header {
+            @include header;
+          }
+          .product_require {
+            @include require;
+          }
+        }
+        .product_explain {
+          margin: 8px 0 0;
+          box-sizing: border-box;
+          display: block;
+          width: 100%;
+          min-height: 140px;
+          padding: 10px;
+          border: 1px solid #ccc;
+          background: #fff;
+          font-size: 16px;
+          line-height: 1.5;
+          box-sizing: border-box;
+      }
+    }
+    .product_content2 {
+      padding: 40px;
+      border-bottom: solid 1px #f5f5f5;
+      display: flex;
+      justify-content: space-between;
+
+      .product_box-details {
+        color: #888;
+        font-size: 14px;
+        font-weight: bolder;
+        
+      }
+      .product_select-details {
+        float: right;
+        
+        .product_select-group {
+          display: flex;
+          
+
+          .product_header {
+            @include header;
+          }
+
+          .product_require {
+            @include require;
+            }
+        }
+        .product_category-select {
+          position: relative;
+          
+          .category_select-box {
+            @include select
+          }
+          .fa-chevron-down {
+            @include fa-chevron-down;
+          }
+        }
+
+        .product_select-group2 {
+          display: flex;
+          margin: 40px 0 0;
+
+          .product_header {
+            @include header;
+          }
+          .product_require {
+            @include require;
+            }
+        }
+        .product_state-select {
+          position: relative;
+          
+          .state_select-box {
+            @include select;
+          }
+          .fa-chevron-down {
+            @include fa-chevron-down;
+          }
+        }
+      }
+    }
+
+    .product_content3 {
+      padding: 40px;
+      border-bottom: solid 1px #f5f5f5;
+      display: flex;
+      justify-content: space-between;
+      .product_box-postage {
+        color: #888;
+        font-size: 14px;
+        font-weight: bolder;
+        
+        .question {
+          display: inline-block;
+          width: 14px;
+          height: 14px;
+          border-radius: 50%;
+          background: #0099e8;
+          color: #fff;
+          line-height: 14px;
+          font-size: 12px;
+          text-align: center;
+          text-decoration: none;
+        }
+      }
+    
+      .product_select-postage {
+        float: right;
+
+        .product_postage-group {
+          display: flex;
+          
+
+
+          .product_header {
+            @include header;
+          }
+          .product_require {
+            @include require;
+          }
+      }
+      .product_postage-select {
+        position: relative;
+
+        .postage_select-box {
+          @include select;
+        }
+        .fa-chevron-down {
+          @include fa-chevron-down;
+        }
+      }
+      .product_postage-group2 {
+        display: flex;
+        margin: 40px 0 0;
+        .product_header {
+          @include header;
+        }
+        .product_require {
+          @include require;
+        }
+      }
+      .product_region-select {
+        position: relative;
+
+        .region_select-box {
+          @include select;
+        }
+        .fa-chevron-down {
+          @include fa-chevron-down;
+        }
+      }
+      .product_select-group3 {
+        display: flex;
+        margin: 40px 0 0;
+
+        .product_header {
+          @include header;
+        }
+        .product_require {
+          @include require;
+        }
+      }
+      .product_days-select {
+        position: relative;
+
+        .days_select-box {
+          @include select;
+        }
+        .fa-chevron-down {
+          @include fa-chevron-down;
+        }
+      }
+    }
+  } 
+  }
+}
