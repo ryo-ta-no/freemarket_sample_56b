@@ -15,7 +15,6 @@ Rails.application.routes.draw do
   resources :users
 
 
-  resources :ragistrations do
   resources :ragistrations , only: [:create] do
     collection do
       get 'member'
@@ -26,8 +25,5 @@ Rails.application.routes.draw do
       post "/" => "items#index"
     end
   end
-
-
-  resources :ragistrations
 end
 
