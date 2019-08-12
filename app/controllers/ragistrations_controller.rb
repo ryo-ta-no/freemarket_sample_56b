@@ -12,8 +12,7 @@ class RagistrationsController < ApplicationController
     session[:last_name] = user_params[:last_name]
     session[:first_kana] = user_params[:first_kana]
     session[:last_kana] = user_params[:last_kana]
-    session[:birth_day] = user_params[:birth_day]
-
+    session[:birth_day] = user_params['birth_day(1i)'] + "-" + user_params['birth_day(2i)'] + "-" + user_params['birth_day(3i)']
     @user = User.new
 
   end
@@ -37,13 +36,13 @@ class RagistrationsController < ApplicationController
   end
 
   def complete
-    session[:card_number] = user_params[:card_number]
-    session[:expirationdate_year] = user_params[:expirationdate_year]
-    session[:expirationdate_mouth] = user_params[:expirationdate_mouth]
-    session[:card_name] = user_params[:card_name]
-    session[:security_card] = user_params[:security_card]
-    binding.pry
-    @user = User.new
+    # session[:card_number] = user_params[:card_number]
+    # session[:expirationdate_year] = user_params[:expirationdate_year]
+    # session[:expirationdate_mouth] = user_params[:expirationdate_mouth]
+    # session[:card_name] = user_params[:card_name]
+    # session[:security_card] = user_params[:security_card]
+    # binding.pry
+    # @user = User.new
   end
 
   def create
@@ -70,12 +69,12 @@ class RagistrationsController < ApplicationController
       card_name: session[:card_name],
       security_card: session[:security_card]
     )
-    if @user.save
-      session[:id] = @user.id
-      redirect_to complete_root_path
-    else
-      render '/signup/registration'
-    end
+    # if @user.save
+    #   session[:id] = @user.id
+    #   redirect_to complete_root_path
+    # else
+    #   render '/signup/registration'
+    # end
   end
 
   private
