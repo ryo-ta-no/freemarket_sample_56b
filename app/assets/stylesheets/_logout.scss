@@ -1,0 +1,41 @@
+
+.wrapper {
+  background-color: rgb(245, 245, 245);
+
+  .all-contents {
+    height: 1000px;
+    width: 100%;
+
+    &__contents {
+      width: 73%;
+      margin: auto;
+
+      .logout-1 {
+        background-color: #fff;
+        height: 180px;
+        width: 700px;
+        margin-top: 40px;
+        float: right;
+
+        .logout-2 {
+          background-color: #fff;
+          margin-top: 70px;
+
+          .logout-3 {
+            background-color: #ea352d;
+            height: 50px;
+            width: 320px;
+            margin: 0 auto;
+            .logout-4 {
+              color: #fff;
+              text-align: center;
+              padding-top: 12px;
+            }
+          }
+        }
+      }
+
+
+    }
+  }
+}

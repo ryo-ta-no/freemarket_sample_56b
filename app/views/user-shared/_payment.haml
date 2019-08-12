@@ -1,0 +1,52 @@
+.payment-box
+  .payment-center-box
+    .__payment-small-text
+      支払い方法
+    .__payment-small-box
+      .__payment-list-box
+        = form_with do |pay|
+          .__l-payment-form
+            .__l-p-text
+              = pay.label :"カード番号"
+            .__l-p-required
+              必須
+          = pay.text_field :card_naumber, placeholder: "半角数字のみ", class: "text-payment"
+
+          .__l-payment-form
+          %img{alt:  "", height:  "20", src:  "//www-mercari-jp.akamaized.net/assets/img/card/visa.svg?917505326", width:  "49"}
+          %img{alt:  "", height:  "20", src:  "//www-mercari-jp.akamaized.net/assets/img/card/master-card.svg?917505326", width:  "34"}
+          %img{alt:  "", height:  "20", src:  "//www-mercari-jp.akamaized.net/assets/img/card/saison-card.svg?917505326", width:  "30"}
+          %img{alt:  "", height:  "20", src:  "//www-mercari-jp.akamaized.net/assets/img/card/jcb.svg?917505326", width:  "32"}
+          %img{alt:  "", height:  "20", src:  "//www-mercari-jp.akamaized.net/assets/img/card/american_express.svg?917505326", width:  "21"}
+          %img{alt:  "", height:  "20", src:  "//www-mercari-jp.akamaized.net/assets/img/card/dinersclub.svg?917505326", width:  "32"}
+          %img{alt:  "", height:  "20", src:  "//www-mercari-jp.akamaized.net/assets/img/card/discover.svg?917505326", width:  "32"}
+
+
+          .__l-payment-form
+            .__l-p-text
+              = pay.label :"有効期限"
+            .__l-p-required
+              必須
+          .__payment-pull-box
+            .__payment-pull-mouth
+            = render "user-shared/pull-down-birthday/pull-mouth"
+            .__payment-pull-text
+              月
+            .__payment-pull-day
+            = render "user-shared/pull-down-birthday/pull-short-year"
+            .__payment-pull-text
+              年
+
+          .__l-payment-form
+            .__l-p-text
+              = pay.label :"セキュリティーコード"
+            .__l-p-required
+              必須
+          = pay.text_field :security_code, placeholder: " カード背面4桁もしくは3桁の番号", class: "text-payment"
+
+          .__payment-under-text
+            カード裏面の番号とは？
+
+          .__payment-move-on-btn
+            = link_to "次へ進む" , complete_ragistrations_path , class: "payment-move-text"
+
