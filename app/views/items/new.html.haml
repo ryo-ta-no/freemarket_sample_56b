@@ -54,6 +54,37 @@
           .product_state-select
             = f.select :state, Item.states.keys, {}, { class: "state_select-box" }
             %i.fa.fa-chevron-down
-            
-    
+          
+      .product_content3
+        .product_box-postage
+          配送について
+          = link_to " ", class: "question" do
+            ?
+        .product_select-postage    
+          .product_postage-group
+            .product_header
+              送料の負担
+            .product_require
+              必須 
+          .product_postage-select
+            = f.collection_select :postage, @postage, :id, :postage, { prompt: "---" }, { class: "postage_select-box", id: "postage_select" }
+            %i.fa.fa-chevron-down
+          .product_select-postage_children
+          .product_postage-group2
+            .product_header
+              発送元の地域
+            .product_require
+              必須
+          .product_region-select
+            = f.collection_select :prefecture, @prefecture, :id, :prefecture, {prompt: "---"}, {class: "region_select-box", id: "region_select"}
+            %i.fa.fa-chevron-down
+          .product_select-group3
+            .product_header
+              発送までの日数
+            .product_require
+              必須
+          .product_days-select
+            = f.collection_select :prefecture, @prefecture, :id, :prefecture, {prompt: "---"}, {class: "days_select-box", id: "region_select"}
+            %i.fa.fa-chevron-down
+
   = render "user-shared/user-fotter" 

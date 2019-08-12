@@ -34,6 +34,21 @@ select {
   
 }
 
+.postage-select-wrapper {
+
+  .product_postage-group {
+    display: flex;
+    margin: 40px 0 0;
+
+    .product_header {
+      @include header;
+    }
+    .product_require {
+      @include require;
+    }
+  }
+}
+
 .product_listing_content {
   width: 100%;
   height: 100%;
@@ -164,13 +179,12 @@ select {
       padding: 40px;
       border-bottom: solid 1px #f5f5f5;
       display: flex;
-
+      justify-content: space-between;
 
       .product_box-details {
         color: #888;
         font-size: 14px;
-        margin-right: 150px;
-        
+        font-weight: bolder;
         
       }
       .product_select-details {
@@ -222,7 +236,98 @@ select {
         }
       }
     }
+
+    .product_content3 {
+      padding: 40px;
+      border-bottom: solid 1px #f5f5f5;
+      display: flex;
+      justify-content: space-between;
+      .product_box-postage {
+        color: #888;
+        font-size: 14px;
+        font-weight: bolder;
+        
+        .question {
+          display: inline-block;
+          width: 14px;
+          height: 14px;
+          border-radius: 50%;
+          background: #0099e8;
+          color: #fff;
+          line-height: 14px;
+          font-size: 12px;
+          text-align: center;
+          text-decoration: none;
+        }
+      }
+    
+      .product_select-postage {
+        float: right;
+
+        .product_postage-group {
+          display: flex;
+          
+
+
+          .product_header {
+            @include header;
+          }
+          .product_require {
+            @include require;
+          }
+      }
+      .product_postage-select {
+        position: relative;
+
+        .postage_select-box {
+          @include select;
+        }
+        .fa-chevron-down {
+          @include fa-chevron-down;
+        }
+      }
+      .product_postage-group2 {
+        display: flex;
+        margin: 40px 0 0;
+        .product_header {
+          @include header;
+        }
+        .product_require {
+          @include require;
+        }
+      }
+      .product_region-select {
+        position: relative;
+
+        .region_select-box {
+          @include select;
+        }
+        .fa-chevron-down {
+          @include fa-chevron-down;
+        }
+      }
+      .product_select-group3 {
+        display: flex;
+        margin: 40px 0 0;
+
+        .product_header {
+          @include header;
+        }
+        .product_require {
+          @include require;
+        }
+      }
+      .product_days-select {
+        position: relative;
+
+        .days_select-box {
+          @include select;
+        }
+        .fa-chevron-down {
+          @include fa-chevron-down;
+        }
+      }
+    }
+  } 
   }
-} 
-
-
+}

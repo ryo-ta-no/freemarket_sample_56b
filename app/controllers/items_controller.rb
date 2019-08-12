@@ -5,6 +5,8 @@ class ItemsController < ApplicationController
 
   def new
     @category = Category.all.order("id ASC").limit(13)
+    @postage = Postage.all.order("id ASC").limit(2)
+    @prefecture = Prefecture.all
   end
 
   def category_children  
@@ -16,6 +18,10 @@ class ItemsController < ApplicationController
     @category_grandchildren = Category.find(params[:productcategory]).children
     end
 
+  def postage_children 
+    @postage_children = Postage.find(params[:postageitem]).children
+    
+  end
 
 
 

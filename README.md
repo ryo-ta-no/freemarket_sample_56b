@@ -77,7 +77,7 @@ Things you may want to cover:
 |price|integer|null false|　商品価格
 |buyer_id|integer|foreign_key: true, null false|
 |seller_id|integer|foreign_key: true, null false|
-|postage|integer|null false|　送料負担者
+|postage_id|integer|foreign_key: true, null false| 
 |prefecture_id|integer|foreign_key: true, null false|
 |shipping_date|integer|foreign_key: true, null false|
 |size_id|string|foreign_key: true, null false|
@@ -85,13 +85,25 @@ Things you may want to cover:
 |user_id|integer|foreign_key: true, null false|
 |category_id|integer|foreign_key: true, null false|
 
+
 ### Association
 - has_many :photo
 - belongs_to :user
 - belomgs_to :size
-- belongs_to :prefecture
+- belongs_to_active_hash :prefecture
 - belongs_to :category
 - belongs_to :brand
+
+## postagesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|postage|string|null false|　
+|ancestry|string|null false| アンセストリー
+
+### Association
+- has_ancestry
+- has_many :items
+
 
 
 ## sizesテーブル
@@ -111,6 +123,7 @@ Things you may want to cover:
 |ancestry|string|null false| アンセストリー
 
 ### Association
+- has_ancestry
 - has_many :items
 - has_many :sizes through: :size_categories
 
