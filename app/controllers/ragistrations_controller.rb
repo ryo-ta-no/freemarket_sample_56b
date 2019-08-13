@@ -28,22 +28,13 @@ class RagistrationsController < ApplicationController
     session[:first_kana] = user_params[:first_kana]
     session[:last_kana] = user_params[:last_kana]
     session[:post] = user_params[:post]
-    session[:pretecture_id] = user_params[:pretecture_id]
+    session[:prefecture_id] = user_params[:prefecture_id]
     session[:city] = user_params[:city]
     session[:bilding] = user_params[:bilding]
     session[:phone] = user_params[:phone]
-    binding.pry
-    @user = User.new
   end
 
   def complete
-    # session[:card_number] = user_params[:card_number]
-    # session[:expirationdate_year] = user_params[:expirationdate_year]
-    # session[:expirationdate_mouth] = user_params[:expirationdate_mouth]
-    # session[:card_name] = user_params[:card_name]
-    # session[:security_card] = user_params[:security_card]
-    # binding.pry
-    # @user = User.new
   end
 
   def create
@@ -59,22 +50,14 @@ class RagistrationsController < ApplicationController
       call_number: session[:call_number],
       birth_day: session[:birth_day],
       post: session[:post],
-      pretecture_id: session[:pretecture_id],
+      prefecture_id: session[:prefecture_id],
       city: session[:city],
       address: session[:address],
       bilding: session[:bilding],
-      phone: session[:phone],
-      card_number: session[:card_number],
-      expirationdate_year: session[:expirationdate_year],
-      expirationdate_mouth: session[:expirationdate_mouth],
-      card_name: session[:card_name],
-      security_card: session[:security_card]
+      phone: session[:phone]
     )
     if @user.save
       session[:id] = @user.id
-      redirect_to complete_root_path
-    else
-      render '/signup/registration'
     end
   end
 
@@ -94,16 +77,11 @@ class RagistrationsController < ApplicationController
       :birth_day,
       :authentication_number,
       :post,
-      :pretecture_id,
+      :prefecture_id,
       :city,
       :address,
       :bilding,
-      :phone,
-      :card_number,
-      :expirationdate_year,
-      :expirationdate_mouth,
-      :card_name,
-      :security_card
+      :phone
     )
   end
 end

@@ -4,7 +4,7 @@
       住所入力
     .__address-small-box
       .__address-list-box
-        = form_with model: @user, model: @prefecture, url: payment_ragistrations_path, method: :get, local: true do |ad|
+        = form_with model: @user, url: payment_ragistrations_path, method: :get, local: true do |ad|
           .__l-address-form
             .__l-a-text
               = ad.label :"お名前"
@@ -39,7 +39,7 @@
               = ad.label :"都道府県"
             .__l-a-required
               必須
-          = ad.collection_select(:prefecture_id, Prefecture.all ,:id, :prefecture, prompt: "--" )
+          = ad.collection_select(:prefecture_id, Prefecture.all ,:id, :prefecture, prompt: "--")
           .__l-address-form
             .__l-a-text
               = ad.label :"市区町村"

@@ -4,15 +4,13 @@
       会員情報登録
     .__info-center-small
       .__info-list
-        = form_with model: @user , url: authentication_ragistrations_path , method: :get , local: true do |f|
+        = form_with model: @user, url: authentication_ragistrations_path , method: :get , local: true do |f|
           .__list-from
             .__info-form-text
               = f.label :"ニックネーム"
             .__list-required
               必須
           = f.text_field :nickname, placeholder: "例)メルカリ太郎", class: "text-info"
-
-
           -# パスワード
           .__list-from
             .__info-form-text
@@ -108,7 +106,6 @@
                 同意したものとみなします
 
               .red-move-on-btn
-                -# = link_to "次へ進む", authentication_ragistrations_path , class: "move-on-red"
                 = f.submit "次へ進む", class: "move-on-red"
               .move-on-under-text
                 本人情報の登録について
