@@ -10,6 +10,7 @@ class ItemsController < ApplicationController
     @postage = Postage.all.order("id ASC").limit(2)
     @prefecture = Prefecture.all
     @postage_day = PostageDay.all
+    @state = State.all
     @item = Item.new
   end
 
@@ -29,7 +30,7 @@ class ItemsController < ApplicationController
 
 
   def create
-    @item = Item.new
+    @item = Item.new(item_params)
     @item.save
     redirect_to root_path, notice: "投稿を完了しました"  
   end
@@ -48,5 +49,11 @@ private
   def user_search_params
     params.fetch(:search, {}).permit(:id,:prefecture)
   end
+
+  def item_params
+    params.require(:item).permit(:state_id, :name, :explain, :category_id, :price, :postage_id, :prefecture_id, :postage_day_id).merge(user_id: 1, buyer_id: 1, shipping_date: 1, size_id: 1, brand_id: 1)
+  end
+ 
+
 end
 

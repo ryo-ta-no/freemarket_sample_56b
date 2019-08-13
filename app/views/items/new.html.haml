@@ -12,9 +12,9 @@
             必須
         %p
           最大10枚までアップロードできます
-        = f.label :img, class: "image_label" do
+        = f.label :photo_id, class: "image_label" do
           .upload_image
-          =f.file_field :img, class: "file_field" 
+          =f.file_field :photo_id, class: "file_field" 
           %pre.image_text
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ドラッグアンドドロップ　
             またはクリックしてファイルをアップロード
@@ -43,7 +43,7 @@
             .product_require
               必須
           .product_category-select
-            = f.collection_select :category, @category, :id, :category_name, { prompt: "---" }, { class: "category_select-box", id: "category_select" }
+            = f.collection_select :category_id, @category, :id, :category_name, { prompt: "---" }, { class: "category_select-box", id: "category_select" }
             %i.fa.fa-chevron-down
           .product_select-children
           .product_select-group2
@@ -52,7 +52,7 @@
             .product_require
               必須
           .product_state-select
-            = f.select :state, Item.states.keys, {}, { class: "state_select-box" }
+            = f.collection_select :state_id, @state, :id, :state, { prompt: "---" }, { class: "state_select-box" }
             %i.fa.fa-chevron-down
           
       .product_content3
@@ -67,7 +67,7 @@
             .product_require
               必須 
           .product_postage-select
-            = f.collection_select :postage, @postage, :id, :postage, { prompt: "---" }, { class: "postage_select-box", id: "postage_select" }
+            = f.collection_select :postage_id, @postage, :id, :postage, { prompt: "---" }, { class: "postage_select-box", id: "postage_select" }
             %i.fa.fa-chevron-down
           .product_select-postage_children
           .product_postage-group2
@@ -76,7 +76,7 @@
             .product_require
               必須
           .product_region-select
-            = f.collection_select :prefecture, @prefecture, :id, :prefecture, {prompt: "---"}, {class: "region_select-box", id: "region_select"}
+            = f.collection_select :prefecture_id, @prefecture, :id, :prefecture, {prompt: "---"}, {class: "region_select-box", id: "region_select"}
             %i.fa.fa-chevron-down
           .product_select-group3
             .product_header
@@ -84,7 +84,7 @@
             .product_require
               必須
           .product_days-select
-            = f.collection_select :postage_day, @postage_day, :id, :postage_day, {prompt: "---"}, {class: "days_select-box", id: "days_select"}
+            = f.collection_select :postage_day_id, @postage_day, :id, :postage_day, {prompt: "---"}, {class: "days_select-box", id: "days_select"}
             %i.fa.fa-chevron-down
 
       .product_content4

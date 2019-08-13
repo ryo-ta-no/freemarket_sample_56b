@@ -17,7 +17,7 @@ function appendChildrenBox(insertHTML){
                       </div>
                       </div>
                       <div class='product_postage-select'>
-                      <select class='postage_select-box', id='child_postage' name='postage_id'>
+                      <select class='postage_select-box', id='child_postage' name='item[postage_id]'>
                       <option value='---'>---</option>
                       ${insertHTML}
                       </select>
