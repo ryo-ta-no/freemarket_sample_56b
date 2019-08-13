@@ -87,4 +87,44 @@
             = f.collection_select :postage_day, @postage_day, :id, :postage_day, {prompt: "---"}, {class: "days_select-box", id: "days_select"}
             %i.fa.fa-chevron-down
 
+      .product_content4
+        .product_box-price
+          販売価格(300〜9,999,999)
+          = link_to " ", class: "question" do
+            ?
+        .product_price
+          .product_price-group
+            .product_header
+              価格
+            .product_require
+              必須 
+          .product_price-form
+            ¥
+            = f.number_field :price, placeholder: "例) 300", class: "price_form-box"
+      .product_content5
+        .product_notice
+          = link_to " " do
+            禁止されている出品
+          ,
+          = link_to " " do
+            行為
+          を必ずご確認ください｡
+          %br
+            またブランド品でシリアルナンバー等がある場合はご記載ください。
+            =link_to " " do
+              偽ブランドの販売
+            は犯罪であり処罰される可能性があります｡
+          また、出品をもちまして
+          = link_to " " do
+            加盟店規約
+          に同意したことになります｡
+        .product_exhibit-box
+          = f.submit "出品する"
+        .product_back-box
+          =link_to " " do
+            戻る
+
+
+
+
   = render "user-shared/user-fotter" 

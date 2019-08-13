@@ -10,6 +10,7 @@ class ItemsController < ApplicationController
     @postage = Postage.all.order("id ASC").limit(2)
     @prefecture = Prefecture.all
     @postage_day = PostageDay.all
+    @item = Item.new
   end
 
   def category_children  
@@ -27,7 +28,11 @@ class ItemsController < ApplicationController
   end
 
 
-
+  def create
+    @item = Item.new
+    @item.save
+    redirect_to root_path, notice: "投稿を完了しました"  
+  end
 
 
 
