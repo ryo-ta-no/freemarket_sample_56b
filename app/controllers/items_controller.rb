@@ -1,5 +1,5 @@
 class ItemsController < ApplicationController
- 
+
   def index
     
   end
@@ -12,6 +12,7 @@ class ItemsController < ApplicationController
     @postage_day = PostageDay.all
     @state = State.all
     @item = Item.new
+    @photo = Photo.new
   end
 
   def category_children  
@@ -32,7 +33,9 @@ class ItemsController < ApplicationController
   def create
     @item = Item.new(item_params)
     @item.save
-    redirect_to root_path, notice: "投稿を完了しました"  
+    @photo = Photo.new(photo_params)
+    @photo.save
+    redirect_to root_path 
   end
 
 
@@ -53,6 +56,12 @@ private
   def item_params
     params.require(:item).permit(:state_id, :name, :explain, :category_id, :price, :postage_id, :prefecture_id, :postage_day_id).merge(user_id: 1, buyer_id: 1, shipping_date: 1, size_id: 1, brand_id: 1)
   end
+
+  def photo_params
+    params.require(:photo).permit(:img).merge(item_id: @item.id)
+  end
+
+
  
 
 end

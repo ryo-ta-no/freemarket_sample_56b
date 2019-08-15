@@ -3,7 +3,7 @@
   .product_listing_box
     .product_listing_title
       商品の情報を入力
-    = form_with(model: @item) do |f|
+    = form_with(model: @item, local: true) do |f|
       .upload_box
         .upload_text
           .upload_header 
@@ -12,12 +12,14 @@
             必須
         %p
           最大10枚までアップロードできます
-        = f.label :photo_id, class: "image_label" do
-          .upload_image
-          =f.file_field :photo_id, class: "file_field" 
-          %pre.image_text
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ドラッグアンドドロップ　
-            またはクリックしてファイルをアップロード
+        = fields_for (@photo)  do |photo|
+          = photo.label :img, class: "image_label" do
+            .upload_image
+            = photo.file_field :img, multipart: true, class: "file_field" 
+              
+            %pre.image_text
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ドラッグアンドドロップ　
+              またはクリックしてファイルをアップロード
 
       .product_content
         .product_box-description
