@@ -25,14 +25,9 @@ class RagistrationsController < ApplicationController
   end
 
   def payment
-    # session[:first_name] = user_params[:first_name]
-    # session[:last_name] = user_params[:last_name]
-    # session[:first_kana] = user_params[:first_kana]
-    # session[:last_kana] = user_params[:last_kana]
   end
 
   def complete
-    # ragistration User.find(session[:id]) unless user_signed_in?
   end
 
 
@@ -53,6 +48,8 @@ class RagistrationsController < ApplicationController
     if @user.save
       session[:id] = @user.id
       redirect_to payment_ragistrations_path
+    else
+      render '/signup/registration'
     end
   end
 
