@@ -3,16 +3,24 @@
   box-shadow: 0 10px 6px -6px rgba(99,85,101,0.21);
   border-top: 1px solid gainsboro;
   background-color: white;
+  font-size: 14px;
 
 
   .breadcrumbs {
     margin: 0 250px;
     padding: 16px 0;
+    text-decoration: none;
+
+
+    a {
+      text-decoration: none;
+      color: gray;
+    }
+
+    .current {
+      @include font-weight;
+    }
 
   }
 
 }
-
-// * {
-//   text-decoration: none;
-// }

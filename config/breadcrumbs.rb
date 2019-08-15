@@ -7,7 +7,7 @@ crumb :show_user do
   parent :root
 end
 
-crumb :edit_user do |user|
+crumb :edit_user do #|user|
   link "プロフィール", edit_user_path
   parent :show_user
 end
