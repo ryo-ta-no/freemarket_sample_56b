@@ -21,22 +21,18 @@ class RagistrationsController < ApplicationController
   def address
     session[:call_number] = user_params[:call_number]
     @user = User.new
+    @user.build_street
   end
 
   def payment
-    session[:first_name] = user_params[:first_name]
-    session[:last_name] = user_params[:last_name]
-    session[:first_kana] = user_params[:first_kana]
-    session[:last_kana] = user_params[:last_kana]
-    session[:post] = street_params[:post]
-    session[:city] = street_params[:city]
-    session[:address] = street_params[:address]
-    session[:bilding] = street_params[:binlding]
-    session[:phone] = street_params[:phone]
+    # session[:first_name] = user_params[:first_name]
+    # session[:last_name] = user_params[:last_name]
+    # session[:first_kana] = user_params[:first_kana]
+    # session[:last_kana] = user_params[:last_kana]
   end
 
   def complete
-    ragistration User.find(session[:id]) unless user_signed_in?
+    # ragistration User.find(session[:id]) unless user_signed_in?
   end
 
 
@@ -53,13 +49,7 @@ class RagistrationsController < ApplicationController
       call_number: session[:call_number],
       birth_day: session[:birth_day],
     )
-    @street = Street.new(
-      post: session[:post],
-      city: session[:city],
-      address: session[:address],
-      bilding: session[:bilding],
-      phone: session[:phone]
-    )
+    @user.build_street(user_params[:street_attributes])
     if @user.save
       session[:id] = @user.id
       redirect_to payment_ragistrations_path

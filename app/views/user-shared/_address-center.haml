@@ -27,7 +27,7 @@
             .__onamae-kana-namae
             = f.text_field :last_kana, placeholder: "例)アヤ", class: "text-address"
 
-          = f.fields_for :streets do |p|
+          = f.fields_for :street do |p|
             .__l-address-form
               .__l-a-text
                 = p.label :"郵便番号"
@@ -40,7 +40,7 @@
                 = p.label :"都道府県"
               .__l-a-required
                 必須
-            = p.collection_select(:prefecture_id, Prefecture.all ,:id, :prefecture, prompt: "--")
+            = f.collection_select(:prefecture_id, Prefecture.all ,:id, :prefecture, prompt: "--")
             .__l-address-form
               .__l-a-text
                 = p.label :"市区町村"
