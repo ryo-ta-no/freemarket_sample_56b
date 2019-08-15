@@ -21,7 +21,6 @@ class RagistrationsController < ApplicationController
   def address
     session[:call_number] = user_params[:call_number]
     @user = User.new
-    @street = Street.new
   end
 
   def payment
@@ -61,7 +60,6 @@ class RagistrationsController < ApplicationController
       bilding: session[:bilding],
       phone: session[:phone]
     )
-    binding.pry
     if @user.save
       session[:id] = @user.id
       redirect_to payment_ragistrations_path
