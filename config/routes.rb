@@ -16,6 +16,11 @@ Rails.application.routes.draw do
 
   resources :ragistrations
 
-  resources :searches
+  resources :searches do
+    collection do
+      get 'search'
+    end
+  end
+
 
 end

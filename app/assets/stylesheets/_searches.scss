@@ -1,3 +1,118 @@
 // Place all the styles related to the search controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.big-box {
+  box-sizing: border-box;
+
+  .main-box-big {
+    margin: 40px auto 0;
+    width: 1020px;
+    display: flex;
+
+
+    .left-big-content {
+      width: 280px;
+      margin-right: 40px;
+
+      .details {
+        padding: 16px;
+
+
+        .search-shuffle {
+          height: 40px;
+          width: 100%;
+          padding: 0 16px;
+          background-color: white;
+
+        }
+
+        .search-refine {
+          margin-top: 40px;
+          background-color: white;
+
+
+          .form-sort {
+            width: 100%;
+            margin: 24px 0 0;
+
+            .area-form {
+              margin-top: 8px;
+              padding: 10px 16px 8px;
+
+            }
+
+              .tb {
+                @include font-weight;
+                font-size: 14px;
+
+              }
+
+          }
+
+        }
+
+      }
+
+    }
+
+    .right-big-content {
+      width: auto;
+
+      .result {
+        font-size: 18px;
+        margin: 0 0 8px;
+        display: flex;
+
+      }
+
+      .result-number {
+        font-size: 12px;
+        color: #AAAAAA;
+        margin: 16px 0;
+
+      }
+
+      .result-box {
+        display: flex;
+        flex-wrap: wrap;
+
+        .item-result {
+          margin: 0 20px 20px 0;
+          @include font-weight;
+          background-color: white;
+
+          a {
+            text-decoration: none;
+
+            .item-photo-box {
+
+              .photo-index {
+              width: 160px;
+              height: 160px;
+              }
+
+            }
+
+            .item-body-box {
+
+              .item-body-box-val {
+
+                .item-price {
+
+                }
+
+              }
+
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
