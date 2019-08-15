@@ -1,4 +1,5 @@
 class RagistrationsController < ApplicationController
+
   def member
     @user = User.new
   end
@@ -20,6 +21,7 @@ class RagistrationsController < ApplicationController
   def address
     session[:call_number] = user_params[:call_number]
     @user = User.new
+    @street = Street.new
   end
 
   def payment
@@ -27,15 +29,17 @@ class RagistrationsController < ApplicationController
     session[:last_name] = user_params[:last_name]
     session[:first_kana] = user_params[:first_kana]
     session[:last_kana] = user_params[:last_kana]
-    session[:post] = user_params[:post]
-    session[:prefecture_id] = user_params[:prefecture_id]
-    session[:city] = user_params[:city]
-    session[:bilding] = user_params[:bilding]
-    session[:phone] = user_params[:phone]
+    session[:post] = street_params[:post]
+    session[:city] = street_params[:city]
+    session[:address] = street_params[:address]
+    session[:bilding] = street_params[:binlding]
+    session[:phone] = street_params[:phone]
   end
 
   def complete
+    ragistration User.find(session[:id]) unless user_signed_in?
   end
+
 
   def create
     @user = User.new(
@@ -49,17 +53,21 @@ class RagistrationsController < ApplicationController
       last_kana: session[:last_kana],
       call_number: session[:call_number],
       birth_day: session[:birth_day],
+    )
+    @street = Street.new(
       post: session[:post],
-      prefecture_id: session[:prefecture_id],
       city: session[:city],
       address: session[:address],
       bilding: session[:bilding],
       phone: session[:phone]
     )
+    binding.pry
     if @user.save
       session[:id] = @user.id
+      redirect_to payment_ragistrations_path
     end
   end
+
 
   private
 
@@ -75,13 +83,8 @@ class RagistrationsController < ApplicationController
       :last_kana,
       :call_number,
       :birth_day,
-      :authentication_number,
-      :post,
-      :prefecture_id,
-      :city,
-      :address,
-      :bilding,
-      :phone
+      street_attributes: [:post, :city, :address, :bilding, :phone]
     )
   end
+
 end

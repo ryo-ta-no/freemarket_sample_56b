@@ -4,7 +4,7 @@
       支払い方法
     .__payment-small-box
       .__payment-list-box
-        = form_with model: @user , url: complete_ragistrations_path, method: :get, local: true do |pay|
+        = form_with model: @user , url: complete_ragistrations_path, local: true do |pay|
           .__l-payment-form
             .__l-p-text
               = pay.label :"カード番号"
