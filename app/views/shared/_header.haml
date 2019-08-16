@@ -28,7 +28,7 @@
           .header-to-do-list
             やることリスト
           .header-mypage-box
-            マイページ
+            = link_to "マイページ",  "/users/:id" , class: 'mypage-kondou'
         - else
           .new-create-user
             = link_to "新規会員登録", new_user_registration_path, class: 'new-ragistration-text'
