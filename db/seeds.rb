@@ -138,3 +138,22 @@ handmade_item = handmade.children.create(:category_name=>"ファッション/小
 handmade_accessory = handmade.children.create(:category_name=>"アクセサリー/時計")
 handmade_interior = handmade.children.create(:category_name=>"日用品/インテリア")
 
+
+cash_on = Postage.create(postage: "送料込み(出品者負担)")
+postage_included = Postage.create(postage: "着払い(購入者負担)")
+
+cash_on1 = cash_on.children.create(postage: "未定")
+cash_on2 = cash_on.children.create(postage: "クロネコヤマト")
+cash_on3 = cash_on.children.create(postage: "ゆうパック")
+cash_on4 = cash_on.children.create(postage: "ゆうメール")
+
+postage_included1 = postage_included.children.create(postage: "未定")
+postage_included2 = postage_included.children.create(postage: "らくらくメルカリ便")
+postage_included3 = postage_included.children.create(postage: "ゆうメール")
+postage_included4 = postage_included.children.create(postage: "レターパック")
+postage_included5 = postage_included.children.create(postage: "普通郵便(定形､定形外)")
+postage_included6 = postage_included.children.create(postage: "クロネコヤマト")
+postage_included7 = postage_included.children.create(postage: "ゆうパック")
+postage_included8 = postage_included.children.create(postage: "クリックポスト")
+postage_included9 = postage_included.children.create(postage: "ゆうパケット")
+
