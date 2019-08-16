@@ -9,7 +9,13 @@ Rails.application.routes.draw do
       get 'postage_children'
     end
   end
-  resources :users
+
+  resources :users do
+    member do
+      get 'goods'
+    end
+  end
+
   resources :ragistrations , only: [:create] do
     collection do
       get 'member'
