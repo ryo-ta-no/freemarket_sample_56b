@@ -8,8 +8,8 @@ $(function(){
     var childSelectHtml = '';
       childSelectHtml = `<div class='product-select-wrapper' id= 'children_wrapper'>
                         <div class='product_category-select'>
-                        <select class="category_select-box" id="child_category" name="category_id">
-                        <option value="---">---</option>
+                        <select class="category_select-box" id="child_category" name="item[category_id]">
+                        <option value>---</option>
                         ${insertHTML}
                         </select>
                         <i class='fa fa-chevron-down'></i>
@@ -23,8 +23,8 @@ $(function(){
     var grandchildrenSelectHtml = '';
     grandchildrenSelectHtml = `<div class='product-select-wrapper' id= 'grandchildren_wrapper'>
                               <div class='product_category-select'>
-                              <select class="category_select-box" id="grandchild_category" name="category_id">
-                              <option value="---">---</option>
+                              <select class="category_select-box" id="grandchild_category" name="item[category_id]">
+                              <option value>---</option>
                               ${insertHTML}
                               </select>
                               <i class='fa fa-chevron-down'></i>
@@ -37,8 +37,9 @@ $(function(){
 
 
 
-  $(document).on('change', '#category_select', function(){ 
+  $('#category_select').on('change', function(){ 
     var productcategory = document.getElementById('category_select').value; 
+    console.log(productcategory)
     if (productcategory != ''){
       $.ajax({
         url: 'category_children',
@@ -66,9 +67,11 @@ $(function(){
   
 
 
-  $(document).on('change', '#child_category', function(){
+  $('.product_select-details').on('change', '#child_category', function(){
     var productcategory = document.getElementById('child_category').value;
+    console.log(productcategory)
     if (productcategory != ''){
+      
     $.ajax ({
       url: 'category_grandchildren',
       type: 'GET',

@@ -4,72 +4,72 @@
       住所入力
     .__address-small-box
       .__address-list-box
-        = form_with model: @user , url: payment_ragistrations_path, method: :get, local: true do |ad|
+        = form_with model: @user, url: ragistrations_path, method: :post, local: true do |f|
           .__l-address-form
             .__l-a-text
-              = ad.label :"お名前"
+              = f.label :"お名前"
             .__l-a-required
               必須
           .__onamae-box
             .__onamae-myouzi
-            = ad.text_field :first_name, placeholder: "例)山田", class: "text-address"
+            = f.text_field :first_name, placeholder: "例)山田", class: "text-address"
             .__onamae-namae
-            = ad.text_field :last_name, placeholder: "例)彩", class: "text-address"
+            = f.text_field :last_name, placeholder: "例)彩", class: "text-address"
 
           .__l-address-form
             .__l-a-text
-              = ad.label :"お名前カナ"
+              = f.label :"お名前カナ"
             .__l-a-required
               必須
           .__onamae-kana-box
             .__onamae-kana-myouzi
-            = ad.text_field :first_kana, placeholder: "例)ヤマダ", class: "text-address"
+            = f.text_field :first_kana, placeholder: "例)ヤマダ", class: "text-address"
             .__onamae-kana-namae
-            = ad.text_field :last_kana, placeholder: "例)アヤ", class: "text-address"
+            = f.text_field :last_kana, placeholder: "例)アヤ", class: "text-address"
 
-          .__l-address-form
-            .__l-a-text
-              = ad.label :"郵便番号"
-            .__l-a-required
-              必須
-          = ad.text_field :post, placeholder: " 例) 123-4567", class: "text-address"
+          = f.fields_for :street do |p|
+            .__l-address-form
+              .__l-a-text
+                = p.label :"郵便番号"
+              .__l-a-required
+                必須
+            = p.text_field :post, placeholder: " 例) 123-4567", class: "text-address"
 
-          .__l-address-form
-            .__l-a-text
-              = ad.label :"都道府県"
-            .__l-a-required
-              必須
-          = ad.text_field :prefectures, placeholder: "北海道", class: "text-address"
+            .__l-address-form
+              .__l-a-text
+                = p.label :"都道府県"
+              .__l-a-required
+                必須
+            = f.collection_select(:prefecture_id, Prefecture.all ,:id, :prefecture, prompt: "--")
+            .__l-address-form
+              .__l-a-text
+                = p.label :"市区町村"
+              .__l-a-required
+                必須
+            = p.text_field :city, placeholder: "例) 横浜市緑区", class: "text-address"
 
-          .__l-address-form
-            .__l-a-text
-              = ad.label :"市区町村"
-            .__l-a-required
-              必須
-          = ad.text_field :city, placeholder: "例) 横浜市緑区", class: "text-address"
+            .__l-address-form
+              .__l-a-text
+                = p.label :"番地"
+              .__l-a-required
+                必須
+            = p.text_field :address, placeholder: "例) 青山1-1-1", class: "text-address"
 
-          .__l-address-form
-            .__l-a-text
-              = ad.label :"番地"
-            .__l-a-required
-              必須
-          = ad.text_field :address, placeholder: "例) 青山1-1-1", class: "text-address"
+            .__l-address-form
+              .__l-a-text
+                = p.label :"建物名"
+              .__a-l-required
+                任意
+            = p.text_field :bilding, placeholder: "例) 柳ビル103", class: "text-address"
 
-          .__l-address-form
-            .__l-a-text
-              = ad.label :"建物名"
-            .__a-l-required
-              任意
-          = ad.text_field :bilding, placeholder: "例) 柳ビル103", class: "text-address"
+            .__l-address-form
+              .__l-a-text
+                = p.label :"電話"
+              .__a-l-required
+                任意
+            = p.telephone_field :phone, placeholder: "例) 09012345678", class: "text-address"
 
-          .__l-address-form
-            .__l-a-text
-              = ad.label :"電話"
-            .__a-l-required
-              任意
-          = ad.telephone_field :phone, placeholder: "例) 09012345678", class: "text-address"
-
-          .__address-red-move
-            = ad.submit "次へ進む" , class: "address-payment"
+            .__address-red-move
+              = f.submit "次へ進む" , class: "address-payment"
 
 

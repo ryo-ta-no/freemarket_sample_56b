@@ -62,12 +62,6 @@
   width: 100px;
 }
 
-#through{
-  color: #ea352d;
-  .progress-status{
-    background: #ea352d;
-  }
-}
 
 // #through .progress-status_bar{
 //   background: #ea352d;
@@ -79,4 +73,24 @@
 //     background: #ea352d;
 //   }
 // }
+
+// .progress-bar li:first-child{
+//   color: #ea352d;
+//   .progress-status{
+//     background: #ea352d;
+//   }
+// }
+
+// .progress progress-bar + li{
+  // color: #ea352d;
+  // .progress-status{
+  //   background: #ea352d;
+//   }
+// }
+.through#through:first-child{
+  color: #ea352d;
+  .progress-status{
+    background: #ea352d;
+  }
+}
 

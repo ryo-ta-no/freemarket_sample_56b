@@ -33,6 +33,23 @@ select {
   -webkit-appearance: none;
   
 }
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.question {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #0099e8;
+  color: #fff;
+  line-height: 14px;
+  font-size: 12px;
+  text-align: center;
+  text-decoration: none;
+}
 
 .postage-select-wrapper {
 
@@ -97,6 +114,7 @@ select {
       .image_label {
         position: relative;
         cursor: pointer;
+      
 
         .upload_image {
           min-height: 162px;
@@ -106,7 +124,6 @@ select {
           text-align: center;
           position: relative;
       
-          
         }
         .file_field {
           display: none;
@@ -242,25 +259,12 @@ select {
       border-bottom: solid 1px #f5f5f5;
       display: flex;
       justify-content: space-between;
+
       .product_box-postage {
         color: #888;
         font-size: 14px;
         font-weight: bolder;
-        
-        .question {
-          display: inline-block;
-          width: 14px;
-          height: 14px;
-          border-radius: 50%;
-          background: #0099e8;
-          color: #fff;
-          line-height: 14px;
-          font-size: 12px;
-          text-align: center;
-          text-decoration: none;
-        }
       }
-    
       .product_select-postage {
         float: right;
 
@@ -328,6 +332,56 @@ select {
         }
       }
     }
+  }
+  .product_content4 {
+    padding: 40px;
+    border-bottom: solid 1px #f5f5f5;
+    display: flex;
+    justify-content: space-between;
+
+    .product_box-price {
+      color: #888;
+      font-size: 14px;
+      font-weight: bolder;
+    }
+    .product_price {
+      display: flex;
+      
+      
+      .product_price-group {
+        display: flex;
+
+        .product_header {
+          @include header;
+          height: 22px;
+        }
+        .product_require {
+          @include require;
+          height: 22px;
+        }
+      }
+      .product_price-form {
+        margin-left: 100px;
+        position: relative;
+        bottom: 18px;
+
+        .price_form-box {
+          margin: 8px 0 0;
+          width: 160px;
+          height: 50px;
+          padding: 10px 20px 8px;
+          border-radius: 4px;
+          border: 1px solid #ccc;
+          background: #fff;
+          font-size: 16px;
+          box-sizing: border-box;
+
+        }
+      }
+    }
   } 
+  .product_content4 {
+    
+  }
   }
 }
