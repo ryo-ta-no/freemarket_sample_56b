@@ -84,3 +84,4 @@ group :production do
 end
 gem'pry-byebug'
 gem 'payjp'
+gem 'dotenv-rails'
