@@ -10,14 +10,14 @@ Rails.application.routes.draw do
     end
   end
   resources :users
-  resources :ragistrations , only: [:create] do
+
+  resources :ragistrations do
     collection do
       get 'member'
       get 'authentication'
       get 'address'
       get 'payment'
       get 'complete'
-      post "/" => "items#index"
     end
   end
 end
