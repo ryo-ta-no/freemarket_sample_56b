@@ -17,7 +17,7 @@ function appendChildrenBox(insertHTML){
                       </div>
                       </div>
                       <div class='product_postage-select'>
-                      <select class='postage_select-box', id='child_postage' name='postage_id'>
+                      <select class='postage_select-box', id='child_postage' name='item[postage_id]'>
                       <option value='---'>---</option>
                       ${insertHTML}
                       </select>
@@ -28,7 +28,7 @@ function appendChildrenBox(insertHTML){
 }
 
 
-  $('#postage_select').on('change', function(){
+  $(document).on('change', '#postage_select', function(){
     console.log(1)
     var postageitem = document.getElementById('postage_select').value; 
     console.log(postageitem)
@@ -46,7 +46,7 @@ function appendChildrenBox(insertHTML){
           insertHTML += appendOption(child);
         });
         appendChildrenBox(insertHTML);
-        $('#postage_select').on('change', function(){
+        $(document).on('change', '#postage_select', function(){
           $('#children_wrapper').remove();
         })
       })
