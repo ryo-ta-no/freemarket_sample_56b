@@ -34,7 +34,6 @@ class ItemsController < ApplicationController
     @item = Item.new(item_params)
     @item.save
     @photo = Photo.new(photo_params)
-
     @photo.save
     redirect_to root_path 
   end
