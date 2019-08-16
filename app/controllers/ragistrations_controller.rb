@@ -27,9 +27,6 @@ class RagistrationsController < ApplicationController
   def payment
   end
 
-  def complete
-  end
-
 
   def create
     @user = User.new(
@@ -51,6 +48,10 @@ class RagistrationsController < ApplicationController
     else
       render '/signup/registration'
     end
+  end
+
+  def complete
+    sign_in User.find(session[:id]) unless user_signed_in?
   end
 
 

@@ -23,13 +23,13 @@
               = f.label :"パスワード"
             .__list-required
               必須
-          = f.password_field :password, placeholder: "7文字以上", class: "text-info"
+          = f.password_field :password, placeholder: "8文字以上", class: "text-info"
           .__list-from
             .__info-form-text
               = f.label :"パスワード(確認)"
             .__list-required
               必須
-          = f.password_field :password_confirmation, placeholder: "7文字以上", class: "text-info"
+          = f.password_field :password_confirmation, placeholder: "8文字以上", class: "text-info"
 
           -# 本人確認テキスト
           .__list-from
