@@ -9,4 +9,7 @@ class UsersController < ApplicationController
   def goods
   end
 
+  def goods_detail
+  end
+
 end

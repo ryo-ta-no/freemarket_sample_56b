@@ -1,11 +1,36 @@
 .wrapper
   = render 'shared/header'
-  - breadcrumb :edit_user
+  - breadcrumb :goods_user
   = render 'shared/breadcrumbs'
   .main-box
     .mypage-main
       = render 'shared/side-bar'
       .right-container
-        
+        .goods-box-title
+          出品した商品
+        .goods-box-example
+          .example-1
+            出品中
+          .example-2
+            取引中
+          .example-3
+            売却済み
+        %a()
+          .goods-list-box
+            .goods-photo
+              = image_tag 'albert-einstein-1933340_640.jpg', height: '60', width: '60'
+            .goods-name
+              %div
+                絵画
+              .goods-icon-list
+                =fa_icon 'heart-o', class: 'heart-item'
+                %span &nbsp;0&nbsp;
+                =fa_icon 'comment-o', class: 'comment-item'
+                %span &nbsp;0&nbsp;&nbsp;
+                .font-goods
+                  出品中
+              =fa_icon 'angle-right 2x', class: 'angle-item', height: '100', width: '100'
+
+
   = render 'shared/footer'
   = render 'shared/exhibition-btn'

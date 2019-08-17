@@ -12,6 +12,15 @@ crumb :edit_user do |user|
   parent :show_user
 end
 
+crumb :goods_user do
+  link "出品した商品 - 出品中", goods_user_path
+  parent :show_user
+end
+
+crumb :goods_detail do
+  link "出品商品画面", goods_detail_user_path
+  parent :goods_user
+end
 
 # crumb :projects do
 #   link "Projects", projects_path
