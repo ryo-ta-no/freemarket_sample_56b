@@ -1,0 +1,52 @@
+.detail-main-box {
+  width: auto;
+  margin: 40px auto;
+
+  .action-choice-content {
+    width: 700px;
+    margin: 24px auto;
+    @include background-white;
+    overflow:hidden;
+
+    .action-edit-c {
+      width: 650px;
+      height: 50px;
+      margin: 16px auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: red;
+
+
+      .choice-goods-edit {
+        text-decoration: none;
+        color: white;
+      }
+    }
+
+    .text-or {
+      text-align: center;
+
+    }
+
+  }
+
+  .destroy-content {
+    width: 700px;
+
+
+    .choice-destroy {
+      text-decoration: none;
+      width: 650px;
+      height: 50px;
+      margin: 16px auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      background-color: #C0C0C0;
+
+    }
+  }
+
+}

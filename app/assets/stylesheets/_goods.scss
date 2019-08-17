@@ -45,6 +45,12 @@
 
   }
 }
+
+.goods-main-c {
+  text-decoration: none;
+
+}
+
 .goods-list-box {
   @include background-white;
   display: flex;
@@ -61,17 +67,25 @@
     width: 100%;
     margin-left: 15px;
     padding: 15px 0 15px 15px;
+    color: black;
+
+    .name-fine {
+      font-size: 14px;
+      margin-top: 5px;
+    }
 
     .goods-icon-list {
       display: flex;
-      margin-top: 15px;
+      margin-top: 10px;
       display: flex;
       align-items: center;
+      color: #C0C0C0;
 
       .font-goods {
         background-color:#0099FF;
         color: white;
         border-radius: 10%;
+        font-size: 12px;
       }
     }
 

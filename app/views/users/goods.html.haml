@@ -15,12 +15,13 @@
             取引中
           .example-3
             売却済み
-        %a()
+        -# リストで作る後で
+        %a.goods-main-c{href: :goods_detail}
           .goods-list-box
             .goods-photo
               = image_tag 'albert-einstein-1933340_640.jpg', height: '60', width: '60'
             .goods-name
-              %div
+              .name-fine
                 絵画
               .goods-icon-list
                 =fa_icon 'heart-o', class: 'heart-item'

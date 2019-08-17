@@ -2,8 +2,17 @@
   = render 'shared/header'
   - breadcrumb :goods_detail
   = render 'shared/breadcrumbs'
-  .main-box
-    .detail-main-box
-      
+
+  .detail-main-box
+    -# 後でrenderする商品の詳細ページview
+    .action-choice-content
+      .action-edit-c
+        %a.choice-goods-edit{href: "/items"}商品の編集
+      %p.text-or
+        or
+      .destroy-content
+        = link_to 'この商品を削除する', goods_detail_user_path, method: :delete, class: "choice-destroy", data: {confirm: "本当に削除しますか？"}
+
+
   = render 'shared/footer'
   = render 'shared/exhibition-btn'
