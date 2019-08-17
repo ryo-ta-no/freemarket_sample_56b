@@ -16,18 +16,11 @@
         .expire__date 
           - exp_mouth = @expirationdate_mouth.to_s
           - exp_year = @expirationdate_year.to_s.slice(2,3)
-          = "#{exp_mouth}  /   #{exp_year}"
+          = "#{exp_mouth} +  /  + #{exp_year}"
         = form_tag(delete_cards_path, method: :post, id: 'charge-form',  name: "inputForm") do
           %input{ type: "hidden", name: "card_id", value: "" }
           %button.delete__button 削除する
       .how__not__regist
         %span 支払い方法について
 
-        class AddColumnToCards < ActiveRecord::Migration[5.2]
-  def change
-    add_column :cards, :user_id, :string, null: false, foreign_key: true
-    add_column :cards, :customer_id, :string, null: false
-    add_column :cards, :card_id, :string, null: false
-    add_column :cards, :current_user_id, :string, null: false
-  end
-end
+        
