@@ -15,22 +15,24 @@
             取引中
           .example-3
             売却済み
-        -# リストで作る後で
-        %a.goods-main-c{href: :goods_detail}
-          .goods-list-box
-            .goods-photo
-              = image_tag 'albert-einstein-1933340_640.jpg', height: '60', width: '60'
-            .goods-name
-              .name-fine
-                絵画
-              .goods-icon-list
-                =fa_icon 'heart-o', class: 'heart-item'
-                %span &nbsp;0&nbsp;
-                =fa_icon 'comment-o', class: 'comment-item'
-                %span &nbsp;0&nbsp;&nbsp;
-                .font-goods
-                  出品中
-              =fa_icon 'angle-right 2x', class: 'angle-item', height: '100', width: '100'
+
+        %ul
+          %li
+            %a.goods-main-c{href: :goods_detail}
+              .goods-list-box
+                .goods-photo
+                  = image_tag 'albert-einstein-1933340_640.jpg', height: '60', width: '60'
+                .goods-name
+                  .name-fine
+                    絵画
+                  .goods-icon-list
+                    =fa_icon 'heart-o', class: 'heart-item'
+                    %span &nbsp;0&nbsp;
+                    =fa_icon 'comment-o', class: 'comment-item'
+                    %span &nbsp;0&nbsp;&nbsp;
+                    .font-goods
+                      出品中
+                  =fa_icon 'angle-right 2x', class: 'angle-item', height: '100', width: '100'
 
 
   = render 'shared/footer'
