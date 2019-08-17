@@ -343,9 +343,10 @@ input[type="number"]::-webkit-inner-spin-button {
       color: #888;
       font-size: 14px;
       font-weight: bolder;
+      
     }
     .product_price {
-      display: flex;
+      width: 350px;
       
       
       .product_price-group {
@@ -363,11 +364,11 @@ input[type="number"]::-webkit-inner-spin-button {
       .product_price-form {
         margin-left: 100px;
         position: relative;
-        bottom: 18px;
-
+        bottom: 45px;
+        
         .price_form-box {
           margin: 8px 0 0;
-          width: 160px;
+          
           height: 50px;
           padding: 10px 20px 8px;
           border-radius: 4px;
@@ -378,10 +379,74 @@ input[type="number"]::-webkit-inner-spin-button {
 
         }
       }
+      .product_price-fee {
+        padding: 20px 0;
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        font-size: 14px;
+        color: #333;
+        display: flex;
+        .right_bar {
+          padding-left: 100px;
+        }
+      }
+      .product_profit {
+        padding: 20px 0;
+        font-size: 16px;
+        display: flex;
+        font-weight: bolder;
+        
+        .right_bar_2 {
+          padding-left: 100px;
+          font-size: 30px;
+        }
+      }
     }
   } 
-  .product_content4 {
-    
+  .product_content5 {
+    padding: 40px;
+    border-bottom: solid 1px #f5f5f5;
+    font-size: 14px;
+    color: #333;
+    .product_notice {
+      a {
+        text-decoration: none;
+        color: #0099e8;
+      }
+    }
+    .product_exhibit-box {
+      .submit {
+        margin: 40px 0 0;
+        display: block;
+        width: 100%;
+        line-height: 48px;;
+        cursor: pointer;
+        text-align: center;
+        background: #ea352d;
+        border: 1px solid #ea352d;
+        border-radius: 4px;
+        color: #fff;
+      }
+    }
+    .product_back-box {
+      margin: 40px 0 0;
+      display: block;
+      width: 300px;
+      position: relative;
+      left: 25%;
+      line-height: 48px;
+      cursor: pointer;
+      text-align: center;
+      background: #aaa;
+      border: 1px solid #aaa;
+      border-radius: 4px;
+
+      
+      a {
+        text-decoration: none;
+        color: #fff;
+      }
+    }
   }
   }
 }

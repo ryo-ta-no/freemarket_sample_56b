@@ -34,6 +34,7 @@ class ItemsController < ApplicationController
     @item = Item.new(item_params)
     @item.save
     @photo = Photo.new(photo_params)
+   
     @photo.save
     redirect_to root_path 
   end
@@ -49,6 +50,8 @@ class ItemsController < ApplicationController
 
 private
 
+
+
   def user_search_params
     params.fetch(:search, {}).permit(:id,:prefecture)
   end
@@ -58,7 +61,8 @@ private
   end
 
   def photo_params
-    params.require(:photo).permit(:img).merge(item_id: @item.id)
+    params.require(:photo).permit({img: []}).merge(item_id: @item.id)
+    binding.pry
   end
 
 
