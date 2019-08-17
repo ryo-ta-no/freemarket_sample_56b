@@ -1,0 +1,26 @@
+.user-logout-main{
+  display: flex;
+  margin: 40px 200px 0;
+  padding: 40px;
+  .__right-logout{
+    background-color: #fff;
+    width: 700px;
+    height: 180px;
+    .__logout-big-box{
+      padding: 64px;
+      text-align: center;
+      .__logout-small-box{
+        max-width: 320px;
+        margin: 0 auto;
+        .__text-logout{
+          width: 100%;
+          line-height: 48px;
+          font-size: 14px;
+          background: #ea352d;
+          border: 1px solid #ea352d;
+          color: #fff;
+        }
+      }
+    }
+  }
+}

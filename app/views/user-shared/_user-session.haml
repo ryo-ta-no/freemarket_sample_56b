@@ -16,7 +16,7 @@
       .__session-google-text
         Googleでログイン
   .login-form-session
-    = form_with do |form|
+    = form_with model: @user do |form|
       .session-email-form
         = form.email_field :email,placeholder: 'メールアドレス', class: 'email-form'
       .session-password-form
@@ -35,7 +35,7 @@
             プライバシー・利用規約
       .log-in-box
         .text-box-log
-          ログイン
+          = form.submit "ログイン", class: "login-box"
       .forgot-box
         パスワードをお忘れの方
 
