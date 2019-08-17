@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root to: "cards#index"
+  root to: "items#index"
   devise_for :users
   resources :items do
     resources :photos 
@@ -21,7 +21,7 @@ Rails.application.routes.draw do
       get 'userlogout'
     end
   end
-  resources :cards, only: [:create, :show, :new, :show] do
+  resources :cards, only: [:create, :show, :new, :show,:index] do
     collection do
       post 'create'
       post 'delete', to: 'card#delete'
