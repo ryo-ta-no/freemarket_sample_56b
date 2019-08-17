@@ -18,6 +18,7 @@ Rails.application.routes.draw do
       get 'address'
       get 'payment'
       get 'complete'
+      get 'userlogout'
     end
   end
   resources :cards, only: [:create, :show, :new, :show] do

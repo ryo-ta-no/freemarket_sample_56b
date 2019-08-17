@@ -126,15 +126,17 @@ body{
       }
     }
     .log-in-box{
-      background: #ea352d;
-      border: 1px solid #ea352d;
-      color: #fff;
-      margin: 24px 0 0;
-      line-height: 48px;
-      font-size: 14px;
-      width: 100%;
-      text-align: center;
-      cursor: pointer;
+      .login-box{
+        background: #ea352d;
+        border: 1px solid #ea352d;
+        color: #fff;
+        margin: 24px 0 0;
+        line-height: 48px;
+        font-size: 14px;
+        width: 100%;
+        text-align: center;
+        cursor: pointer;
+        }
     }
     .forgot-box{
       margin: 40px 0 0;
