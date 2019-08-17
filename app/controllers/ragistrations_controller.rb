@@ -27,6 +27,8 @@ class RagistrationsController < ApplicationController
   def payment
   end
 
+  def userlogout
+  end
 
   def create
     @user = User.new(
@@ -46,7 +48,7 @@ class RagistrationsController < ApplicationController
       session[:id] = @user.id
       redirect_to payment_ragistrations_path
     else
-      render '/signup/registration'
+      render 'ragistrations/member'
     end
   end
 
