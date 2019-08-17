@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root to: "items#index"
+  root to: "cards#index"
   devise_for :users
   resources :items do
     resources :photos 
@@ -20,5 +20,15 @@ Rails.application.routes.draw do
       get 'complete'
     end
   end
+  resources :cards, only: [:create, :show, :new, :show] do
+    collection do
+      post 'create'
+      post 'delete', to: 'card#delete'
+      post 'show'
+      get 'confirmation'
+    end
+  end
+   
+
 end
 

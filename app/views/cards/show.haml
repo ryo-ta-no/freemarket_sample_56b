@@ -11,13 +11,16 @@
           .card__list__picture  
         .card__number 
         
-          = "**** **** **** " + card_url.slice(12..16)
+          = "**** **** **** " + card_url(@number,id: 1)
+          
         .expire__date 
           - exp_mouth = @expirationdate_mouth.to_s
           - exp_year = @expirationdate_year.to_s.slice(2,3)
-          = exp_mouth + " / " + exp_year
-        = form_tag(delete_credit_card_index_path, method: :post, id: 'charge-form',  name: "inputForm") do
+          = "#{exp_mouth} +  /  + #{exp_year}"
+        = form_tag(delete_cards_path, method: :post, id: 'charge-form',  name: "inputForm") do
           %input{ type: "hidden", name: "card_id", value: "" }
           %button.delete__button 削除する
       .how__not__regist
         %span 支払い方法について
+
+        
