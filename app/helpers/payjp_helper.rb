@@ -8,4 +8,7 @@ module PayjpHelper
     end
     doc.to_html.html_safe
 end
+
+
+
 end

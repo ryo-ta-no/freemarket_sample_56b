@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_15_101542) do
+ActiveRecord::Schema.define(version: 2019_08_13_075002) do
 
   create_table "brands", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "brand", null: false
@@ -20,17 +20,12 @@ ActiveRecord::Schema.define(version: 2019_08_15_101542) do
   end
 
   create_table "cards", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "card_number", null: false
-    t.integer "expirationdate_year", null: false
-    t.integer "expirationdate_mouth", null: false
-    t.string "card_name", null: false
-    t.integer "security_cord", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "user_id", null: false
+    t.bigint "user_id", null: false
     t.string "customer_id", null: false
     t.string "card_id", null: false
-    t.string "current_user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_cards_on_user_id"
   end
 
   create_table "categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -46,16 +41,16 @@ ActiveRecord::Schema.define(version: 2019_08_15_101542) do
     t.integer "state_id", null: false
     t.integer "price", null: false
     t.integer "buyer_id", null: false
+    t.integer "postage", null: false
     t.integer "prefecture_id", null: false
     t.integer "shipping_date", null: false
     t.integer "size_id", null: false
     t.integer "brand_id", null: false
     t.integer "user_id", null: false
+    t.integer "postage_day_id", null: false
+    t.integer "category_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "category_id"
-    t.integer "postage_id", null: false
-    t.integer "postage_day_id", null: false
     t.index ["name"], name: "index_items_on_name"
   end
 
@@ -132,12 +127,13 @@ ActiveRecord::Schema.define(version: 2019_08_15_101542) do
     t.string "last_name", null: false
     t.string "first_kana", null: false
     t.string "last_kana", null: false
+    t.integer "year_day", null: false
     t.string "call_number", null: false
-    t.string "nickname", null: false
     t.integer "birth_day"
+    t.string "nickname", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
-    t.index ["nickname"], name: "index_users_on_nickname"
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "cards", "users"
 end
