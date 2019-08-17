@@ -48,7 +48,7 @@ class RagistrationsController < ApplicationController
       session[:id] = @user.id
       redirect_to payment_ragistrations_path
     else
-      render '/'
+      render 'ragistrations/member'
     end
   end
 

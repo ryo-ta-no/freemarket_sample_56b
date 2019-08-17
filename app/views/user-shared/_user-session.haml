@@ -16,7 +16,7 @@
       .__session-google-text
         Googleでログイン
   .login-form-session
-    = form_with model: @user do |form|
+    = form_for(resource, as: resource_name, url: session_path(resource_name)) do |form|
       .session-email-form
         = form.email_field :email,placeholder: 'メールアドレス', class: 'email-form'
       .session-password-form
@@ -24,7 +24,7 @@
       .session-form-checker
         .__checker-mini-box
           .__square-small-checker
-            = form.check_box :check_box, class: 'small-check'
+            = check_box :check_box, class: 'small-check'
           .__suquare-text
             私はロボットではあり
             %br
