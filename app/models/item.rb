@@ -5,7 +5,7 @@ class Item < ApplicationRecord
   belongs_to_active_hash :state
   belongs_to :postage
   has_many :photos
-  accepts_nested_attributes_for :photos
+  # accepts_nested_attributes_for :photos
   belongs_to :user, optional: true
   belongs_to :size, optional: true
   belongs_to :category, optional: true

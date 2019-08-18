@@ -12,11 +12,10 @@
             必須
         %p
           最大10枚までアップロードできます
-        = fields_for :photos do |photo|
-          = photo.label :images, class: "image_label", id: "image"  do
+        = fields_for @photo do |i|
+          = i.label :img, class: "image_label", for: "image"  do
             .upload_image
-              = photo.file_field :images, multipart: true, class: "file_field"
-              abort
+              = i.file_field :img, multipart: true, class: "file_field", id: "image"
               %pre.image_text
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ドラッグアンドドロップ　
                 またはクリックしてファイルをアップロード
