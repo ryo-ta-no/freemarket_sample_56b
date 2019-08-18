@@ -87,10 +87,23 @@
   //   background: #ea352d;
 //   }
 // }
-.through#through:first-child{
+// .through#through:first-child{
+  // color: #ea352d;
+  // .progress-status{
+  //   background: #ea352d;
+//   }
+// }
+
+ul .through:first-child{
   color: #ea352d;
   .progress-status{
     background: #ea352d;
   }
 }
 
+ul .active::before{
+  color: #ea352d;
+  .progress-status_bar{
+    background: #ea352d;
+  }
+}
