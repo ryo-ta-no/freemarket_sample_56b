@@ -80,7 +80,7 @@ body{
       height:50px;
       padding: 0;
       display: block;
-      font: 66.66667% sans-serif;
+      // font: 66.66667% sans-serif;
       clear: both;
       .left{
         margin-top:0;
@@ -113,9 +113,9 @@ body{
               font-size: 15px;
               margin-right: 4px;
               }
-            }
           }
-        }
+      }
+    }
 
           .header-l-right{
           position: relative;
@@ -141,53 +141,69 @@ body{
           }
       .right{
         float: right;
-      }
-        .login-navi{
-        padding:0;
-        display:flex;
-        line-height: 32px;
-
-          .new-create-user{
-          font-size:13px;
-          padding: 0 10px;
-          line-height: 30px;
-          margin:0;
-          border-radius: 4px;
-          text-align: center;
+        display: flex;
+        .header-like-box{
+          margin-top: 10px;
+          display: flex;
+          padding: 0 7px;
+          .like-icon-box{
+            margin-right: 10px;
+            color: #ccc;
+          }
+        }
+        .header-notice{
+          margin-top: 10px;
+          display: flex;
+          padding: 0 7px;
+          .notice-icon-box{
+            margin-right: 10px;
+            margin-left: 5px;
+            color: #ccc;
+          }
+        }
+        .header-to-do-list{
+          margin-top: 10px;
+          display: flex;
+          padding: 0 7px;
+          .check-icon-box{
+            margin-right: 10px;
+            margin-left: 5px;
+            color: #ccc;
+          }
+        }
+        .header-mypage-box{
+          margin-top: 10px;
+          padding-left: 7px;
+          .mypage-kondou{
+            color: #333333;
+          }
+        }
+        .new-create-user{
+          padding: 0 7px;
           background: #ea352d;
           border: 1px solid #ea352d;
-          &:hover{
-            cursor:pointer;
-          }
-          a {
-            color: #fff;
-            text-decoration: none;
-          }
-        }
-          .login{
-          display: inline-block;
-          margin: 0 0 0 10px ;
-          display: block;
-          border: 1px solid #0099e8;
-          background: #fff;
-          color: #0099e8;
+          padding: 0 10px;
           padding: 0 10px;
           line-height: 30px;
           border-radius: 4px;
-          text-align: center;
-          font-size:13px;
-
-          &:hover{
+          margin-right: 10px;
+          .new-ragistration-text{
             color: #fff;
-            border: 1px solid #0099e8;
-            background-color: #0099e8;
-            cursor:pointer;
+          }
+        }
+        .login-user-box{
+          border: 1px solid #0099e8;
+          background: #fff;
+          padding: 0 10px;
+          line-height: 30px;
+          border-radius: 4px;
+          .new-user-text{
+            color: #0099e8;
           }
         }
       }
-    }
   }
-
+}
 .new-user-text{
   color: #0099e8;
   text-decoration: none;
