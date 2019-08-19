@@ -5,7 +5,7 @@
       .product-details-3
         COACH コーチ ショルダーバッグ
       .product-description
-        『COACH コーチ ショルダーバッグ』は、75回の取引実績を持つカカロット@断捨離さんから出品されました。コーチ（ショルダーバッグ/レディース）の商品で、大阪府から2~3日で発送されます。
+        『COACH コーチ ショルダーバッグ』は、75回の取引実績を持つGGさんから出品されました。コーチ（ショルダーバッグ/レディース）の商品で、大阪府から2~3日で発送されます。
       .product-details-4
         .product-details-5
           .photo-box-1
@@ -23,7 +23,7 @@
               出品者
             .right-zone-1
               .right-zone-1-1
-                カカロット@断捨離
+                GG
               .right-zone-1-2
                 .evaluation-icon
                   = fa_icon 'twitter', class: "good-icon"
@@ -134,4 +134,31 @@
       .product-details-38
         iPhone 純正 コンセント >
 
-    .product-details-39
+    .details-comment-box
+      .details-in-box
+        .details-text-box
+          相手のことを考え丁寧なコメントを心掛けましょう。不快な言葉遣いなどは利用制限や退会処分とな
+          %br/
+          ることがあります。
+        = form_with do |c|
+          .details-comment-form
+            = c.text_area :p , class: 'coment-text-area'
+          .details-comment-submit
+            = c.submit :"コメント" , class: 'coment-submit-b'
+
+    .comment-under-box
+      .before-box
+        < 時計
+      .after-box
+        パジャマ >
+
+    .details-icon-box
+      %ul.details-icon-main
+        %li.details-facebook
+          = fa_icon 'facebook-square', class: 'd-facebook'
+        %li.details-twitter
+          = fa_icon 'twitter-square' , class: 'd-twitter'
+        %li.details-line
+          = fa_icon 'vine' ,class: 'd-vine'
+        %li.details-pinster
+          = fa_icon 'pinterest' , class: 'd-pint'
