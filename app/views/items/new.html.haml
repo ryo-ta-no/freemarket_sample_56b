@@ -11,14 +11,17 @@
           .upload_require 
             必須
         %p
-          最大10枚までアップロードできます
-        = fields_for @photo do |i|
-          = i.label :img, class: "image_label", for: "image"  do
-            .upload_image
-              = i.file_field :img, multipart: true, class: "file_field", id: "image"
-              %pre.image_text
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ドラッグアンドドロップ　
-                またはクリックしてファイルをアップロード
+          最大5枚までアップロードできます
+          下をクリックしてください
+        .photo_form
+          = f.fields_for :photos do |i|
+            .photo_display
+            = i.label :img, class: "image_label", for: "image"  do
+              .upload_image
+                = i.file_field :img, name: "item[photos_attributes][0][img]", multipart: true, class: "file_field", id: "image", style: "color: red"
+                = i.file_field :img, name: "item[photos_attributes][1][img]", multipart: true, class: "file_field", id: "image2", style: "display: none;"
+            
+            
 
       .product_content
         .product_box-description
