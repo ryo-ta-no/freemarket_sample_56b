@@ -1,0 +1,195 @@
+.main-box {
+  background-color: #F5F5F5;
+  width: 100%;
+
+
+  .mypage-main {
+    display: flex;
+    margin: 40px 200px 0;
+    padding: 40px;
+
+
+
+    .right-container {
+      width: 100%;
+      max-width: 700px;
+
+
+      .user-top {
+        height: 200px;
+        width: auto;
+        text-align: center;
+        @include back-img;
+
+
+
+        .top-box {
+          text-decoration: none;
+          position: relative;
+          top: 50px;
+
+
+          .user-img {
+
+
+            #img-top {
+              border-radius: 50%;
+
+            }
+
+          }
+
+          .user-nick {
+            @include font-size-1;
+            @include line-height;
+            @include font-weight;
+          }
+
+          .user-val {
+            @include font-size-1;
+            @include line-height;
+          }
+
+        }
+
+      }
+
+      .user-notice {
+        @include background-white;
+        min-height: 300px;
+
+        .user-tab {
+          display: flex;
+          width: 100%;
+          line-height: 72px;
+          @include font-size-2;
+
+          .active-1 {
+            text-align: center;
+            @include tab-center;
+            width: 100%;
+
+            .do-1 {
+              @include font-weight;
+            }
+
+          }
+
+          .active-2 {
+            background-color: gainsboro;
+            text-align: center;
+            @include tab-center;
+            width: 100%;
+
+            .do-2 {
+              @include font-weight;
+            }
+
+          }
+
+        }
+
+        .user-box {
+          width: 100%;
+          text-align: center;
+          @include font-size-2;
+          color: #ccc;
+
+          #box-img {
+            position: relative;
+            top: 100px;
+
+          }
+
+          .list-box {
+            padding-top: 160px;
+            padding-bottom: 60px;
+
+            .not-find-box-1 {
+              @include font-weight;
+            }
+
+          }
+
+        }
+
+      }
+
+      .user-history {
+        width: 100%;
+        @include background-white;
+        margin-top: 40px;
+
+        .history-head {
+          height: 72px;
+          @include font-size-2;
+          font-weight: 600;
+          padding-right: 16px;
+          padding-left: 16px;
+          display: flex;
+          align-items: center;
+          background-color: #FAFAFA;
+
+        }
+
+        .history-tab {
+          display: flex;
+          line-height: 72px;
+          @include font-size-2;
+
+            .active-3 {
+              width: 100%;
+              @include tab-center;
+              
+
+              .do-3 {
+                @include font-weight;
+              }
+
+            }
+
+            .active-4 {
+              width: 100%;
+              @include tab-center;
+              background-color:gainsboro;
+
+              .do-4 {
+                @include font-weight;
+              }
+
+            }
+
+        }
+
+        .history-box {
+          width: 100%;
+          text-align: center;
+          @include font-size-2;
+          color: #ccc;
+
+          #box-img {
+            position: relative;
+            top: 100px;
+
+          }
+
+          .history-list {
+            padding-top: 160px;
+            padding-bottom: 60px;
+
+            .not-find-history-1 {
+              @include font-weight;
+
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}

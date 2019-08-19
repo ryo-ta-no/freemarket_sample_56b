@@ -1,0 +1,112 @@
+.info-center-box
+  .center-info-main
+    .__info-small-text
+      会員情報登録
+    .__info-center-small
+      .__info-list
+        = form_with model: @user, url: authentication_ragistrations_path , method: :get , local: true do |f|
+          .__list-from
+            .__info-form-text
+              = f.label :"ニックネーム"
+            .__list-required
+              必須
+          = f.text_field :nickname, placeholder: "例)メルカリ太郎", class: "text-info"
+          -# パスワード
+          .__list-from
+            .__info-form-text
+              = f.label :"メールアドレス"
+            .__list-required
+              必須
+          = f.email_field :email, placeholder: "メールアドレス", class: "text-info"
+          .__list-from
+            .__info-form-text
+              = f.label :"パスワード"
+            .__list-required
+              必須
+          = f.password_field :password, placeholder: "8文字以上", class: "text-info"
+          .__list-from
+            .__info-form-text
+              = f.label :"パスワード(確認)"
+            .__list-required
+              必須
+          = f.password_field :password_confirmation, placeholder: "8文字以上", class: "text-info"
+
+          -# 本人確認テキスト
+          .__list-from
+            本人確認
+          %br
+            .list-text-box
+              安心・安全にご利用していただくために、お客さまの本人
+              %br/
+              情報の登録にご協力ください。他のお客さまに公開さ
+              %br/
+              れることはありません。
+
+          -# 名前全角
+          .__list-from
+            .__info-form-text
+              = f.label :"お名前(全角)"
+            .__list-required
+              必須
+          .__zenkaku-box
+            .__zenkaku-name-1
+            = f.text_field :first_name, placeholder: "例)山田", class: "text-info"
+            .__zenkaku-name-2
+            = f.text_field :last_name, placeholder: "例彩", class: "text-info"
+
+          -# 名前カタカナ
+          .__list-from
+            .__info-form-text
+              = f.label :"お名前カナ(全角)"
+            .__list-required
+              必須
+          .__katakana-box
+            .__katakana-name-1
+            = f.text_field :first_kana, placeholder: "例)ヤマダ", class: "text-info"
+            .__katakana-name-2
+            = f.text_field :last_kana, placeholder: "例)アヤ", class: "text-info"
+
+          -# 生年月日フォーム
+          .__list-from
+            .__info-form-text
+              = f.label :"生年月日"
+            .__list-required
+              必須
+
+          -# 生年月日フォーム
+          .__info-pull-box
+            .__info-pull-mouth
+            = raw sprintf( f.date_select(:birth_day , use_month_numbers: true , start_year: 1930 , end_year: (Time.now.year + 5) , default: Date.new(1989, 1, 1),date_separator: '%s'),'年 ', '月 ') + '日'
+
+          -# 本人情報テキスト
+          .__list-render-text
+            ※本人情報は正しく入力してください。会員登録後、
+            %br/
+            修正するにはお時間を頂く場合があります。
+
+          .__center-under-info
+            .__info-under-small
+              .l-form-checker
+                .__l-mini-box
+                  .__l-small-checker
+                    = check_box :check_box, class: 'small-check'
+                  .__l-text
+                    私はロボットではあり
+                    %br
+                    ません
+                  .__l-icon
+                    = fa_icon 'internet-explorer', class: 'll-icon'
+                  .__l-under-text
+                    プライバシー・利用規約
+
+              .text-up-box
+                .text-sevice-box
+                  「次へ進む」のボタンを押すことによ利用規約に
+              .text-consent-box
+                同意したものとみなします
+
+              .red-move-on-btn
+                = f.submit "次へ進む", class: "move-on-red"
+              .move-on-under-text
+                本人情報の登録について
+

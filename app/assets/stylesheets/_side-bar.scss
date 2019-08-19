@@ -1,5 +1,6 @@
 *{
   font-family: "Source Sans Pro", Helvetica, Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif;
+  text-decoration: none;
 }
 @mixin li{
   cursor: pointer;
@@ -45,7 +46,7 @@ font-weight: bold;
 .side-bar{
   list-style: none;
   float: left;
-  width: 280px;
+  min-width: 280px;
   margin: 0 40px 0 0;
   
 
@@ -54,13 +55,7 @@ font-weight: bold;
   
   display: block;
     list-style-type: disc;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    padding-inline-start: 40px;
     
-
   .mypage li {
     @include li;
     .icon-arrow-right{
@@ -95,7 +90,9 @@ font-weight: bold;
   float:right;
   }
       }}
-    
+  .log-out-text{
+    color: #333;
+  }
   
 
 
