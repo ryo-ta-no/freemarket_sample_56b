@@ -12,8 +12,9 @@ class ItemsController < ApplicationController
     @postage_day = PostageDay.all
     @state = State.all
     @item = Item.new
-    # @item.photos.build
     @photo = Photo.new
+    # @photo = @item.photos.build
+    
     
 end
   
@@ -25,7 +26,7 @@ end
 
   def category_grandchildren
     @category_grandchildren = Category.find(params[:productcategory]).children
-    end
+    end 
 
   def postage_children 
     @postage_children = Postage.find(params[:postageitem]).children
@@ -35,16 +36,15 @@ end
 
   def create
     @item = Item.new(item_params)
-    # binding.pry
     @item.save
+    @photo = Photo.new(photo_params)
+    @photo.save
+    redirect_to root_path
       # params[:photos][:img].each do |i|
       #   @photo = @item.photos.create!(img: i)
     #   end
-    # end
-    @photo = Photo.new(photo_params)
-    # binding.pry
-    @photo.save
-    redirect_to root_path
+    # # end
+
   end
 
 
@@ -67,7 +67,7 @@ private
   def item_params
     params.require(:item).permit(:state_id, :name, :explain, :category_id, :price, :postage_id, :prefecture_id, :postage_day_id).merge(user_id: 1, buyer_id: 1, shipping_date: 1, size_id: 1, brand_id: 1)
   end
-  # , photos_attributes: [:img]
+
   def photo_params 
     params.require(:photo).permit(:img).merge(item_id: @item.id)
   end
