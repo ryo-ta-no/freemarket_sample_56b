@@ -134,4 +134,31 @@
       .product-details-38
         iPhone 純正 コンセント >
 
-    .product-details-39
+    .details-coment-box
+      .details-in-box
+        .details-text-box
+          相手のことを考え丁寧なコメントを心掛けましょう。不快な言葉遣いなどは利用制限や退会処分とな
+          %br/
+          ることがあります。
+        = form_with do |c|
+          .details-coment-form
+            = c.text_area :p , class: 'coment-text-area'
+          .details-coment-submit
+            = c.submit :"コメント" , class: 'coment-submit-b'
+
+    .coment-under-box
+      .before-box
+        < 時計
+      .after-box
+        パジャマ >
+
+    .details-icon-box
+      %ul.details-icon-main
+        %li.details-facebook
+          = fa_icon 'facebook-square', class: 'd-facebook'
+        %li.details-twitter
+          = fa_icon 'twitter-square' , class: 'd-twitter'
+        %li.details-line
+          = fa_icon 'vine' ,class: 'd-vine'
+        %li.details-pinster
+          = fa_icon 'pinterest' , class: 'd-pint'

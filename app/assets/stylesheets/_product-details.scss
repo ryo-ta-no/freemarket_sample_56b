@@ -4,12 +4,10 @@
 
   .all-contents {
     height: 2500px;
-    // height: auto;
     width: 100%;
 
     &__prduct-details-1 {
       background-color: #fff;
-      height: 1500px;
       width: 50%;
       margin: auto;
       margin-top: 40px;
@@ -426,12 +424,81 @@
         }
       }
 
-      .product-details-39 {
-        background-color: #fff;
-        background-color: green;
-        height: 200px;
-        width: 100%;
+      .details-coment-box {
+        .details-in-box{
+          padding: 24px;
+          .details-text-box{
+            padding: 8px;
+            background: #fff6de;
+            font-size: 14px;
+          }
+          .details-coment-form{
+            margin-top: 8px;
+            .coment-text-area{
+              width: 100%;
+              min-height: 104px;
+              max-width: 97%;
+              padding: 10px;
+              border: 1px solid #ccc;
+              font-size: 16px;
+              line-height: 1.5;
+              outline: 0;
+            }
+          }
+          .details-coment-submit{
+            .coment-submit-b{
+              background: #aaa;
+              width: 100%;
+              margin: 8px 0 0;
+              text-align: center;
+              border: 1px solid #aaa;
+              color: #fff;
+              line-height: 48px;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+      .coment-under-box{
+        background-color: rgb(245, 245, 245);
+        width: 720px;
+        margin: 24px auto 0;
+        display: flex;
+        justify-content: space-between;
+        .before-box{
+          color: #0099e8;
 
+        }
+        .after-box{
+          color: #0099e8;
+        }
+      }
+
+      .details-icon-box{
+        margin: 24px auto;
+        padding: 32px 0 24px;
+        width: 700px;
+
+        .details-icon-main{
+          margin: 16px 0 0;
+          font-size: 50px;
+          text-align: center;
+          .details-facebook{
+            display: inline-block;
+            .d-facebook{
+              color: #0099e8;
+            }
+          }
+          .details-twitter{
+            display: inline-block;
+          }
+          .details-line{
+            display: inline-block;
+          }
+          .details-pinster{
+            display: inline-block;
+          }
+        }
       }
     }
   }
