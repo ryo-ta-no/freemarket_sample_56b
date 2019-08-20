@@ -1,10 +1,12 @@
 class ItemsController < ApplicationController
 
   def index
+    @parents = Category.where(ancestry: nil).order("id ASC").limit(4)
   end
 
 
   def new
+    @parents = Category.where(ancestry: nil)
     @category = Category.all.order("id ASC").limit(13)
     @postage = Postage.all.order("id ASC").limit(2)
     @prefecture = Prefecture.all
@@ -12,28 +14,25 @@ class ItemsController < ApplicationController
     @state = State.all
     @item = Item.new
     @item.photos.build
+  end
 
-
-end
-  
-
-  def category_children  
+  def category_children
     @category_children = Category.find(params[:productcategory]).children
-    end
+  end
 
 
   def category_grandchildren
     @category_grandchildren = Category.find(params[:productcategory]).children
-    end 
+    end
 
-  def postage_children 
+  def postage_children
     @postage_children = Postage.find(params[:postageitem]).children
-    
   end
 
 
   def create
     @item = Item.new(item_params)
+    @parents = Category.where(ancestry: nil)
     @item.save
     redirect_to root_path
   end
@@ -45,11 +44,8 @@ end
     @search_params = user_search_params
     @prefecrure = Prefecture.all
   end
-  
 
-private
-
-
+  private
 
   def user_search_params
     params.fetch(:search, {}).permit(:id,:prefecture)
