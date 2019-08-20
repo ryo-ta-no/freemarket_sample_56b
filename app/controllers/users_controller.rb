@@ -1,8 +1,11 @@
 class UsersController < ApplicationController
 
   def index
-    # @nickname = current_user.nickname
   end
+
+  def show
+  end
+
 
   def update
   end
