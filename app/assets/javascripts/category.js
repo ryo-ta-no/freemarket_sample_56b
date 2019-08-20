@@ -39,7 +39,6 @@ $(function(){
 
   $('#category_select').on('change', function(){ 
     var productcategory = document.getElementById('category_select').value; 
-    console.log(productcategory)
     if (productcategory != ''){
       $.ajax({
         url: 'category_children',
@@ -69,7 +68,6 @@ $(function(){
 
   $('.product_select-details').on('change', '#child_category', function(){
     var productcategory = document.getElementById('child_category').value;
-    console.log(productcategory)
     if (productcategory != ''){
       
     $.ajax ({

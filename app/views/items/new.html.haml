@@ -11,15 +11,31 @@
           .upload_require 
             必須
         %p
-          最大10枚までアップロードできます
-        = fields_for (@photo) do |photo|
-          = photo.label :img, class: "image_label", id: "image"  do
-            .upload_image
-              = photo.file_field :img, multipart: true, class: "file_field"
-              abort
-              %pre.image_text
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ドラッグアンドドロップ　
-                またはクリックしてファイルをアップロード
+          最大6枚までアップロードできます
+          %br [下をクリックしてください]
+        .photo_form
+          = f.fields_for :photos do |i|
+            .photo_display
+            = i.label :img, class: "image_label", for: "image", id: "photo"  do
+              .upload_image
+                = i.file_field :img, name: "item[photos_attributes][0][img]", multipart: true, class: "file_field", id: "image", style: "color: red"
+            = i.label :img, class: "image_label", for: "image2", id: "photo2", style: "display: none;"  do
+              .upload_image
+                = i.file_field :img, name: "item[photos_attributes][1][img]", multipart: true, class: "file_field", id: "image2"
+            = i.label :img, class: "image_label", for: "image3", id: "photo3", style: "display: none;"  do
+              .upload_image
+                = i.file_field :img, name: "item[photos_attributes][2][img]", multipart: true, class: "file_field", id: "image3"
+            = i.label :img, class: "image_label", for: "image4", id: "photo4", style: "display: none;"  do
+              .upload_image
+                = i.file_field :img, name: "item[photos_attributes][3][img]", multipart: true, class: "file_field", id: "image4"
+            = i.label :img, class: "image_label", for: "image5", id: "photo5", style: "display: none;"  do
+              .upload_image
+                = i.file_field :img, name: "item[photos_attributes][4][img]", multipart: true, class: "file_field", id: "image5"
+            = i.label :img, class: "image_label", for: "image6", id: "photo6", style: "display: none;"  do
+              .upload_image
+                = i.file_field :img, name: "item[photos_attributes][5][img]", multipart: true, class: "file_field", id: "image6"
+        .remove_btn
+          削除
 
       .product_content
         .product_box-description
@@ -102,7 +118,17 @@
               必須 
           .product_price-form
             ¥
-            = f.number_field :price, placeholder: "例) 300", class: "price_form-box"
+            %input#price_calc.price_form-box{placeholder: "例) 300", type: "number"}/
+          .product_price-fee
+            販売手数料(10%)
+            .right_bar
+            
+          .product_profit
+            販売利益
+            = f.number_field :price, style: "display: none", id: "price"
+            .right_bar_2
+              
+
       .product_content5
         .product_notice
           = link_to " " do
@@ -121,9 +147,9 @@
             加盟店規約
           に同意したことになります｡
         .product_exhibit-box
-          = f.submit "出品する"
+          = f.submit "出品する", class: "submit"
         .product_back-box
-          =link_to " " do
+          =link_to root_path do
             戻る
 
 
