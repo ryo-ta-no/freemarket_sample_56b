@@ -12,12 +12,9 @@ class ItemsController < ApplicationController
     @postage_day = PostageDay.all
     @state = State.all
     @item = Item.new
-    # 6.times do
     @item.photos.build
-    # end
-    
-    
-    
+
+
 end
   
 

@@ -10,7 +10,6 @@ $(function(){
   reader.readAsDataURL(file);
 
   var num = $('.photo_display img').length;
-  console.log(num)
   if (num == 0){
   $('#photo').css({'display':'none'});
   $('#photo2').css('display','');

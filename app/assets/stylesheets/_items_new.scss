@@ -143,7 +143,16 @@ input[type="number"]::-webkit-inner-spin-button {
           }
           }
           }
+          .remove_btn {
+            cursor: pointer;
+            border-radius: 2px;
+            background: #0099e8;
+            color: #fff;
+            display: inline-block;
+            padding: 10px;
+          }
         }
+
       }
       .product_content {
         padding: 40px;
