@@ -24,6 +24,6 @@ set :default_env, {
   AWS_ACCESS_KEY_ID: ENV["AWS_ACCESS_KEY_ID"],
   AWS_SECRET_ACCESS_KEY: ENV["AWS_SECRET_ACCESS_KEY"],
   BASIC_AUTH_USER: ENV["BASIC_AUTH_USER"],
-  BASIC_AUTH_PASSWORD: ENV["BASIC_AUTH_PASSWORD"]
+  BASIC_AUTH_PASSWORD: ENV["BASIC_AUTH_PASSWORD"],
 }
 set :linked_files, fetch(:linked_files, []).push("config/master.key")
