@@ -11,17 +11,29 @@
           .upload_require 
             必須
         %p
-          最大5枚までアップロードできます
-          下をクリックしてください
+          最大6枚までアップロードできます
+          %br 下をクリックしてください
         .photo_form
           = f.fields_for :photos do |i|
             .photo_display
-            = i.label :img, class: "image_label", for: "image"  do
+            = i.label :img, class: "image_label", for: "image", id: "photo"  do
               .upload_image
                 = i.file_field :img, name: "item[photos_attributes][0][img]", multipart: true, class: "file_field", id: "image", style: "color: red"
-                = i.file_field :img, name: "item[photos_attributes][1][img]", multipart: true, class: "file_field", id: "image2", style: "display: none;"
-            
-            
+            = i.label :img, class: "image_label", for: "image2", id: "photo2", style: "display: none;"  do
+              .upload_image
+                = i.file_field :img, name: "item[photos_attributes][1][img]", multipart: true, class: "file_field", id: "image2"
+            = i.label :img, class: "image_label", for: "image3", id: "photo3", style: "display: none;"  do
+              .upload_image
+                = i.file_field :img, name: "item[photos_attributes][2][img]", multipart: true, class: "file_field", id: "image3"
+            = i.label :img, class: "image_label", for: "image4", id: "photo4", style: "display: none;"  do
+              .upload_image
+                = i.file_field :img, name: "item[photos_attributes][3][img]", multipart: true, class: "file_field", id: "image4"
+            = i.label :img, class: "image_label", for: "image5", id: "photo5", style: "display: none;"  do
+              .upload_image
+                = i.file_field :img, name: "item[photos_attributes][4][img]", multipart: true, class: "file_field", id: "image5"
+            = i.label :img, class: "image_label", for: "image6", id: "photo6", style: "display: none;"  do
+              .upload_image
+                = i.file_field :img, name: "item[photos_attributes][5][img]", multipart: true, class: "file_field", id: "image6"
 
       .product_content
         .product_box-description
