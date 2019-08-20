@@ -35,8 +35,19 @@ $(function(){
   else if (num == 5){
     $('.image_label').css({'display':'none'});
 
- 
   }
+
   })
 
+
+
+  $('#image').on('change', function(){
+    console.log(999)
+    var HTML = '';
+    HTML = `<a class='remove-btn'>削除</a>`;
+    console
+    $('#image').append(HTML);
+
+
+  })
 })
