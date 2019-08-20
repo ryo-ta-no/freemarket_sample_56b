@@ -28,6 +28,18 @@
   position: absolute;
   right: 20px;
   bottom: 17px;
+
+}
+@mixin remove {
+  cursor: pointer;
+  border-radius: 2px;
+  background: #0099e8;
+  color: #fff;
+  display: inline-block;
+  padding: 5px 10px;
+  position: relative;
+  left: 23px;
+  margin-top: 10px;
 }
 .photo_img {
   width: 100px; height: 162px;
@@ -143,13 +155,33 @@ input[type="number"]::-webkit-inner-spin-button {
           }
           }
           }
-          .remove_btn {
-            cursor: pointer;
-            border-radius: 2px;
-            background: #0099e8;
-            color: #fff;
-            display: inline-block;
-            padding: 10px;
+          .remove_btn1 {
+            @include remove;
+            
+          }
+          .remove_btn2 {
+            @include remove;
+            margin-left: 45px;
+           
+          }
+          .remove_btn3 {
+            @include remove;
+            margin-left: 45px;
+            
+          }
+          .remove_btn4 {
+            @include remove;
+            margin-left: 45px;
+            
+          }
+          .remove_btn5 {
+            @include remove;
+            margin-left: 45px;
+          }
+          .remove_btn6 {
+            @include remove;
+            margin-left: 45px;
+          
           }
         }
 
