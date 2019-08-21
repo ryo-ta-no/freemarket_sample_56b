@@ -10,7 +10,7 @@
           .new-items__caption
             = link_to '' do
               = "#{parent.category_name} 新着アイテム"
-          - @items = Item.where(category_id: category.first.id..category.last.id).limit(4)
+          - @items = Item.where(category_id: category.first.id..category.last.id).order("id DESC").limit(4)
           .new-items__products
             = render partial: "shared/all-items", collection: @items, as: "item"
     .show-all
