@@ -2,13 +2,24 @@ Rails.application.routes.draw do
   root to: "items#index"
   devise_for :users
   resources :items do
-    resources :photos 
     collection do
       get 'category_children'
       get 'category_grandchildren'
       get 'postage_children'
     end
+
+    member do
+      get 'goods_detail'
+    end
   end
+
+
+  resources :users do
+    member do
+      get 'goods'
+    end
+  end
+
   resources :users
 
   resources :ragistrations do
@@ -22,4 +33,3 @@ Rails.application.routes.draw do
     end
   end
 end
-

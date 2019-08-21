@@ -54,6 +54,18 @@ class ItemsController < ApplicationController
     @prefecrure = Prefecture.all
   end
 
+  def goods_detail
+    @items = Item.find(params[:id])
+    @photos = Photo.where(params[:id])
+  end
+
+  def destroy
+    @items = Item.find(params[:id])
+    @items.destroy
+    redirect_to goods_user_path
+  end
+
+
   private
 
   def user_search_params

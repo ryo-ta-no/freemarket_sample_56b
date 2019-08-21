@@ -1,6 +1,8 @@
 class UsersController < ApplicationController
 
   def index
+    @items = Item.all
+    @photos = Photo.all
   end
 
   def show
@@ -11,6 +13,11 @@ class UsersController < ApplicationController
   end
 
   def edit
+  end
+
+  def goods
+    @items = Item.all
+    @photos = Photo.all
   end
 
 end
