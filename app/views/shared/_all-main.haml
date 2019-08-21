@@ -2,7 +2,7 @@
 - if Item.exists?(category_id: category.first.id..category.last.id)
   .new-items
     .new-items__caption
-      = link_to '' do
+      = link_to '', class: 'itmes-main-link' do
         = "#{parent.category_name} 新着アイテム"
     - @items = Item.where(category_id: category.first.id..category.last.id).order("id DESC").limit(4)
     .new-items__products
