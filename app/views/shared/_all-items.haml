@@ -1,0 +1,11 @@
+=link_to item_path(item.id) do
+  .product
+    .photo-zone
+      = image_tag item.photos[0].img.url , width: "100%", height: "100%"
+    .data
+      .name
+        = item.name
+      .price
+        ¥
+        = item.price
+
