@@ -1,7 +1,7 @@
 .wrapper
   = render 'shared/header'
-  - breadcrumb :goods_detail
-  = render 'shared/breadcrumbs'
+  -# - breadcrumb :goods_detail
+  -# = render 'shared/breadcrumbs'
 
   .detail-main-box
     -# 後でrenderする商品の詳細ページview
@@ -11,7 +11,7 @@
       %p.text-or
         or
       .destroy-content
-        = link_to 'この商品を削除する', item_path(@item), method: :delete, class: "choice-destroy", data: {confirm: "本当に削除しますか？"}
+        = link_to 'この商品を削除する', item_path(@items.id), method: :delete, class: "choice-destroy", data: {confirm: "本当に削除しますか？"}
 
 
   = render 'shared/footer'
