@@ -1,6 +1,9 @@
 @import "users-mixin";
 @import "reset";
 @import "header";
+@import "product-details";
+@import "footer";
+@import "all-items";
 
 @import "slick-banner";
 @import "all-contents";
@@ -28,7 +31,7 @@
 @import "ragistration/info-authentication";
 @import "ragistration/info-center";
 
-
+@import "ragistration/_logout";
 @import "ragistration/center-main";
 @import "ragistration/header-main";
 @import "ragistration/fotter-main";

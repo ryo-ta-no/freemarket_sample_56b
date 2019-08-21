@@ -79,6 +79,7 @@ gem 'devise'
 gem 'active_hash'
 gem 'ancestry'
 gem 'gretel'
+gem "nested_form"
 group :production do
   gem 'unicorn', '5.4.1'
 end

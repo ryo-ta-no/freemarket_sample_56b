@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_13_075002) do
+ActiveRecord::Schema.define(version: 2019_08_15_101542) do
 
   create_table "brands", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "brand", null: false
@@ -106,7 +106,6 @@ ActiveRecord::Schema.define(version: 2019_08_13_075002) do
 
   create_table "streets", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "post", null: false
-    t.string "pretectures", null: false
     t.string "city", null: false
     t.string "address", null: false
     t.string "bilding"
@@ -129,7 +128,6 @@ ActiveRecord::Schema.define(version: 2019_08_13_075002) do
     t.string "first_kana", null: false
     t.string "last_kana", null: false
     t.string "call_number", null: false
-    t.string "authenticaition_number", null: false
     t.string "nickname", null: false
     t.integer "birth_day"
     t.index ["email"], name: "index_users_on_email", unique: true

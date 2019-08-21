@@ -4,15 +4,13 @@
       会員情報登録
     .__info-center-small
       .__info-list
-        = form_with model: @user , url: authentication_ragistrations_path , method: :get , local: true do |f|
+        = form_with model: @user, url: authentication_ragistrations_path , method: :get , local: true do |f|
           .__list-from
             .__info-form-text
               = f.label :"ニックネーム"
             .__list-required
               必須
           = f.text_field :nickname, placeholder: "例)メルカリ太郎", class: "text-info"
-
-
           -# パスワード
           .__list-from
             .__info-form-text
@@ -25,13 +23,13 @@
               = f.label :"パスワード"
             .__list-required
               必須
-          = f.password_field :password, placeholder: "7文字以上", class: "text-info"
+          = f.password_field :password, placeholder: "8文字以上", class: "text-info"
           .__list-from
             .__info-form-text
               = f.label :"パスワード(確認)"
             .__list-required
               必須
-          = f.password_field :password_confirmation, placeholder: "7文字以上", class: "text-info"
+          = f.password_field :password_confirmation, placeholder: "8文字以上", class: "text-info"
 
           -# 本人確認テキスト
           .__list-from
@@ -78,7 +76,7 @@
           -# 生年月日フォーム
           .__info-pull-box
             .__info-pull-mouth
-            = raw sprintf( f.date_select(:birth_day , use_month_numbers: true , start_year: 1930 , end_year: (Time.now.year - 18) , default: Date.new(1989, 1, 1),date_separator: '%s'),'年 ', '月 ') + '日'
+            = raw sprintf( f.date_select(:birth_day , use_month_numbers: true , start_year: 1930 , end_year: (Time.now.year + 5) , default: Date.new(1989, 1, 1),date_separator: '%s'),'年 ', '月 ') + '日'
 
           -# 本人情報テキスト
           .__list-render-text
@@ -108,7 +106,6 @@
                 同意したものとみなします
 
               .red-move-on-btn
-                -# = link_to "次へ進む", authentication_ragistrations_path , class: "move-on-red"
                 = f.submit "次へ進む", class: "move-on-red"
               .move-on-under-text
                 本人情報の登録について

@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     end
   end
 
+
   resources :users do
     member do
       get 'goods'
@@ -18,13 +19,17 @@ Rails.application.routes.draw do
   end
 
   resources :ragistrations , only: [:create] do
+
+  resources :users
+
+  resources :ragistrations do
     collection do
       get 'member'
       get 'authentication'
       get 'address'
       get 'payment'
       get 'complete'
-      post "/" => "items#index"
+      get 'userlogout'
     end
   end
 end

@@ -1,6 +1,6 @@
 .wrapper
   = render 'shared/header'
-  - breadcrumb :show_user
+  - breadcrumb :index_user
   = render 'shared/breadcrumbs'
   .main-box
     .mypage-main
@@ -11,6 +11,7 @@
             .user-img
               = image_tag 'mer.png', alt: '', height: '60', width: '60', id: 'img-top'
             .user-nick
+              -# = @nickname
               りょう
             .user-val
               評価
