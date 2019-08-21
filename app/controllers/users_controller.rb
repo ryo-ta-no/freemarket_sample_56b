@@ -18,7 +18,6 @@ class UsersController < ApplicationController
   def goods
     @items = Item.all
     @photos = Photo.all
-    # @items = Item.where().order("id DESC").page(params[:page]).per(15)
   end
 
 end

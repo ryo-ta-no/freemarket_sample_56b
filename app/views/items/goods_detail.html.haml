@@ -1,10 +1,9 @@
 .wrapper
   = render 'shared/header'
-  -# - breadcrumb :goods_detail
-  -# = render 'shared/breadcrumbs'
+  - breadcrumb :goods_detail
+  = render 'shared/breadcrumbs'
 
   .detail-main-box
-    -# 後でrenderする商品の詳細ページview
     .action-choice-content
       .action-edit-c
         %a.choice-goods-edit{href: "/items"}商品の編集

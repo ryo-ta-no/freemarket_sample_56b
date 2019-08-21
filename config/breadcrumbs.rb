@@ -13,15 +13,15 @@ crumb :edit_user do
 end
 
 
-# crumb :goods_user do
-#   link "出品した商品 - 出品中", goods_user_path
-#   parent :index_user
-# end
+crumb :goods_user do
+  link "出品した商品 - 出品中", goods_user_path
+  parent :index_user
+end
 
-# crumb :goods_detail do
-#   link "出品商品画面", goods_detail_items_path
-#   # parent :goods_user
-# end
+crumb :goods_detail do
+  link "出品商品画面", goods_detail_item_path
+  parent :goods_user
+end
 
 # crumbs :user_payment
 #   link "支払い方法",
