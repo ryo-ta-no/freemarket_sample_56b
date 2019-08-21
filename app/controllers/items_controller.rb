@@ -4,6 +4,15 @@ class ItemsController < ApplicationController
     @parents = Category.where(ancestry: nil).limit(4)
   end
 
+  def edit
+    @item = Item.find(21)
+    # binding.pry
+    @photo = @item.photos
+    # binding.pry
+
+
+
+  end
 
   def new
     @parents = Category.where(ancestry: nil)
