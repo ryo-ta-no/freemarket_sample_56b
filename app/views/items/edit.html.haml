@@ -1,10 +1,9 @@
-
 .product_listing_content
   = render "user-shared/user-header" 
   .product_listing_box
     .product_listing_title
       商品の情報を入力
-    = form_with(model: @item, local: true, multipart: true) do |f|
+    = form_with(model: @item, local: true, multipart: true, id: "form") do |f|
       .upload_box
         .upload_text
           .upload_header 
@@ -15,7 +14,7 @@
           最大6枚までアップロードできます
           %br [選択ボタンをクリックしてください]
         .photo_form
-          = f.fields_for :photos do |i|
+          = f.fields_for @photo do |i|
             .img_box_boxs
               .img_box1
               .img_box2
@@ -86,7 +85,7 @@
             .product_require
               必須
           .product_category-select
-            = f.collection_select :category_id, @category, :id, :category_name, { prompt: "---" }, { class: "category_select-box", id: "category_select" }
+            -# = f.collection_select :category_id, @category, :id, :category_name, { prompt: "---" }, { class: "category_select-box", id: "category_select" }
             %i.fa.fa-chevron-down
           .product_select-children
           .product_select-group2
@@ -95,7 +94,7 @@
             .product_require
               必須
           .product_state-select
-            = f.collection_select :state_id, @state, :id, :state, { prompt: "---" }, { class: "state_select-box" }
+            -# = f.collection_select :state_id, @state, :id, :state, { prompt: "---" }, { class: "state_select-box" }
             %i.fa.fa-chevron-down
           
       .product_content3
@@ -110,7 +109,7 @@
             .product_require
               必須 
           .product_postage-select
-            = f.collection_select :postage_id, @postage, :id, :postage, { prompt: "---" }, { class: "postage_select-box", id: "postage_select" }
+            -# = f.collection_select :postage_id, @postage, :id, :postage, { prompt: "---" }, { class: "postage_select-box", id: "postage_select" }
             %i.fa.fa-chevron-down
           .product_select-postage_children
           .product_postage-group2
@@ -119,7 +118,7 @@
             .product_require
               必須
           .product_region-select
-            = f.collection_select :prefecture_id, @prefecture, :id, :prefecture, {prompt: "---"}, {class: "region_select-box", id: "region_select"}
+            -# = f.collection_select :prefecture_id, @prefecture, :id, :prefecture, {prompt: "---"}, {class: "region_select-box", id: "region_select"}
             %i.fa.fa-chevron-down
           .product_select-group3
             .product_header
@@ -127,7 +126,7 @@
             .product_require
               必須
           .product_days-select
-            = f.collection_select :postage_day_id, @postage_day, :id, :postage_day, {prompt: "---"}, {class: "days_select-box", id: "days_select"}
+            -# = f.collection_select :postage_day_id, @postage_day, :id, :postage_day, {prompt: "---"}, {class: "days_select-box", id: "days_select"}
             %i.fa.fa-chevron-down
 
       .product_content4

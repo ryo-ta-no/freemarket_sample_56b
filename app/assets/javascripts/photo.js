@@ -61,51 +61,33 @@ $(function(){
   })
   
   $('.remove_btn1').on('click', function(){
-    console.log(1)
     $('#image').val('');
-    console.log(2)
     $('.img_box1').html('');
-    console.log(3)
   })
 
   $('.remove_btn2').on('click', function(){
-    console.log(1)
     $('#image2').val('');
-    console.log(2)
     $('.img_box2').html('');
-    console.log(3)
   })
 
   $('.remove_btn3').on('click', function(){
-    console.log(1)
     $('#image3').val('');
-    console.log(2)
     $('.img_box3').html('');
-    console.log(3)
   })
 
   $('.remove_btn4').on('click', function(){
-    console.log(1)
     $('#image4').val('');
-    console.log(2)
     $('.img_box4').html('');
-    console.log(3)
   })
 
   $('.remove_btn5').on('click', function(){
-    console.log(1)
     $('#image5').val('');
-    console.log(2)
     $('.img_box5').html('');
-    console.log(3)
   })
 
   $('.remove_btn6').on('click', function(){
-    console.log(1)
     $('#image6').val('');
-    console.log(2)
     $('.img_box6').html('');
-    console.log(3)
   })
 
 })
