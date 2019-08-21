@@ -46,7 +46,7 @@ class ItemsController < ApplicationController
     @search_params = user_search_params
     @prefecrure = Prefecture.all
   end
-  
+
 
 private
 

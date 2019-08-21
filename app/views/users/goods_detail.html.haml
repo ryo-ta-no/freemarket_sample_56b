@@ -11,7 +11,7 @@
       %p.text-or
         or
       .destroy-content
-        = link_to 'この商品を削除する', goods_detail_user_path, method: :delete, class: "choice-destroy", data: {confirm: "本当に削除しますか？"}
+        = link_to 'この商品を削除する', item_path(@item), method: :delete, class: "choice-destroy", data: {confirm: "本当に削除しますか？"}
 
 
   = render 'shared/footer'
