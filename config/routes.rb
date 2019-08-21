@@ -3,6 +3,9 @@ Rails.application.routes.draw do
   devise_for :users
   resources :items do
     resources :photos 
+    member do
+      get 'items_show'
+    end
     collection do
       get 'category_children'
       get 'category_grandchildren'

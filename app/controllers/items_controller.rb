@@ -16,6 +16,11 @@ class ItemsController < ApplicationController
     @item.photos.build
   end
 
+  def items_show_items
+    @items = Item.param
+  end
+
+
   def category_children
     @category_children = Category.find(params[:productcategory]).children
   end
