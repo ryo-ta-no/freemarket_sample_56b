@@ -17,6 +17,61 @@
         font-weight: bold;
         text-align: center;
         margin: 26px;
+        .new-items {
+  max-width: 100%;
+
+  &__caption{
+    color: #0099e8;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 26px;
+  }
+
+  &__products {
+    height: 330px;
+    width: 912px;
+    display: flex;
+    margin: 0 auto;
+
+    .product {
+      height: 330px;
+      width: 213px;
+      margin-right: 20px;
+
+      .photo-zone {
+        height: 220px;
+        width: 210px;
+        display: block;
+        margin: 0 auto;
+
+        .vuitton-img {
+          width: 100vw;
+          max-height: 220px;
+          max-width: 213px;
+        }
+      }
+
+      .data {
+        background-color: #fff;
+        padding: 16px;
+
+        .name {
+          height: 48px;
+          word-wrap: break-word;
+          overflow: hidden;
+        }
+
+        .price {
+          height: 17px;
+          font-size: 17px;
+          margin-top: 8px;
+        }
+      }
+    }
+  }
+}
+
       }
       .show-all {
         color: #0099e8;
