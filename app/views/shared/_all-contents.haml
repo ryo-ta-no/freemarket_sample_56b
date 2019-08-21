@@ -3,15 +3,6 @@
   .all-contents__contents
     .picup-category
       ピックアップカテゴリー
-    - @parents.each do |parent|
-      - category = Category.where('ancestry LIKE(?)',"#{parent.id}/%")
-      - if Item.exists?(category_id: category.first.id..category.last.id)
-        .new-items
-          .new-items__caption
-            = link_to '' do
-              = "#{parent.category_name} 新着アイテム"
-          - @items = Item.where(category_id: category.first.id..category.last.id).order("id DESC").limit(4)
-          .new-items__products
-            = render partial: "shared/all-items", collection: @items, as: "item"
+    = render partial: "shared/all-main" , collection: @parents, as: "parent"
     .show-all
       すべての商品を見る
