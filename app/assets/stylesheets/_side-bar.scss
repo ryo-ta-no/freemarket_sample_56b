@@ -1,5 +1,6 @@
 *{
   font-family: "Source Sans Pro", Helvetica, Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif;
+  text-decoration: none;
 }
 @mixin li{
   cursor: pointer;
@@ -45,7 +46,7 @@ font-weight: bold;
 .side-bar{
   list-style: none;
   float: left;
-  width: 280px;
+  min-width: 280px;
   margin: 0 40px 0 0;
   
 
@@ -89,7 +90,9 @@ font-weight: bold;
   float:right;
   }
       }}
-    
+  .log-out-text{
+    color: #333;
+  }
   
 
 

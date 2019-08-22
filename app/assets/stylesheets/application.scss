@@ -1,11 +1,20 @@
 @import "users-mixin";
 @import "reset";
 @import "header";
+@import "product-details";
+@import "footer";
+@import "all-items";
 
 @import "slick-banner";
 @import "all-contents";
 @import "under-banner";
 @import "footer";
+
+@import "exhibition-btn";
+@import "font-awesome";
+@import "font-awesome";
+@import "side-bar";
+
 
 
 @import "exhibition-btn";
@@ -22,6 +31,7 @@
 @import "ragistration/info-authentication";
 @import "ragistration/info-center";
 
+@import "ragistration/_logout";
 @import "ragistration/center-main";
 @import "ragistration/header-main";
 @import "ragistration/fotter-main";
@@ -29,9 +39,14 @@
 @import "ragistration/info-header";
 @import "ragistration/adress";
 @import "font-awesome";
+@import "items_new";
 
 @import "users-show";
 @import "users-edit";
 
 @import "breadcrumbs";
+
 @import "searches";
+@import "goods";
+@import "goods_detail";
+

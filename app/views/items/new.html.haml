@@ -1,0 +1,183 @@
+
+.product_listing_content
+  = render "user-shared/user-header" 
+  .product_listing_box
+    .product_listing_title
+      商品の情報を入力
+    = form_with(model: @item, local: true, multipart: true) do |f|
+      .upload_box
+        .upload_text
+          .upload_header 
+            出品画像
+          .upload_require 
+            必須
+        %p
+          最大6枚までアップロードできます
+          %br [選択ボタンをクリックしてください]
+        .photo_form
+          = f.fields_for :photos do |i|
+            .img_box_boxs
+              .img_box1
+              .img_box2
+              .img_box3
+              .img_box4
+              .img_box5
+              .img_box6
+            .photo_form_box
+              .photo_display1
+                = i.label :img, class: "image_label1", for: "image", id: "photo"  do
+                  = i.file_field :img, name: "item[photos_attributes][0][img]", multipart: true, class: "file_field1", id: "image", style: "color: red"
+                  選択
+                .remove_btn1
+                  削除
+              .photo_display2
+                = i.label  :img, class: "image_label2", for: "image2", id: "photo2" do
+                  = i.file_field :img, name: "item[photos_attributes][1][img]", multipart: true, class: "file_field2", id: "image2", style: "color: brown"
+                  選択
+                .remove_btn2
+                  削除
+              .photo_display3
+                = i.label :img, class: "image_label3", for: "image3", id: "photo3" do
+                  = i.file_field :img, name: "item[photos_attributes][2][img]", multipart: true, class: "file_field3", id: "image3", style: "color: blueviolet"
+                  選択
+                .remove_btn3
+                  削除
+              .photo_display4
+                = i.label :img, class: "image_label4", for: "image4", id: "photo4" do
+                  = i.file_field :img, name: "item[photos_attributes][3][img]", multipart: true, class: "file_field4", id: "image4", style: "color: rgb(226, 43, 144)"
+                  選択
+                .remove_btn4
+                  削除
+              .photo_display5
+                = i.label :img, class: "image_label5", for: "image5", id: "photo5" do
+                  = i.file_field :img, name: "item[photos_attributes][4][img]", multipart: true, class: "file_field5", id: "image5", style: "color: rgb(86, 226, 43)"
+                  選択
+                .remove_btn5
+                  削除
+              .photo_display6
+                = i.label :img, class: "image_label6", for: "image6", id: "photo6" do
+                  = i.file_field :img, name: "item[photos_attributes][5][img]", multipart: true, class: "file_field6", id: "image6", style: "color: rgb(43, 183, 226)"
+                  選択
+                .remove_btn6
+                  削除
+      
+
+      .product_content
+        .product_box-description
+          .product_header
+            商品名
+          .product_require
+            必須  
+        = f.text_field :name, placeholder: "商品名（必須 40文字まで)", class: "product_description"
+        .product_box-explain
+          .product_header
+            商品の説明
+          .product_require
+            必須
+        = f.text_area :explain, placeholder: "商品の説明 (必須 1000文字以内) (色、素材、重さ、定価、注意点など) 例) 2010年頃に1万円で購入したジャケットです。ライトグレーではありません。あわせやすいのでおすすめです。", class: "product_explain"
+
+      .product_content2
+        .product_box-details
+          商品の詳細
+        .product_select-details
+          .product_select-group
+            .product_header
+              カテゴリー
+            .product_require
+              必須
+          .product_category-select
+            = f.collection_select :category_id, @category, :id, :category_name, { prompt: "---" }, { class: "category_select-box", id: "category_select" }
+            %i.fa.fa-chevron-down
+          .product_select-children
+          .product_select-group2
+            .product_header
+              商品の状態
+            .product_require
+              必須
+          .product_state-select
+            = f.collection_select :state_id, @state, :id, :state, { prompt: "---" }, { class: "state_select-box" }
+            %i.fa.fa-chevron-down
+          
+      .product_content3
+        .product_box-postage
+          配送について
+          = link_to " ", class: "question" do
+            ?
+        .product_select-postage    
+          .product_postage-group
+            .product_header
+              送料の負担
+            .product_require
+              必須 
+          .product_postage-select
+            = f.collection_select :postage_id, @postage, :id, :postage, { prompt: "---" }, { class: "postage_select-box", id: "postage_select" }
+            %i.fa.fa-chevron-down
+          .product_select-postage_children
+          .product_postage-group2
+            .product_header
+              発送元の地域
+            .product_require
+              必須
+          .product_region-select
+            = f.collection_select :prefecture_id, @prefecture, :id, :prefecture, {prompt: "---"}, {class: "region_select-box", id: "region_select"}
+            %i.fa.fa-chevron-down
+          .product_select-group3
+            .product_header
+              発送までの日数
+            .product_require
+              必須
+          .product_days-select
+            = f.collection_select :postage_day_id, @postage_day, :id, :postage_day, {prompt: "---"}, {class: "days_select-box", id: "days_select"}
+            %i.fa.fa-chevron-down
+
+      .product_content4
+        .product_box-price
+          販売価格(300〜9,999,999)
+          = link_to " ", class: "question" do
+            ?
+        .product_price
+          .product_price-group
+            .product_header
+              価格
+            .product_require
+              必須 
+          .product_price-form
+            ¥
+            %input#price_calc.price_form-box{placeholder: "例) 300", type: "number"}/
+          .product_price-fee
+            販売手数料(10%)
+            .right_bar
+            
+          .product_profit
+            販売利益
+            = f.number_field :price, style: "display: none", id: "price"
+            .right_bar_2
+              
+
+      .product_content5
+        .product_notice
+          = link_to " " do
+            禁止されている出品
+          ,
+          = link_to " " do
+            行為
+          を必ずご確認ください｡
+          %br
+            またブランド品でシリアルナンバー等がある場合はご記載ください。
+            =link_to " " do
+              偽ブランドの販売
+            は犯罪であり処罰される可能性があります｡
+          また、出品をもちまして
+          = link_to "/items/:id/edit/ " do
+            加盟店規約
+          に同意したことになります｡
+        .product_exhibit-box
+          = f.submit "出品する", class: "submit"
+        .product_back-box
+          =link_to root_path do
+            戻る
+
+
+
+
+  = render "user-shared/user-fotter" 

@@ -4,9 +4,10 @@
       会員登録完了
     .__complete-small-box
       .__complete-list-box
-        .__complete-big-textbox
-          ありがとうございます。
-          %br/
-          会員登録が完了しました。
-        .__complete-red-move
-          = link_to "次へ進む" , root_path , class: "complete-text-move"
+        = form_with model: @user , url: items_path , method: :get , local: true do |f|
+          .__complete-big-textbox
+            ありがとうございます。
+            %br/
+            会員登録が完了しました。
+          .__complete-red-move
+            = f.submit "メルカリを始める" , class: "coplete-move"

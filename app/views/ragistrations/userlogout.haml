@@ -1,0 +1,13 @@
+= render "shared/header"
+- breadcrumb :logout_page
+= render 'shared/breadcrumbs'
+.user-logout-main
+  = render "shared/side-bar"
+  .__right-logout
+    .__logout-big-box
+      .__logout-small-box
+        .__text-logout
+          = link_to "ログアウト", destroy_user_session_path ,method: :delete, class: "destory-logout"
+= render 'shared/footer'
+= render 'shared/exhibition-btn'
+

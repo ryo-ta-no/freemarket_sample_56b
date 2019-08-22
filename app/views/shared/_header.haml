@@ -19,8 +19,27 @@
             = fa_icon 'tag',class: 'brand-icon'
             %span ブランドから探す
       .right
-        %ul.login-navi
-          %li.new-create-user
+        - if user_signed_in?
+          .header-like-box
+            .like-icon-box
+              = fa_icon 'heart-o' ,class:'like-header'
+            .like-text-box
+              いいね!一覧
+          .header-notice
+            .notice-icon-box
+              = fa_icon 'bell-o' , class: 'bell-header'
+            .notice-text-box
+              お知らせ
+          .header-to-do-list
+            .check-icon-box
+              = fa_icon 'check' , class: 'check-header'
+            .check-text-box
+              やることリスト
+          .header-mypage-box
+            .header-mypage-url
+              = link_to "マイページ",  users_path , class: 'mypage-kondou'
+        - else
+          .new-create-user
             = link_to "新規会員登録", new_user_registration_path, class: 'new-ragistration-text'
-          %li.login
+          .login-user-box
             = link_to "ログイン" , new_user_session_path, class: 'new-user-text'

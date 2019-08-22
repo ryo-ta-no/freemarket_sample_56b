@@ -1,0 +1,108 @@
+
+.goods-box-title {
+  display: flex;
+  align-items: center;
+  height: 80px;
+  width: auto;
+  @include background-white;
+  @include font-weight;
+  padding-left: 20px;
+
+}
+
+.goods-box-example {
+  display: flex;
+
+  .example-1 {
+    box-sizing: border-box;
+    @include font-weight;
+    height: 80px;
+    width: 230px;
+    @include background-white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: solid red;
+
+  }
+
+  .example-2 {
+    @include font-weight;
+    height: 80px;
+    width: 230px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: gainsboro;
+
+  }
+
+  .example-3 {
+    @include font-weight;
+    height: 80px;
+    width: 230px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: gainsboro;
+
+
+  }
+}
+
+.goods-main-c {
+  text-decoration: none;
+
+}
+
+.goods-list-box {
+  @include background-white;
+  display: flex;
+  max-height: 90px;
+  text-decoration: none;
+
+  .goods-photo {
+    margin: auto;
+    margin-left: 20px;
+
+  }
+
+  .goods-name {
+    width: 100%;
+    margin-left: 15px;
+    padding: 15px 0 15px 15px;
+    color: black;
+
+    .name-fine {
+      font-size: 14px;
+      margin-top: 5px;
+    }
+
+    .goods-icon-list {
+      display: flex;
+      margin-top: 10px;
+      display: flex;
+      align-items: center;
+      color: #C0C0C0;
+
+      .font-goods {
+        background-color:#0099FF;
+        color: white;
+        border-radius: 10%;
+        font-size: 12px;
+      }
+    }
+
+
+
+    .angle-item {
+      float: right;
+      position: relative;
+      bottom: 45px;
+      right: 20px;
+      color: rgb(116, 111, 111);
+    }
+
+  }
+
+}

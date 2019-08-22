@@ -62,21 +62,144 @@
   width: 100px;
 }
 
-#through{
-  color: #ea352d;
-  .progress-status{
-    background: #ea352d;
+
+.signup_member{
+  #through{
+    color: #ea352d;
+    .progress-status{
+      background: #ea352d;
+    }
   }
 }
 
-// #through .progress-status_bar{
-//   background: #ea352d;
-// }
+.sinup-authen{
+  #through{
+    .progress-status{
+      background: #ea352d;
+    }
+  }
+  #through .progress-status_bar{
+      background: #ea352d;
+    }
+    #active{
+      color: #ea352d;
+      .progress-status{
+        background: #ea352d;
+      }
+    }
+}
 
-// #active{
-//   color: #ea352d;
-//   .progress-status{
-//     background: #ea352d;
-//   }
-// }
+.signup_address{
+  #through{
+    .progress-status{
+      background: #ea352d;
+    }
+  }
+  #through .progress-status_bar{
+    background: #ea352d;
+  }
+  #active{
+    .progress-status {
+      background: #ea352d;
+    }
+    .progress-status_bar{
+      background: #ea352d;
+    }
+  }
+  #address{
+    color: #ea352d;
+    .progress-status {
+      background: #ea352d;
+    }
+  }
+}
 
+.signup_payment{
+  #through{
+    .progress-status{
+      background: #ea352d;
+    }
+  }
+  #through .progress-status_bar{
+    background: #ea352d;
+  }
+  #active{
+    .progress-status {
+      background: #ea352d;
+    }
+    .progress-status_bar{
+      background: #ea352d;
+    }
+  }
+  #address{
+    .progress-status {
+      background: #ea352d;
+    }
+  }
+  #address{
+    .progress-status {
+      background: #ea352d;
+    }
+    .progress-status_bar{
+      background: #ea352d;
+    }
+  }
+  #payment{
+    color: #ea352d;
+    .progress-status {
+      background: #ea352d;
+    }
+  }
+}
+
+.signup_complete{
+  #through{
+    .progress-status{
+      background: #ea352d;
+    }
+  }
+  #through .progress-status_bar{
+    background: #ea352d;
+  }
+  #active{
+    .progress-status {
+      background: #ea352d;
+    }
+    .progress-status_bar{
+      background: #ea352d;
+    }
+  }
+  #address{
+    .progress-status {
+      background: #ea352d;
+    }
+  }
+  #address{
+    .progress-status {
+      background: #ea352d;
+    }
+    .progress-status_bar{
+      background: #ea352d;
+    }
+  }
+  #payment{
+    .progress-status {
+      background: #ea352d;
+    }
+  }
+  #payment{
+    .progress-status {
+      background: #ea352d;
+    }
+    .progress-status_bar{
+      background: #ea352d;
+    }
+  }
+  #end{
+    color: #ea352d;
+    .progress-status {
+      background: #ea352d;
+    }
+  }
+
+}
