@@ -1,7 +1,7 @@
 class ItemsController < ApplicationController
 
   def index
-    @parents = Category.where(ancestry: nil).limit(13)
+    @parents = Category.where(ancestry: nil).limit(9)
   end
 
   def edit
