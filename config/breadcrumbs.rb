@@ -28,3 +28,8 @@ crumb :update_user do
   link "本人情報の登録",items_path
   parent :index_user
 end
+
+crumb :logout_page do
+  link "ログアウト", userlogout_ragistrations_path
+  parent :index_user
+end
