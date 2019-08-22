@@ -60,9 +60,11 @@ class ItemsController < ApplicationController
   end
 
   def destroy
-    @items = Item.find(params[:id])
-    @items.destroy
-    redirect_to goods_user_path
+    item = Item.find(params[:id])
+    if item.user_id == current_user.id
+      item.destroy
+      redirect_to :controller => "users", :action => "goods", :id => current_user.id
+    end
   end
 
 
@@ -73,7 +75,7 @@ class ItemsController < ApplicationController
   end
 
   def item_params
-    params.require(:item).permit(:state_id, :name, :explain, :category_id, :price, :postage_id, :prefecture_id, :postage_day_id, photos_attributes: [:id, :img]).merge(user_id: 1, buyer_id: 1, shipping_date: 1, size_id: 1, brand_id: 1)
+    params.require(:item).permit(:state_id, :name, :explain, :category_id, :price, :postage_id, :prefecture_id, :postage_day_id, photos_attributes: [:id, :img]).merge(user_id: current_user.id, buyer_id: 1, shipping_date: 1, size_id: 1, brand_id: 1)
   end
 
 end
