@@ -13,14 +13,11 @@ Rails.application.routes.draw do
     end
   end
 
-
   resources :users do
     member do
       get 'goods'
     end
   end
-
-  resources :users
 
   resources :ragistrations do
     collection do
@@ -33,17 +30,10 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :users
-
-  resources :ragistrations
-
   resources :searches do
     collection do
       get 'search'
     end
   end
-
-
-end
 
 end
