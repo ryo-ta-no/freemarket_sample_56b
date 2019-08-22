@@ -6,6 +6,7 @@ Rails.application.routes.draw do
       get 'category_children'
       get 'category_grandchildren'
       get 'postage_children'
+      get 'category_drop_parent'
     end
 
     member do

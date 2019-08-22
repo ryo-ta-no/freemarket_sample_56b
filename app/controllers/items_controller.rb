@@ -39,6 +39,11 @@ class ItemsController < ApplicationController
   end
 
 
+  def category_drop_parent
+    @category_parent = Category.all.order("id ASC").limit(13)
+  end
+
+
   def create
     @item = Item.new(item_params)
     @parents = Category.where(ancestry: nil)
