@@ -16,20 +16,21 @@ Rails.application.routes.draw do
       get 'member'
       get 'authentication'
       get 'address'
-      get 'payment'
-      get 'complete'
+      post 'complete'
       get 'userlogout'
     end
   end
-  resources :cards, only: [:create, :show, :new, :show,:index] do
+  resources :cards, only: [:create, :show, :new, :index] do
     collection do
       post 'create'
-      post 'delete', to: 'card#delete'
+      post 'delete', to: 'cards#delete'
       post 'show'
       get 'confirmation'
+      post 'payment'
+      get 'pay'
     end
   end
-   
+
 
 end
 
