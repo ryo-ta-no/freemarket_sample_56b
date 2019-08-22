@@ -6,11 +6,7 @@ class CardsController < ApplicationController
 
   def index #CardのデータをPayjpに送って情報を取り出す
  
-    card = Card.where(user_session).first
-       = customer.cards.retrieve(card.card_id)
-    else
-      redirect_to action: "pay"
-    end
+
     if @card.present?
       Payjp.api_key = "sk_test_e1ae6a554565547f186622ad"
       customer = Payjp::Customer.retrieve(@card.customer_id)
