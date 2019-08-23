@@ -24,6 +24,9 @@ class RagistrationsController < ApplicationController
     @user.build_street
   end
 
+  def payment
+  end
+
 
   def userlogout
   end
