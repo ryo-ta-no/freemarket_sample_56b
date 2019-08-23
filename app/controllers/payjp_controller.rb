@@ -1,0 +1,2 @@
+class PayjpController < ApplicationController
+end
