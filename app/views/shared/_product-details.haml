@@ -3,7 +3,7 @@
     .all-contents__prduct-details-1
       .product-details-2
         .product-details-3
-          COACH コーチ ショルダーバッグ
+          = @items.name
         .product-description
           『COACH コーチ ショルダーバッグ』は、75回の取引実績を持つGGさんから出品されました。コーチ（ショルダーバッグ/レディース）の商品で、大阪府から2~3日で発送されます。
         .product-details-4
@@ -23,7 +23,7 @@
                 出品者
               .right-zone-1
                 .right-zone-1-1
-                  GG
+                  = @items.user.nickname
                 .right-zone-1-2
                   .evaluation-icon
                     = fa_icon 'twitter', class: "good-icon"
@@ -59,7 +59,7 @@
                 商品の状態
               .right-zone-3
                 .right-zone-3-1b
-                  目立った傷や汚れなし
+                  = @items.state.state
             .product-details-9
               .left-text-3
                 配送料の負担
@@ -71,13 +71,13 @@
                 配送の方法
               .right-zone-3
                 .right-zone-3-1b
-                  らくらくメルカリ便
+                  = @items.postage.postage
             .product-details-9
               .left-text-3
                 配送元地域
               .right-zone-3
                 .right-zone-3-1
-                  大阪府
+                  = @items.prefecture.prefecture
             .product-details-9
               .left-text-3
                 発送日の目安
