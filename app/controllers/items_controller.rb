@@ -4,15 +4,6 @@ class ItemsController < ApplicationController
     @parents = Category.where(ancestry: nil).order("id ASC").limit(4)
   end
 
-  def edit
-    @item = Item.find(21)
-    # binding.pry
-    @photo = @item.photos
-    # binding.pry
-
-
-
-  end
 
   def new
     @parents = Category.where(ancestry: nil)
@@ -35,7 +26,7 @@ class ItemsController < ApplicationController
     end
 
   def postage_children
-    @postage_children = Postage.find(params[:postageitem]).children
+    @postage_children = Postage.find(params[:postageitem]).childre
   end
 
 
@@ -46,13 +37,16 @@ class ItemsController < ApplicationController
     redirect_to root_path
   end
 
-
-
-
   def show
-    @search_params = user_search_params
-    @prefecrure = Prefecture.all
+    @item = Item.find(params[:id])
   end
+
+
+
+  # def show
+  #   @search_params = user_search_params
+  #   @prefecrure = Prefecture.all
+  # end
 
   def goods_detail
     @items = Item.find(params[:id])
