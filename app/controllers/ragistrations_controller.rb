@@ -24,8 +24,6 @@ class RagistrationsController < ApplicationController
     @user.build_street
   end
 
-  def payment
-  end
 
 
   def userlogout
@@ -51,6 +49,7 @@ class RagistrationsController < ApplicationController
     else
       render 'ragistrations/member'
     end
+   
   end
 
   def complete
