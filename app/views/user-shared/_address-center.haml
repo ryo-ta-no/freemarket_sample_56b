@@ -4,14 +4,14 @@
       住所入力
     .__address-small-box
       .__address-list-box
-        = form_with model: @user, url: ragistrations_path, method: :post, local: true do |f|
+        = form_with  url: payment_cards_path, method: :post, local: true do |f|
           .__l-address-form
             .__l-a-text
               = f.label :"お名前"
             .__l-a-required
               必須
           .__onamae-box
-            .__onamae-myouzi
+            .__onamae-myouzi 
             = f.text_field :first_name, placeholder: "例)山田", class: "text-address"
             .__onamae-namae
             = f.text_field :last_name, placeholder: "例)彩", class: "text-address"

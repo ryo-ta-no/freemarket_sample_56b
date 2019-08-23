@@ -24,8 +24,6 @@ class RagistrationsController < ApplicationController
     @user.build_street
   end
 
-  def payment
-  end
 
   def userlogout
   end
@@ -46,10 +44,11 @@ class RagistrationsController < ApplicationController
     @user.build_street(user_params[:street_attributes])
     if @user.save
       session[:id] = @user.id
-      redirect_to payment_ragistrations_path
+      redirect_to cards_path
     else
       render 'ragistrations/member'
     end
+   
   end
 
   def complete

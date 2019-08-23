@@ -7,5 +7,7 @@ class User < ApplicationRecord
          has_one :card
          has_one :profile
          has_one :street
+
          accepts_nested_attributes_for :street
+
 end
