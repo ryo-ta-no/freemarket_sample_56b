@@ -50,8 +50,7 @@ class ItemsController < ApplicationController
 
 
   def show
-    @search_params = user_search_params
-    @prefecrure = Prefecture.all
+    @item = Item.find(params[:id])
   end
 
   def goods_detail
@@ -66,6 +65,8 @@ class ItemsController < ApplicationController
       redirect_to :controller => "users", :action => "goods", :id => current_user.id
     end
   end
+
+  
 
 
   private

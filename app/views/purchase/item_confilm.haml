@@ -12,7 +12,7 @@
           = image_tag 'https://static.mercdn.net/thumb/photos/m38251906148_1.jpg?1565241696', class:"lazyloaded", alt:"" ,src:"https://static.mercdn.net/thumb/photos/m38251906148_1.jpg?1565241696",  alt:"",width: '64px'
           %p.item-name 
             新品  革  アフリカ大陸キーホルダー
-          = form_with method: :post, class: 'buys-form' do |f|
+          .buys-form
             %p.item-price
               ¥ 1,000 
               %span.item-fee
@@ -30,12 +30,9 @@
                     ¥1,000
             %p.error-text
               配送先と支払い方法の入力を完了してください。
-              = form_with url: 'purchase_item_path' do
-                :plain
-                %form{:action => "/pay", :method => "post"}
-              %script.payjp-button{"data-key" => "", :src => "https://checkout.pay.jp/"}
-                %button{type: 'submit', class: 'purchase-btn'} 購入する
-            
+              = form_tag(action: :pay, method: :post) do
+                %button.purchase-btn 購入する
+
     %section.shipping-address-box
       .main-inner
         %h3
