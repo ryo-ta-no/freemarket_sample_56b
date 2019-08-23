@@ -27,9 +27,10 @@ Rails.application.routes.draw do
       get 'member'
       get 'authentication'
       get 'address'
-      get 'payment'
-      get 'complete'
+      post 'complete'
       get 'userlogout'
     end
   end
+
 end
+
