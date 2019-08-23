@@ -1,6 +1,9 @@
 @import "users-mixin";
 @import "reset";
 @import "header";
+@import "product-details";
+@import "footer";
+@import "all-items";
 
 @import "slick-banner";
 @import "all-contents";
@@ -43,7 +46,8 @@
 
 @import "breadcrumbs";
 
-@import "item-confilm";
 
-@import "cards/_pay";
-@import "cards/new-pay"
+
+@import "goods";
+@import "goods_detail";
+

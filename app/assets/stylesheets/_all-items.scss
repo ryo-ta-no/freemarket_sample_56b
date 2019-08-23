@@ -1,23 +1,4 @@
-// ピックアップカテゴリー、新着アイテムなど真ん中のメインコンテンツ
-.wrapper {
-  background-color: rgb(245, 245, 245);
-
-  .all-contents {
-    height: auto;
-    width: 100%;
-
-
-    &__contents {
-      width: 80%;
-      margin: auto;
-
-      .picup-category {
-        color: #333;
-        font-size: 28px;
-        font-weight: bold;
-        text-align: center;
-        margin: 26px;
-        .new-items {
+.new-items {
   max-width: 100%;
 
   &__caption{
@@ -70,21 +51,4 @@
       }
     }
   }
-}
-
-      }
-      .show-all {
-        color: #0099e8;
-        width: 912px;
-        font-size: 14px;
-        text-align: right;
-        margin: 0 auto;
-        padding: 20px 0;
-      }
-    }
-  }
-}
-
-.itmes-main-link{
-  color: #333;
 }

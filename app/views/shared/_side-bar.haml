@@ -2,7 +2,7 @@
   %nav.bar
     .mypage
       %li
-        マイページ
+        = link_to "マイページ",  users_path, class:'log-out-text'
         = fa_icon 'chevron-right', class: 'icon-arrow-right' 
       %li
         お知らせ
@@ -17,7 +17,7 @@
         出品する
         = fa_icon 'chevron-right', class: 'icon-arrow-right' 
       %li
-        出品した商品・出品中
+        = link_to "出品した商品 - 出品中", goods_user_path(current_user), class:'log-out-text'
         = fa_icon 'chevron-right', class: 'icon-arrow-right' 
       %li
         出品した商品 - 取引中
@@ -58,7 +58,7 @@
       %h3
         設定
       %li
-        プロフィール
+        = link_to "プロフィール", edit_user_path(current_user), class:'log-out-text'
         = fa_icon 'chevron-right', class: 'icon-arrow-right' 
       %li
         発送元・お届け先住所変更
@@ -69,9 +69,9 @@
       %li
         メール/パスワード
         = fa_icon 'chevron-right', class: 'icon-arrow-right' 
-      %h2
-        本人情報
-        = fa_icon 'chevron-right', class: 'icon-arrow-right1' 
+      %li
+        = link_to "本人情報", user_path(current_user), class:'log-out-text'
+        = fa_icon 'chevron-right', class: 'icon-arrow-right' 
       %li
         電話番号
         = fa_icon 'chevron-right', class: 'icon-arrow-right' 

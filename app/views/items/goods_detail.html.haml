@@ -1,0 +1,17 @@
+.wrapper
+  = render 'shared/header'
+  - breadcrumb :goods_detail
+  = render 'shared/breadcrumbs'
+
+  .detail-main-box
+    .action-choice-content
+      .action-edit-c
+        %a.choice-goods-edit{href: "/items"}商品の編集
+      %p.text-or
+        or
+      .destroy-content
+        = link_to 'この商品を削除する', item_path(@items.id), method: :delete, class: "choice-destroy", data: {confirm: "本当に削除しますか？"}
+
+
+  = render 'shared/footer'
+  = render 'shared/exhibition-btn'

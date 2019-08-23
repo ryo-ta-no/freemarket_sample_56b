@@ -29,9 +29,7 @@ function appendChildrenBox(insertHTML){
 
 
   $(document).on('change', '#postage_select', function(){
-    console.log(1)
     var postageitem = document.getElementById('postage_select').value; 
-    console.log(postageitem)
     if (postageitem != ''){
       $.ajax({
         url: 'postage_children',
@@ -40,7 +38,6 @@ function appendChildrenBox(insertHTML){
         dataType: 'json',
       })
       .done(function(children){
-        console.log(2)
         var insertHTML = '';
         children.forEach(function(child) {
           insertHTML += appendOption(child);

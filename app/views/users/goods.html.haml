@@ -1,0 +1,39 @@
+.wrapper
+  = render 'shared/header'
+  - breadcrumb :goods_user
+  = render 'shared/breadcrumbs'
+  .main-box
+    .mypage-main
+      = render 'shared/side-bar'
+      .right-container
+        .goods-box-title
+          出品した商品
+        .goods-box-example
+          .example-1
+            出品中
+          .example-2
+            取引中
+          .example-3
+            売却済み
+        %ul
+          - @items.zip(@photos).each do |item, photo|
+            %li
+              = link_to goods_detail_item_path(item), class: "goods-main-c" do
+                .goods-list-box
+                  .goods-photo
+                    = image_tag item.photos[0].img.url, size: '60x60'
+                  .goods-name
+                    .name-fine
+                      = item.name
+                    .goods-icon-list
+                      =fa_icon 'heart-o', class: 'heart-item'
+                      %span &nbsp;0&nbsp;
+                      =fa_icon 'comment-o', class: 'comment-item'
+                      %span &nbsp;0&nbsp;&nbsp;
+                      .font-goods
+                        出品中
+                    =fa_icon 'angle-right 2x', class: 'angle-item', height: '100', width: '100'
+
+
+  = render 'shared/footer'
+  = render 'shared/exhibition-btn'
