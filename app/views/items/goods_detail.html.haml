@@ -5,8 +5,7 @@
 
   .detail-main-box
     .action-choice-content
-      .action-edit-c
-        %a.choice-goods-edit{href: "/items"}商品の編集
+      = link_to '商品の編集', edit_item_path(@items), class: 'action-edit-c'
       %p.text-or
         or
       .destroy-content
