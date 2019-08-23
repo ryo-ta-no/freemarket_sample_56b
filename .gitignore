@@ -31,3 +31,4 @@ vendor/*
 vendor/bundle/*
 .DS_Store
 /public/uploads/*
+.idea/
