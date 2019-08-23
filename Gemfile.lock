@@ -170,6 +170,7 @@ GEM
       haml (>= 4.0, < 6)
       nokogiri (>= 1.6.0)
       ruby_parser (~> 3.5)
+    http-accept (1.7.0)
     http-cookie (1.0.3)
       domain_name (~> 0.5)
     i18n (1.6.0)
@@ -277,20 +278,13 @@ GEM
     responders (3.0.0)
       actionpack (>= 5.0)
       railties (>= 5.0)
-<<<<<<< HEAD
-    ruby-vips (2.0.14)
-      ffi (~> 1.9)
-=======
-    rest-client (2.0.2)
+    rest-client (2.1.0)
+      http-accept (>= 1.7.0, < 2.0)
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 4.0)
       netrc (~> 0.8)
-<<<<<<< Updated upstream
->>>>>>> df2466c8d58871758c71c0c838dd670093428a74
-=======
     ruby-vips (2.0.14)
       ffi (~> 1.9)
->>>>>>> Stashed changes
     ruby_dep (1.5.0)
     ruby_parser (3.13.1)
       sexp_processor (~> 4.9)
