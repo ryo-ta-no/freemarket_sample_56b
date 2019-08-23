@@ -24,8 +24,6 @@ class RagistrationsController < ApplicationController
     @user.build_street
   end
 
-
-
   def userlogout
   end
 
