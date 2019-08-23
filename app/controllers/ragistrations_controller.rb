@@ -51,7 +51,6 @@ class RagistrationsController < ApplicationController
     else
       render 'ragistrations/member'
     end
-   
   end
 
   def complete
