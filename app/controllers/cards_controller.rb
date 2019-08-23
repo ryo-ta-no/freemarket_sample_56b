@@ -39,7 +39,7 @@ class CardsController < ApplicationController
       
     end
   
-    def create #PayjpとCardのデータベースを作成
+    def pay #PayjpとCardのデータベースを作成
       
       Payjp.api_key = 'sk_test_e1ae6a554565547f186622ad'
      
@@ -51,7 +51,7 @@ class CardsController < ApplicationController
           description: 'test', # 無くてもOK。PAY.JPの顧客情報に表示する概要です。
        
           card: params['payjp-token'], # 直前のnewアクションで発行され、送られてくるトークンをここで顧客に紐付けて永久保存します。
-          metadata: {user_id: current_user.id} # 無くてもOK。
+          # metadata: {user_id: current_user.id} # 無くてもOK。
         )
     
         @card = Card.new(user_id: current_user.id, customer_id: customer.id, card_id: customer.default_card)
@@ -88,13 +88,15 @@ class CardsController < ApplicationController
   
 
       def show
-    
+        Payjp.api_key = "sk_test_e1ae6a554565547f186622ad"
+
         card = Card.where(user_session).first
        if card.present?
          customer = Payjp::Customer.retrieve(card.customer_id)
          @default_card_information = customer.cards.retrieve(card.card_id)
-       else
-         redirect_to action: "pay"
+       
+
+         
        end
       end
 

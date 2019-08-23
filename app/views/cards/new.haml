@@ -6,7 +6,7 @@
     = render 'shared/side-bar'
     %section.chapter__cont
       %h2.chapter__head クレジットカード情報入力
-      = form_tag(cards_path, method: :post, action: "create", id: 'charge-form',  name: "inputForm", class: "chapter__container__inner") do
+      = form_tag(pay_cards_path, method: :post, action: "create", id: 'charge-form',  name: "inputForm", class: "chapter__container__inner") do
         .form__main__container
           .form__content
             %label.payment__card
@@ -65,42 +65,42 @@
             .single__code
               %span.form__question ?
               %span カードの裏面の番号とは？
-          .card_token
-          = submit_tag "追加する", class: "pay-new-move-text"
+          #card_token
+          = submit_tag "追加する",id: "token_submit", class: "pay-new-move-text"
   = render 'shared/footer'
   = render 'shared/exhibition-btn'
 
-  :javascript
-    document.addEventListener(
-    "DOMContentLoaded", e => {
-      if (document.getElementById("token_submit") != null) {
-        Payjp.setPublicKey("pk_test_57f5b7abfc1b1cbd41160d6a");
-        let btn = document.getElementById("token_submit");
-        btn.addEventListener("click", e => {
-          e.preventDefault();
-          let card = {
-            number: document.getElementById("card_number").value,
-            cvc: document.getElementById("cvc").value,
-            exp_month: document.getElementById("exp_month").value,
-            exp_year: document.getElementById("exp_year").value
-          };
-          Payjp.createToken(card, (status, response) => {
-            if (status === 200) {
-              $("#card_number").removeAttr("name");
-              $("#cvc").removeAttr("name");
-              $("#exp_month").removeAttr("name");
-              $("#exp_year").removeAttr("name");
-              $("#card_token").append(
-                $('<input type="hidden" name="payjp-token">').val(response.id)
-              );
-              document.inputForm.submit();
-              alert("登録が完了しました");
-            } else {
-              alert("カード情報が正しくありません。");
-            }
-          });
+:javascript
+  document.addEventListener(
+  "DOMContentLoaded", e => {
+    if (document.getElementById("token_submit") != null) {
+      Payjp.setPublicKey("pk_test_57f5b7abfc1b1cbd41160d6a");
+      let btn = document.getElementById("token_submit");
+      btn.addEventListener("click", e => {
+        e.preventDefault();
+        let card = {
+          number: document.getElementById("card_number").value,
+          cvc: document.getElementById("cvc").value,
+          exp_month: document.getElementById("exp_month").value,
+          exp_year: document.getElementById("exp_year").value
+        };
+        Payjp.createToken(card, (status, response) => {
+          if (status === 200) {
+            $("#card_number").removeAttr("name");
+            $("#cvc").removeAttr("name");
+            $("#exp_month").removeAttr("name");
+            $("#exp_year").removeAttr("name");
+            $("#card_token").append(
+              $('<input type="hidden" name="payjp-token">').val(response.id)
+            );
+            document.inputForm.submit();
+            alert("登録が完了しました");
+          } else {
+            alert("カード情報が正しくありません。");
+          }
         });
-      }
-    },
-    false
-    );
+      });
+    }
+  },
+  false
+  );
