@@ -5,13 +5,12 @@ class ItemsController < ApplicationController
   end
 
   def edit
-    @item = Item.find(21)
-    # binding.pry
+    @item = Item.find(params[:id])
     @photo = @item.photos
-    # binding.pry
+  end
 
-
-
+  def update
+    
   end
 
   def new

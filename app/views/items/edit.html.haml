@@ -1,14 +1,14 @@
 .product_listing_content
-  = render "user-shared/user-header" 
+  = render "user-shared/user-header"
   .product_listing_box
     .product_listing_title
       商品の情報を入力
     = form_with(model: @item, local: true, multipart: true, id: "form") do |f|
       .upload_box
         .upload_text
-          .upload_header 
+          .upload_header
             出品画像
-          .upload_require 
+          .upload_require
             必須
         %p
           最大6枚までアップロードできます
