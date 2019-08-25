@@ -24,6 +24,17 @@ Rails.application.routes.draw do
 
   resources :users
 
+  resources :cards, only: [:create, :show, :new, :index] do
+    collection do
+      post 'pay'
+      post 'delete', to: 'cards#delete'
+      post 'show'
+      get 'confirmation'
+      get 'mypay'
+      post 'payment'
+    end
+  end
+
   resources :ragistrations do
     collection do
       get 'member'

@@ -3,27 +3,24 @@
     .all-contents__prduct-details-1
       .product-details-2
         .product-details-3
-          COACH コーチ ショルダーバッグ
+          = @items.name
         .product-description
           『COACH コーチ ショルダーバッグ』は、75回の取引実績を持つGGさんから出品されました。コーチ（ショルダーバッグ/レディース）の商品で、大阪府から2~3日で発送されます。
         .product-details-4
           .product-details-5
             .photo-box-1
-              = image_tag 'coach.png', class: 'product-img'
+              = image_tag @items.photos[0].img.url, width: "100%", height: "100%"
             .photo-box-2
-              .mini-photo
-                = image_tag 'coach.png', class: 'product-mini-img'
-              .mini-photo
-                = image_tag 'coach.png', class: 'product-mini-img'
-              .mini-photo
-                = image_tag 'coach.png', class: 'product-mini-img'
+              - @items.photos.each do |image|
+                .mini-photo
+                  = image_tag image.img.url , width: "100%", height: "100%"
           .product-details-6
             .product-details-7
               .left-text-1
                 出品者
               .right-zone-1
                 .right-zone-1-1
-                  GG
+                  = @items.user.nickname
                 .right-zone-1-2
                   .evaluation-icon
                     = fa_icon 'twitter', class: "good-icon"
@@ -43,11 +40,13 @@
               .right-zone-2
                 .right-zone-2-1
                   .right-zone-2-2
-                    レディース
+                    = @items.category.root.category_name
                   .right-zone-2-3
-                    > バッグ
+                    >
+                    = @items.category.parent.category_name
                   .right-zone-2-4
-                    > ショルダーバッグ
+                    >
+                    = @items.category.category_name
             .product-details-9
               .left-text-3
                 ブランド
@@ -59,36 +58,37 @@
                 商品の状態
               .right-zone-3
                 .right-zone-3-1b
-                  目立った傷や汚れなし
+                  = @items.state.state
             .product-details-9
               .left-text-3
                 配送料の負担
               .right-zone-3
                 .right-zone-3-1b
-                  送料込み(出品者負担)
+                  = @items.postage.root.postage
             .product-details-9
               .left-text-3
                 配送の方法
               .right-zone-3
                 .right-zone-3-1b
-                  らくらくメルカリ便
+                  = @items.postage.postage
             .product-details-9
               .left-text-3
                 配送元地域
               .right-zone-3
                 .right-zone-3-1
-                  大阪府
+                  = @items.prefecture.prefecture
             .product-details-9
               .left-text-3
                 発送日の目安
               .right-zone-3
                 .right-zone-3-1b
-                  2~3日で発送
+                  = @items.postage_day.postage_day
 
         .product-details-15
           .product-details-16
             .product-details-17
-              ¥ 1,234,567
+              ¥
+              = @items.price
             .product-details-18
               （税込）
             .product-details-19
