@@ -16,7 +16,7 @@ class CardsController < ApplicationController
       @card_brand = @card_information.brand      
       case @card_brand
       when "Visa"
-        @card_src = "visa.svg"
+        @card_src = "visa.png"
       when "JCB"
         @card_src = "jcb.svg"
       when "MasterCard"
@@ -87,7 +87,7 @@ class CardsController < ApplicationController
        
 
          
-       end
+      end
       end
 
 
