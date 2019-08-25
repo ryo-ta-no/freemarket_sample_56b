@@ -1,5 +1,6 @@
 -# = render "user-shared/info-header"
--# = form_with url: pay_cards_path, method: :post,action: "create",html: {name: "inputForm"} do |f|
+-# -# = form_with url: pay_cards_path, method: :post, action: "create", id: 'charge-form',html: {name: "inputForm"} do |f|
+-# = form_with url: pay_cards_path, method: :post, action: "create", id: 'charge-form', html:{ name: "inputForm"}, class: "chapter__container__inner" do |f|
 
 -#   .payment-box
 -#     .payment-center-box
@@ -48,7 +49,6 @@
 
 -#           .__payment-move-on-btn
 -#             = f.submit "次へ進む",id: "token_submit", class: "payment-move-text"
-
 
 -# :javascript
 -#   document.addEventListener(

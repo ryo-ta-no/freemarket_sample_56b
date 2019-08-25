@@ -12,7 +12,6 @@
 //
 //= require rails-ujs
 
-//= require payjp
 //= require_tree .
 //= require jquery 
 //= require jquery_ujs 

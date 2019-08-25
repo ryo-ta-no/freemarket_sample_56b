@@ -3,14 +3,14 @@ class PurchaseController < ApplicationController
   require 'payjp'
 
   def item_confilm
-    # card = Card.where(user_id: current_user.id).first
-    @card =  Card.includes(:user)
+  # card = Card.where(user_id: current_user.id).first
+
+    card = current_user.card
     if card.blank?
-     
       redirect_to controller: "cards", action: "new"
     else
       Payjp.api_key = ENV["PAYJP_PRIVATE_KEY"]
-     
+
       customer = Payjp::Customer.retrieve(card.customer_id)
       @default_card_information = customer.cards.retrieve(card.card_id)
     end
