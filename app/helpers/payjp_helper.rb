@@ -8,4 +8,8 @@ module PayjpHelper
     end
     doc.to_html.html_safe
 end
+
+class MyPayjp
+  Payjp::api_key = ENV['PAYJP_PRIVATE_KEY']
+end
 end
