@@ -1,7 +1,7 @@
 .item-confilm-conteiner 
   .item-confilm-header
     %h1.h1
-    = image_tag 'logo.svg',width:'185px',height: '49px'
+      = image_tag 'logo.svg',width:'185px',height: '49px'
   .item-confilm-main
     %section.buy-content
       %h2.main-head
@@ -9,12 +9,12 @@
       .main-center
         .main-inner
           %h3.inner-lazyloaded
-          = image_tag 'https://static.mercdn.net/thumb/photos/m38251906148_1.jpg?1565241696', class:"lazyloaded", alt:"" ,src:"https://static.mercdn.net/thumb/photos/m38251906148_1.jpg?1565241696",  alt:"",width: '64px'
+          -# = image_tag @item.photos[0].img.url, width: "64px", height: "64px"
           %p.item-name 
-            新品  革  アフリカ大陸キーホルダー
+            = @item.name
           .buys-form
             %p.item-price
-              ¥ 1,000 
+              = @item.price
               %span.item-fee
                 送料込み
             %ul.point-boxs
@@ -27,7 +27,7 @@
                   支払い金額
                 .price-num
                   %span
-                    ¥1,000
+                    = @item.price
             %p.error-text
               配送先と支払い方法の入力を完了してください。
               = form_tag(action: :pay, method: :post) do
@@ -41,7 +41,6 @@
           〒
           %br
           %p.shipping-info
-            
           =link_to "",class:"shipping-p" do
             %span 変更する
             = fa_icon "arrow-right",class:"shipping-p"
@@ -50,6 +49,13 @@
       .main-inner
         %h3 
           支払方法
+          = image_tag "cards/#{@card_src}", width: '26', height: '20', alt: @card_brand, id: "card_image"
+        .card__number 
+          = "**** **** **** " + @default_card_information.last4
+        .expire__date 
+          - exp_month = @default_card_information.exp_month.to_s
+          - exp_year = @default_card_information.exp_year.to_s.slice(2,3)
+          = exp_month + " / " + exp_year
           %p.shipping-info
         %br
           =link_to "",class:"shipping-p" do

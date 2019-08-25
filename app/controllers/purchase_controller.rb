@@ -3,8 +3,8 @@ class PurchaseController < ApplicationController
   require 'payjp'
 
   def item_confilm
+    @item = Item.find(params[:id])
   # card = Card.where(user_id: current_user.id).first
-
     card = current_user.card
     if card.blank?
       redirect_to controller: "cards", action: "new"
@@ -13,6 +13,23 @@ class PurchaseController < ApplicationController
 
       customer = Payjp::Customer.retrieve(card.customer_id)
       @default_card_information = customer.cards.retrieve(card.card_id)
+
+      @card_brand = @default_card_information.brand
+      case @card_brand
+      when "Visa"
+        @card_src = "visa.png"
+      when "JCB"
+        @card_src = "jcb.jpeg"
+      when "MasterCard"
+        @card_src = "master-card.png"
+      when "American Express"
+        @card_src = "american_express.png"
+      when "Diners Club"
+        @card_src = "dinersclub.png"
+      when "Discover"
+        @card_src = "discover.jpeg"
+      end
+      
     end
   end
 
@@ -28,5 +45,7 @@ class PurchaseController < ApplicationController
   )
   redirect_to action: 'done' 
   end
+ 
+ 
 
 end

@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   root to: "items#index"
   devise_for :users
+
   resources :items do
     collection do
       get 'category_children'
@@ -23,17 +24,6 @@ Rails.application.routes.draw do
   end
 
   resources :users
-
-  resources :cards, only: [:create, :show, :new, :index] do
-    collection do
-      post 'pay'
-      post 'delete', to: 'cards#delete'
-      post 'show'
-      get 'confirmation'
-      get 'mypay'
-      post 'payment'
-    end
-  end
 
   resources :ragistrations do
     collection do
