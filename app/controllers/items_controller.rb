@@ -1,7 +1,10 @@
 class ItemsController < ApplicationController
 
   def index
+    # @items = Item.find(params[:id])
+
     @parents = Category.where(ancestry: nil).order("id ASC").limit(9)
+
   end
 
   def edit
