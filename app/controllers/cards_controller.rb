@@ -24,11 +24,7 @@ class CardsController < ApplicationController
         )
         @card = Card.new(user_id: current_user.id, customer_id: customer.id, card_id: customer.default_card)
         if @card.save
-          if request_path == "/cards/mypay"
-            redirect_to new_card_path
-          else request_path == "/ragistrations/payment"
-            redirect_to mypage_cards_path
-          end
+          redirect_to action: "show"
         else
           redirect_to action: "pay"
         end
