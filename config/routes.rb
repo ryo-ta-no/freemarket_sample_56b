@@ -30,8 +30,9 @@ Rails.application.routes.draw do
       get 'member'
       get 'authentication'
       get 'address'
-      post 'complete'
+      get 'complete'
       get 'userlogout'
+      get 'payment'
     end
   end
 
@@ -43,7 +44,7 @@ Rails.application.routes.draw do
       post 'show'
       get 'confirmation'
       get 'mypay'
-      post 'payment'
+   
 
     end
   end
