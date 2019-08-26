@@ -1,2 +1,13 @@
-%h1 Purchase#done
-%p Find me in app/views/purchase/done.html.haml
+.purchase
+  .purchase__image
+    = image_tag "main-logo.png" , width: 240, height:70
+  .purchase__container
+    .purchase__container__title
+      購入が完了しました！
+    .purchase__container__description
+      購入完了しました。出品者の連絡をお待ちください！
+      %br
+      またのご利用お待ちしております。
+    = link_to "トップページへ戻る", root_path, class: "purchase__container__link"
+  .purchase__container__footer
+= render 'shared/footer'

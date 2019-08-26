@@ -1,5 +1,5 @@
 class PurchaseController < ApplicationController
-
+  before_action :authenticate ,only: :item_confilm
   require 'payjp'
 
   def item_confilm
@@ -49,6 +49,10 @@ class PurchaseController < ApplicationController
   def done 
     @product_purchaser= Item.find(params[:id])
     @product_purchaser.update( buyer_id: current_user.id)
+  end
+
+  def authenticate
+    redirect_to new_user_session_path unless user_signed_in?
   end
 
 end
