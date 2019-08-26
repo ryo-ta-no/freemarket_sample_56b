@@ -16,6 +16,12 @@ class UsersController < ApplicationController
 
   def edit
   end
+  
+  def purchase
+    @items = Item.where(user: current_user)
+    @photos = Photo.where(params[:use_id])
+  end
+
 
   def goods
     @items = Item.where(user: current_user)
