@@ -1,14 +1,8 @@
 
 = link_to item_path(item.id), class:"itmes-main-link" do
-  
   .product
     .photo-zone
-      -if item.buyer_id.present? 
-        .items-box_photo__sold
-          .items-box_photo__sold__inner
-            SOLD
-      -# = image_tag item.photos[0].img.url , width: "100%", height: "100%"
-
+      = image_tag item.photos[0].img.url , width: "100%", height: "100%"
     .data
       .name
         = item.name
