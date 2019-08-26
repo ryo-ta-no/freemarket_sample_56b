@@ -26,7 +26,7 @@
         出品した商品 - 売却済み
         = fa_icon 'chevron-right', class: 'icon-arrow-right' 
       %li
-        購入した商品 - 取引中
+        =link_to "購入した商品 - 取引中", purchase_user_path(current_user),class:'log-out-text'
         = fa_icon 'chevron-right', class: 'icon-arrow-right' 
       %li
         購入した商品 - 過去の取引

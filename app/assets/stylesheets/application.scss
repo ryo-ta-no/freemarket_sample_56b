@@ -12,17 +12,6 @@
 
 @import "exhibition-btn";
 @import "font-awesome";
-@import "font-awesome";
-@import "side-bar";
-
-
-
-@import "exhibition-btn";
-@import "font-awesome";
-
-
-@import "user-right";
-@import "font-awesome";
 @import "side-bar";
 
 
@@ -38,20 +27,24 @@
 @import "ragistration/_session-user";
 @import "ragistration/info-header";
 @import "ragistration/adress";
-@import "font-awesome";
 @import "items_new";
 @import "item_confilm";
 
-@import "users-show";
-@import "users-edit";
+
 
 @import "breadcrumbs";
 @import "cards/_new-pay";
 @import "cards/_pay";
 
 
-@import "goods";
-@import "goods_detail";
+@import "user/goods";
+@import "user/goods_detail";
+@import "user/purchase";
+@import "user/user-right";
+@import "user/users-show";
+@import "user/users-edit";
+
+
 @import "slick-theme"; 
 @import "slick";
 

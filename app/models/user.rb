@@ -4,9 +4,11 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
          has_many :items
+         
          has_one :card
          has_one :profile
          has_one :street
+
 
          accepts_nested_attributes_for :street
 

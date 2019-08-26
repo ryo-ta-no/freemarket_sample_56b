@@ -18,6 +18,11 @@ crumb :goods_user do
   parent :index_user
 end
 
+crumb :purchase_user do
+  link "購入した商品 - 取引中", purchase_user_path
+  parent :index_user
+end
+
 crumb :goods_detail do
   link "出品商品画面", goods_detail_item_path
   parent :goods_user
