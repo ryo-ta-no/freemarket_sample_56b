@@ -9,12 +9,7 @@ class ItemsController < ApplicationController
 
   def edit
     @item = Item.find(21)
-    # binding.pry
     @photo = @item.photos
-    # binding.pry
-
-
-
   end
 
   def new
