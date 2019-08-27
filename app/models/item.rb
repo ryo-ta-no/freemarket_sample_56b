@@ -8,7 +8,7 @@ class Item < ApplicationRecord
   has_many :photos, dependent: :destroy
   accepts_nested_attributes_for :photos, allow_destroy: true
 
-  belings_to :buyer,class_name:"User", optional: true
+  belongs_to :buyer,class_name:"User", optional: true
   belongs_to :user,class_name:"User", optional: true
   belongs_to :size, optional: true
   belongs_to :category, optional: true

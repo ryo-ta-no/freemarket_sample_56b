@@ -38,3 +38,18 @@ crumb :logout_page do
   link "ログアウト", userlogout_ragistrations_path
   parent :index_user
 end
+
+crumb :paypay do
+  link "支払方法", mypay_cards_path
+  parent :index_user
+end
+
+crumb :add_card do
+  link "クレジットカードを追加する",  delete_cards_path
+  parent :paypay 
+end
+
+crumb :create_card do
+  link "クレジットカード一覧", new_card_path
+  parent :paypay
+end

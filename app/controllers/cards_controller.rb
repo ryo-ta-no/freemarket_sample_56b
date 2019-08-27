@@ -13,7 +13,7 @@ class CardsController < ApplicationController
 
 
     def pay
-      Payjp.api_key = 'sk_test_e1ae6a554565547f186622ad'
+      Payjp.api_key = ENV["PAYJP_PRIVATE_KEY"]
       if params['payjp-token'].blank?
         redirect_to action: "new"
 
@@ -45,7 +45,7 @@ class CardsController < ApplicationController
     end
 
     def show
-        Payjp.api_key = "sk_test_e1ae6a554565547f186622ad"
+        Payjp.api_key = ENV["PAYJP_PRIVATE_KEY"]
 
         card = Card.where(user_session).first
         if card.present?
