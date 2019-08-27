@@ -24,7 +24,6 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :users
 
   resources :ragistrations do
     collection do

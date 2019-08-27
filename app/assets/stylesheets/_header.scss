@@ -5,7 +5,8 @@ body{
   list-style:none;
 }
 .header{
-  background-color: #fff;
+  background: linear-gradient(25deg, rgba(255, 0, 0, 0.4), rgba(0, 143, 200, 0.603)) ,url(utyuu.jpg);
+  // background-color: #fff;
   width: auto;
   position: relative;
   z-index: 1001;
