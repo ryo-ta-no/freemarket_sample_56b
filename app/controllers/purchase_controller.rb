@@ -5,6 +5,7 @@ class PurchaseController < ApplicationController
   def item_confilm
     @item = Item.find(params[:id])
   # card = Card.where(user_id: current_user.id).first
+  # 7と9同義
     card = current_user.card
     if card.blank?
       redirect_to controller: "cards", action: "new"
@@ -41,12 +42,12 @@ class PurchaseController < ApplicationController
     Payjp::Charge.create(
     :amount => @item.price,
     :customer => card.customer_id,
-    :currency => 'jpy', 
+    :currency => 'jpy',
   )
-  redirect_to action: 'done' 
+  redirect_to action: 'done'
   end
- 
-  def done 
+
+  def done
     @product_purchaser= Item.find(params[:id])
     @product_purchaser.update( buyer_id: current_user.id)
   end
