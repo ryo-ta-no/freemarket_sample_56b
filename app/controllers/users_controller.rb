@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
 
   def index
-    
+    @user = User.find_by(id: current_user)
   end
 
   def show
@@ -15,8 +15,9 @@ class UsersController < ApplicationController
   end
 
   def edit
+    @user = User.find(params[:id])
   end
-  
+
   def purchase
     @items = Item.where(user: current_user)
     @photos = Photo.where(params[:use_id])

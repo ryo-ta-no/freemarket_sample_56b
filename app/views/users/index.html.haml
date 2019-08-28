@@ -11,8 +11,7 @@
             .user-img
               = image_tag 'mer.png', alt: '', height: '60', width: '60', id: 'img-top'
             .user-nick
-              -# = @nickname
-              りょう
+              = @user.nickname
             .user-val
               評価
               %span.bold 0
