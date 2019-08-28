@@ -3,18 +3,19 @@
     .top
       .title
         = link_to root_path do
-          %img{src: "//www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?863303983",width:'134px',height:'36px'} 
+          %img{src: "//www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?863303983",width:'134px',height:'36px'}
       .form
-        = form_with url: '/search', method: :get, local: true  do |f| 
-          = f.text_field :content, class: 'form__search', placeholder: '何をお探しで？',name: 'keyword',type:'search' ,value:''
-          = link_to " " do
-            = fa_icon 'search', class: 'icon-search' 
+        = form_with url: search_items_path, method: :get, local: true do |f|
+          = f.text_field :search, class: 'form__search', placeholder: '何をお探しで？',name: 'keyword',type:'search'
+          %label.search-label{for: "search-icon"}
+            %i.fa.fa-search
+            = f.submit '', id: "search-icon"
 
     .under
       %nav.left
         %ul.header-navi
           %li.header-l-left
-            = fa_icon 'list-ul', class: 'category-icon' 
+            = fa_icon 'list-ul', class: 'category-icon'
             %span カテゴリーから探す
           %li.header-l-right
             = fa_icon 'tag',class: 'brand-icon'
