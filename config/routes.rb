@@ -9,6 +9,7 @@ Rails.application.routes.draw do
       get 'category_grandchildren'
       get 'postage_children'
       get 'item_confilm'
+      get 'search'
     end
 
     member do

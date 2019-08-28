@@ -1,0 +1,110 @@
+.big-box
+  = render 'shared/header'
+  .main-box-big
+    .left-big-content
+      .details
+        = form_with class: "details-form" do |f|
+          %select.search-shuffle(name="shuffle")
+            %option(value="並び替え")並び替え
+            %option(value="価格の安い順")価格の安い順
+            %option(value="かかくの高い順")価格の高い順
+            %option(value="出品の安い順")出品の古い順
+            %option(value="出品の高い順")出品の新しい順
+            %option(value="いいねの多い順")いいねの多い順
+
+
+          .search-refine
+            %h3詳細検索
+
+            .form-sort
+              %lavel
+                %i
+                  %span.tbキーワードを追加
+              %input(type="text" class="area-form")
+
+            .form-sort
+              %lavel
+                %i
+                  %span.tbカテゴリーを選択する
+              = f.collection_select :select_category, @parents, :id, :category_name
+
+            .form-sort
+              %lavel
+                %i
+                  %span.tbブランド名から探す
+              %input(type="text" placeholder="例)シャネル" class="area-form")
+
+            .form-sort
+              %lavel
+                %i
+                  %span.tbサイズを指定する
+              = f.collection_select :select_size, @parents, :id, :category_name #仮後で変更する
+
+            .form-sort
+              %lavel
+                %i
+                  %span.tb価格
+              = f.collection_select :select_size, @parents, :id, :category_name #仮後で変更する
+              %input(type="text")
+              %span &sim;
+              %input(type="text")
+
+            .form-sort
+              %lavel
+                %i
+                  %span.tb商品の状態
+
+
+            .form-sort
+              %lavel
+                %i
+                  %span.tb配送料の負担
+
+
+            .form-sort
+              %lavel
+                %i
+                  %span.tb販売状況
+
+
+            .form-sort-btn
+              .form-sort-reset
+              = f.submit '完了', class: 'form-sort-clear'
+
+    .right-big-content
+      .result
+        %h2〇〇
+        %spanの検索結果
+      .result-number
+        1-〇〇件表示
+
+      .result-box
+        - if @items.count == 0
+          - @all_items.each do |item|
+            %section.item-result
+              = link_to item_path(item) do
+                .item-photo-box
+                  = image_tag item.photos[0].img.url, size: '160x160'
+                .item-body-box
+                  %h3
+                    = item.name
+                  .item-body-box-val
+                    .item-price
+                      ￥
+                      = item.price
+        - else
+          - @items.each do |item|
+            %section.item-result
+              = link_to item_path(item) do
+                .item-photo-box
+                  = image_tag item.photos[0].img.url, size: '160x160'
+                .item-body-box
+                  %h3
+                    = item.name
+                  .item-body-box-val
+                    .item-price
+                      ￥
+                      = item.price
+
+  = render 'shared/footer'
+  = render 'shared/exhibition-btn'
