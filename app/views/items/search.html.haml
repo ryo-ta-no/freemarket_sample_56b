@@ -79,19 +79,32 @@
         1-〇〇件表示
 
       .result-box
-        - @items.each do |item|
-          %section.item-result
-            = link_to item_path(item) do
-              .item-photo-box
-                = image_tag item.photos[0].img.url, size: '160x160'
-              .item-body-box
-                %h3
-                  = item.name
-
-                .item-body-box-val
-                  .item-price
-                    ￥
-                    = item.price
+        - if @items.count == 0
+          - @all_items.each do |item|
+            %section.item-result
+              = link_to item_path(item) do
+                .item-photo-box
+                  = image_tag item.photos[0].img.url, size: '160x160'
+                .item-body-box
+                  %h3
+                    = item.name
+                  .item-body-box-val
+                    .item-price
+                      ￥
+                      = item.price
+        - else
+          - @items.each do |item|
+            %section.item-result
+              = link_to item_path(item) do
+                .item-photo-box
+                  = image_tag item.photos[0].img.url, size: '160x160'
+                .item-body-box
+                  %h3
+                    = item.name
+                  .item-body-box-val
+                    .item-price
+                      ￥
+                      = item.price
 
   = render 'shared/footer'
   = render 'shared/exhibition-btn'
