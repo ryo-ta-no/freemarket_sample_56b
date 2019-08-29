@@ -18,12 +18,22 @@
           .name
             %label
               お名前
+            .name-box
+              = @search_params.first_name
+              = @search_params.last_name
           .kana
             %label
               カタカナ
+            .name-box
+              = @search_params.first_kana
+              = @search_params.last_kana
+              = @street.prefecture_id
           .birth
             %label
               生年月日
+            .name-box
+              = @search_params.birth_day
+              年
           .form-group
             %label.label
               郵便番号
@@ -38,7 +48,7 @@
               任意
             .form-select
               = form_with model:@prefecture, local: true ,class:'form-type' do |f|
-                = f.collection_select(:prefecture_id, Prefecture.all, :id, :prefecture, selected: @search_params[:prefecture_id], include_blank: '--',) 
+                = f.collection_select(:prefecture, Prefecture.all, :id, :prefecture, selected: @search_params[:prefecture_id], include_blank: '--',) 
                 = fa_icon 'chevron-down', class: 'icon-arrow-right'
                   
           .form-group

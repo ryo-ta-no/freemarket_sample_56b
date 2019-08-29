@@ -40,7 +40,7 @@
                 = p.label :"都道府県"
               .__l-a-required
                 必須
-            = f.collection_select(:prefecture_id, Prefecture.all ,:id, :prefecture, prompt: "--")
+            = p.collection_select(:prefecture, Prefecture.all ,:prefecture, :prefecture, prompt: "--")
             .__l-address-form
               .__l-a-text
                 = p.label :"市区町村"
