@@ -94,9 +94,11 @@
             .product-details-19
               送料込み
 
-        .product-details-20
-          .product-details-21
-            = link_to "購入画面に進む", item_confilm_purchase_path(@items) ,calss:"item-confilm"
+        -if @items.user_id == current_user.id
+        -else
+          .product-details-20
+            .product-details-21
+              = link_to "購入画面に進む", item_confilm_purchase_path(@items) ,calss:"item-confilm"
 
         .product-details-22
           = @items.explain
