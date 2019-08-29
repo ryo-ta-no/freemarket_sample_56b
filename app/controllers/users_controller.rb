@@ -21,6 +21,8 @@ class UsersController < ApplicationController
 
   def purchase
     @items = Item.where(user: current_user)
+    @sold = Item.where( buyer_id: current_user.id)
+
     @photos = Photo.where(params[:use_id])
   end
 
