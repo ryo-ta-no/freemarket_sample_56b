@@ -3,7 +3,9 @@ class PurchaseController < ApplicationController
   require 'payjp'
 
   def item_confilm
+    @street = current_user.street
     @item = Item.find(params[:id])
+    @user= User.where(id: current_user.id).first
   # card = Card.where(user_id: current_user.id).first
   # 7と9同義
     card = current_user.card
@@ -36,7 +38,6 @@ class PurchaseController < ApplicationController
 
   def pay
     @item = Item.find(params[:id])
-
     card = Card.where(user_id: current_user.id).first
     Payjp.api_key = ENV['PAYJP_PRIVATE_KEY']
     Payjp::Charge.create(
@@ -50,6 +51,8 @@ class PurchaseController < ApplicationController
   def done
     @product_purchaser= Item.find(params[:id])
     @product_purchaser.update( buyer_id: current_user.id)
+    @item = Item.find(params[:id])
+
   end
 
   def authenticate

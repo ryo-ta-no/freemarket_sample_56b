@@ -72,7 +72,7 @@ class RagistrationsController < ApplicationController
       :last_kana,
       :call_number,
       :birth_day,
-      street_attributes: [:post, :city, :address, :bilding, :phone]
+      street_attributes: [:post, :prefecture,:city, :address, :bilding, :phone,]
     )
   end
 

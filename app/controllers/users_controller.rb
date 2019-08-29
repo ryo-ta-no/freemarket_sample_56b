@@ -6,8 +6,9 @@ class UsersController < ApplicationController
 
   def show
     user = User.find(params[:id])
-    @search_params = user_search_params
     @prefecrure = Prefecture.all
+    @search_params = User.find(params[:id])
+    @street = current_user.street
   end
 
 

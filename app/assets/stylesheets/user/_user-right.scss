@@ -10,7 +10,8 @@
 }
 @mixin label{
   font-weight:600;
-  padding-top:40px;
+  padding-top:20px;
+  margin: 20px 0 0;
 }
 @mixin span{
     margin: 0 0 0 8px;
@@ -49,55 +50,53 @@
     margin: 40px auto 0;
     padding: 0 0 40px;
     width:1020px;
-  
+
     .right-container{
       margin-top:20px;
       width: 700px;
       float:right;
       background: #fff;
 
-      .section{     
+      .section{
         border-top: 1px solid #f5f5f5;
 
       .h2{
         @include h2;
       }
-          
         .form{
           padding: 64px;
-          
           .text{
             margin: 8px 0 0;
             line-height: 1.5;
             .li{
               float:right;
-              .p{       
-                @include p;       
+              .p{
+                @include p;
                 display: inline-block;
               }
               .icon-arrow-right{
                   @include p;
               }
-            }  
+            }
           }
           .name{
-            margin: 40px 0 0;
             @include label;
           }
+            .name-box{
+              margin-top:20px;
+            }
 
           .kana{
-            margin: 40px 0 0;
             @include label;
           }
 
           .birth{
-            margin: 40px 0 0;
             @include label;
+
             .form__input{
             @include forms;
           }
         }
-      
           .form-group{
             margin: 40px 0 0;
             .span{
@@ -106,7 +105,7 @@
             .label{
               @include label;
             }
-              
+
             .form__input{
             @include forms;
             }
@@ -157,11 +156,9 @@
               text-align: center;  
             }
           }
-        
           .form-text{
             margin: 40px 0 0;
             text-align: right;
-           
             .li{
               .p{
                 @include p;
