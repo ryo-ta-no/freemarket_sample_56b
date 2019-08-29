@@ -38,13 +38,13 @@ $(function(){
 
 
   $('#category_select').on('change', function(){ 
-    var productcagory = document.getElementById('category_select').value; 
+    var productcategory = document.getElementById('category_select').value; 
     if (productcategory != ''){
       $.ajax({
         url: 'category_children',
         type: 'GET',
         data: { productcategory: productcategory },
-        dataType: 'json' 
+        dataType: 'json',
       })
       .done(function(children){
         var insertHTML = '';
