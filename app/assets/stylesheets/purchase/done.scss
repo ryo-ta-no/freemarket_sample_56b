@@ -12,25 +12,26 @@
   &__container{
     color: black;
   width: 700px;
-  height: Size;
   background-color: white;
   box-sizing: border-box;
     margin: auto;
     padding-bottom: 20px;
     &__title{
-      height: 50px;
       font-size: 24px;
-      padding: 8px 24px;
+      width:300px;
+      margin: auto;
+      padding: 20px 40px;
+   
+      background: linear-gradient(25deg, rgba(244, 248, 4, 0.966), rgba(252, 6, 219, 0.603)) ,url(utyuu.jpg);
+      padding: 15px 20px;
       font-weight: bold;
       text-align: center;
-      box-sizing: border-box;
-      border-bottom: 1px solid gray;
     }
     &__description{
       display: block;
       margin-top: 40px;
       text-align: center;
-      margin-bottom: 200px;
+      margin-bottom: 50px;
     }
     &__link{
       font-size: 20px;
