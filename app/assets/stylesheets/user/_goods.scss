@@ -65,6 +65,28 @@
     margin: auto;
     margin-left: 20px;
 
+    .items-box_photo__sold{
+      margin-top:256px;
+      width: 0;
+      height: 0;
+      border-top: 20px solid #ea352d ;
+      border-right: 20px solid transparent;
+      border-bottom: 20px solid transparent;
+      border-left: 20px solid #ea352d ;
+      z-index:100;
+      position: relative;
+      top:-320px;
+
+      &__inner{
+        transform: rotate(-45deg);
+        font-size: 7px;
+        margin:-8px 0px 0px -20px;
+        color: white;
+        letter-spacing: 2px;
+        font-weight: 600;
+      }
+    }
+
   }
 
   .goods-name {

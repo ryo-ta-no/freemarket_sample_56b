@@ -22,6 +22,10 @@
                 .goods-list-box
                   .goods-photo
                     = image_tag item.photos[0].img.url, size: '60x60'
+                    -if item.buyer_id.present?
+                      .items-box_photo__sold
+                        .items-box_photo__sold__inner
+                          SOLD
                   .goods-name
                     .name-fine
                       = item.name
