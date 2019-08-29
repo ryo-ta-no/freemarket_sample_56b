@@ -66,7 +66,6 @@ class ItemsController < ApplicationController
 
   def goods_detail
     @items = Item.find(params[:id])
-    @photos = Photo.where(params[:id])
   end
 
   def destroy

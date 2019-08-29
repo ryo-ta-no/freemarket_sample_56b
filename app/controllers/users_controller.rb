@@ -26,7 +26,6 @@ class UsersController < ApplicationController
 
   def goods
     @items = Item.where(user: current_user)
-    @photos = Photo.where(params[:use_id])
   end
 
   private
