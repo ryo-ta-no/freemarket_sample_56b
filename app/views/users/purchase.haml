@@ -14,7 +14,7 @@
           .example-2
             過去の取引
         %ul
-          - @sold.zip(@photos).each do |item, photo|
+          - @sold.each do |item|
             %li
               = link_to goods_detail_item_path(item), class: "goods-main-c" do
                 .goods-list-box
@@ -23,6 +23,9 @@
                   .goods-name
                     .name-fine
                       = item.name
+                    .goods-price
+                      = item.price
+                      円
                     .goods-icon-list
                       =fa_icon 'heart-o', class: 'heart-item'
                       %span &nbsp;0&nbsp;

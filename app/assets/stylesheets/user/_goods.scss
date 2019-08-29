@@ -17,7 +17,7 @@
     box-sizing: border-box;
     @include font-weight;
     height: 80px;
-    width: 230px;
+    width: 100%;
     @include background-white;
     display: flex;
     justify-content: center;
@@ -29,7 +29,7 @@
   .example-2 {
     @include font-weight;
     height: 80px;
-    width: 230px;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -40,7 +40,7 @@
   .example-3 {
     @include font-weight;
     height: 80px;
-    width: 230px;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -98,6 +98,7 @@
     .name-fine {
       font-size: 14px;
       margin-top: 5px;
+      
     }
 
     .goods-icon-list {
