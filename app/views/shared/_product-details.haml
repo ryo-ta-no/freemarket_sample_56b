@@ -93,7 +93,7 @@
             .product-details-19
               送料込み
 
-        -if @items.user_id == current_user.id
+        -if @items.user_id == current_user.id || @items.buyer_id.present?
         -else
           .product-details-20
             .product-details-21
