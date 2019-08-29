@@ -9,7 +9,7 @@ class ItemsController < ApplicationController
 
   def search
     @parents = Category.all.order("id ASC").limit(13)
-    @items = Item.where('name LIKE(?)', "%#{params[:keyword]}%").order("id DESC").page(params[:page]).per(15)
+    @items = Item.where('name LIKE(?)', "%#{params[:keyword]}%").order("created_at DESC").page(params[:page]).per(15)
     if params[:keyword] == ""
       redirect_to '/'
     end
