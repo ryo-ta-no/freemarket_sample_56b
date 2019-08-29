@@ -14,7 +14,7 @@ class ItemsController < ApplicationController
       redirect_to '/'
     end
     if @items.count == 0
-      @all_items = Item.limit(25).order("id ASC")
+      @all_items = Item.limit(25).order("created_at DESC")
     end
   end
 
